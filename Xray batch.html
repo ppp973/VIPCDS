@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIDYUNIVERSE - NDA-2 2025 Full Batch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       :root {
+          --primary-color: #6a0dad; /* Deep Purple */
+            --secondary-color: #ff6f61; /* Coral */
+            --accent-color: #00bcd4; /* Cyan */
+            --background-light: #f0f2f5;
+            --background-dark: #2c3e50; /* Dark Slate */
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --card-background: #ffffff;
+            --card-hover-shadow: rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 60px 20px 40px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+            animation: header-bg-animation 15s infinite alternate;
+        }
+
+        @keyframes header-bg-animation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            animation: header-wave 15s infinite linear;
+        }
+
+        @keyframes header-wave {
+            0% { transform: rotate(45deg) translate(-25%, -25%); }
+            100% { transform: rotate(45deg) translate(25%, 25%); }
+        }
+
+        h1 {
+            font-size: 4.5em;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            animation: text-pop-in 1s ease-out;
+        }
+
+        @keyframes text-pop-in {
+            0% { transform: scale(0.5); opacity: 0; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        .tagline {
+            font-size: 1.4em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--card-background);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            transition: all var(--transition-speed) ease;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.2);
+            outline: none;
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .subject-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .subject-button {
+            background-color: #e0e0e0;
+            color: var(--text-dark);
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all var(--transition-speed) ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .subject-button:hover {
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .subject-button.active {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .course-section {
+            background-color: var(--card-background);
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .course-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px var(--card-hover-shadow);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 4px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+            animation: slideInLeft 0.8s ease-out;
+            font-weight: 700;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .class-item {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-speed) ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .class-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: translateX(-100%);
+            transition: transform 0.4s ease-out;
+        }
+
+        .class-item:hover::before {
+            transform: translateX(0);
+        }
+
+        .class-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .class-item h3 {
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .class-item a {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-light);
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color var(--transition-speed) ease, transform 0.2s ease;
+            text-align: center;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .class-item a::after {
+            content: '\2192'; /* Right arrow */
+            position: absolute;
+            opacity: 0;
+            right: 15px;
+            transition: opacity 0.3s ease, right 0.3s ease;
+        }
+
+        .class-item a:hover::after {
+            opacity: 1;
+            right: 10px;
+        }
+
+        .class-item a:hover {
+            background-color: #00a7b8; /* Darker Cyan */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding-right: 35px; /* Make space for arrow */
+        }
+
+        .class-item a:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            animation: bounceIn 0.6s ease-out;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #e05a50; /* Darker Coral */
+            transform: translateY(-5px);
+        }
+
+        @keyframes bounceIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            60% { transform: translateY(-5px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-bar {
+                max-width: 100%;
+            }
+            .subject-filter {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .tagline {
+                font-size: 1.1em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .class-grid {
+                grid-template-columns: 1fr;
+            }
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1.6em;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 15px 30px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            .tagline {
+                font-size: 0.9em;
+            }
+            .course-section {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            h2 {
+                font-size: 1.7em;
+            }
+            .class-item {
+                padding: 15px;
+            }
+            .class-item h3 {
+                font-size: 1.2em;
+            }
+            .class-item a {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SPIDYUNIVERSE</h1>
+        <p class="tagline">Your Ultimate Hub for NDA-2 2025 Preparation!</p>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for classes...">
+            </div>
+            <div class="subject-filter">
+                <button class="subject-button active" data-subject="all">All Subjects</button>
+                <button class="subject-button" data-subject="Maths">Maths</button>
+                <button class="subject-button" data-subject="English Grammar">English Grammar</button>
+                <button class="subject-button" data-subject="Physical Geography">Physical Geography</button>
+                <button class="subject-button" data-subject="One Pager">One Pager</button>
+                <button class="subject-button" data-subject="Indian Geography">Indian Geography</button>
+                <button class="subject-button" data-subject="BIOLOGY">Biology</button>
+                <button class="subject-button" data-subject="ANCIENT HISTORY">Ancient History</button>
+                <button class="subject-button" data-subject="English Practice">English Practice</button>
+                <button class="subject-button" data-subject="CHEMISTRY">Chemistry</button>
+                <button class="subject-button" data-subject="Modern History">Modern History</button>
+                <button class="subject-button" data-subject="PHYSICS">Physics</button>
+                <button class="subject-button" data-subject="Economics">Economics</button>
+                <button class="subject-button" data-subject="Medieval History">Medieval History</button>
+                <button class="subject-button" data-subject="Antim Pag">Antim Pag</button>
+                <button class="subject-button" data-subject="Polity">Polity</button>
+            </div>
+        </div>
+
+        <div id="classContent">
+            <!-- Maths Section -->
+            <section class="course-section" data-subject="Maths">
+                <h2>Mathematics</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Logarithm Class 1">
+                        <h3>Logarithm Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/4aC5NXAEDCBsira7prqoV4H4np5gQqFj2b0AnsktU0X8pOFO_PZlWn9W6gvcPa_A.eBVRrKVPocr5hchw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Logarithm Class 2">
+                        <h3>Logarithm Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/rYQHvF6M1A27NlXsbvoKtmGE9xuFWOLF4bKx1AS-YkEY0MIG0BHlSTRTJL9ieTr1.6ThSXiYR0r0Fqg6x" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Logarithm Class 3">
+                        <h3>Logarithm Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/kWdD26qqVzFk6c7tAlbnCuCoMgLUbMellUD3IMPpMdldrcQosLsLrPhR3Xf7wO9X.NfEKljTSbYDQnzM6" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Binary Number Class 1">
+                        <h3>Binary Number Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/4oOQ2ZTcuvYEP18jc2MrHelvG5u-zytXqoe-GjFjsUAC20EyFA_oqZMgqN9Duxo.HNvzBjPvxifPxl8x" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Equation Class 1">
+                        <h3>Equation Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/UX_q0EN5croRITPUqo3ja2Qa2ISWGmuUf6oeJ_RF3jPUuM2428he6drsde_D9idS.EV8wesB0b_EKQk6P" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Equation Class 2">
+                        <h3>Equation Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/nk57vwy0nUL26BOuR05k_XMz1th3QS5Jps-C4JLGOtRaLSU_i5VXblXW6x4h2QAJ.OMVRfKmtXP3wH-l6" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Equation Class 3">
+                        <h3>Equation Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/PTejsfctZqZ9WW5EiMbtu1rqQjfiAa6lAN7sQguVZB8LjdsNlEG0cXcnmZ6cObZ4.-tXdy4BmS-DLAalr" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Equation Class 4">
+                        <h3>Equation Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/b61wDwSQiX_KqzKCqfaifuVon2tJMudevR2tSjqnjfQJvYR2GV3d2tHAwyEDjtC-.MV_DN0E9HCI9Mx_Z" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Equation Class 5">
+                        <h3>Equation Class 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/VBaOMIzJxVVmQDn0XcruKvFZfAzesIgwuLcgozfc9rUGhiGK--E_2EcYgkLDs-ln.ORo2LeIa9gl4xlVg" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Set theory class 1">
+                        <h3>Set theory class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/3AsJJttLXb7dpp__3aTl1TH2LYOHcPtQwF-b6ZKv2i11FMCP8r7lHwX0rG-6qCmb.hQ65TTcI7lBjHfN5" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Set theory Class 2">
+                        <h3>Set theory Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/y9OpBDXIr5Jn9veFGQHGDVy0sowcZvIn753GmAItDYdmBAh-ebAHKL4ycY8KaoeW.4qG5x1cc9cr1tBBp" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Set theory Class 3">
+                        <h3>Set theory Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/8ieXojwEuB1tRNy2aap8Dy0u5si267UaiZKTlsO_NQL-UXhP89KlCn7N4UeQeZo.7FdJn4zz7hoLmloR" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Set Theory Class 4">
+                        <h3>Set Theory Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/O_QmZuyB8v0m3N5AYfZjmC0anZhXBfFRZ3SEKsOA5VbzH6J2z1L1MgHQFdz8R7Cf.3QlzUKXSQz0-0FQh" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Complex number 1">
+                        <h3>Complex number 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tyQwaxDvdXj5YBlzcXwuAf9taIMXdNC9kop-6tcq1NaAAmx83TpVOfuAUMGT0Kk.acsiMV8kDGaBxZtI" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Complex number 2">
+                        <h3>Complex number 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/2fytS4JQFOB-6M_G8dwP6JBxgSRiXM32OhkYXG_2VJzBDsyIyiqGKxEIF054aNnL.iGy05p8cNKsEsfF_" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Complex Number 3">
+                        <h3>Complex Number 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/y71J-NmOltBi_qGpCPaBdmZmHIyoFG-LBHYndVVAKTswkmiCy9CAjjhyrosLA1hm.6AawR-QrzbEAuBwH" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Complex Number 4">
+                        <h3>Complex Number 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/bgjio8ueAPo7pUI29oDgj9iE7LjktZnh29vm7oG0SMd3sh3pE15SOKuthhhZWaxV.lBkb-fyW1sVVj8JL" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Permutations and combinations Class 1">
+                        <h3>Permutations and combinations Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/akudDZiHP05JKmkXlB5_CtfnHtCNwhR2uJNd3Z-63ycZM-bZttAvferYjDXgRuyG.ugumirW70lwW8-L-" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="permutations and combinations Class 2">
+                        <h3>permutations and combinations Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/2ItLXIKdewXd4OsQh85GBKim6hxXU5RKBvYL-U58DzsC_YcarLc5EPelRNXW4Wt9.uJHamSUbT6oUSp74" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Permutations and combinations Class 3">
+                        <h3>Permutations and combinations Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/mOwW4bwOUpPry7Wiha10gFDKfjteal8CgBMZu45PT4pVthOxSrZUL9-oqkYsPcsi.rAebOGZIYMrhxMPl" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Permutations and combinations Class 4">
+                        <h3>Permutations and combinations Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/4cLsZW9q7ZutD_ed5WGqh9nIzZqbQbtLOG6CtIVGGvcGUbfiossjDs4ann-hlk4J.wOqZAo9FWObsIepX" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="P & C last class + Binomial Class 1">
+                        <h3>P & C last class + Binomial Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/-tKSpekudLISIV2Qh8yhRb80cudYXS5tXZN6JgxFqq0Q58zBhkB0rwtiou10r0--.4LFkLWqlfQPNQCKA" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Binomial Class 2">
+                        <h3>Binomial Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/50D05rJuAvgWmo4r14NgU1jAQCdPt4voVsuSsaNjg7XiyZNgJ9S278r1D1mpxjjF.9BlTm2Aykmr80j4n" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Binomial Class 3">
+                        <h3>Binomial Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IbMCJqBlE9XqjCJBYRtsbkCIxf0EMMZSugrpRj5p-MkvPvxhuq_XIuXoTGPI7KuI.vsE9o_93BPlWC_Eb" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Series Class 1">
+                        <h3>Series Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Q8tC6aYKDczy1sMr-XYlTW1xINqXJzN-fooq7Lr884Vw3TF0tPG04avnBLOpntrE.R39u72OAuALAT_9Z" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Series Class 2">
+                        <h3>Series Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/81OdSHNagyti86ttZd_WUw9RiYFD0jdjT_KlGR8I7a2m2ojKorHkjPpQl6PYB3Rl.NBWfQanOWRlVwBDz" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Series Class 3">
+                        <h3>Series Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/L7C1LXdj2RyVHYCnErGqU4Z-xrhpRJBOTDlKPLJSvcCHECzyihaUfeo5greFVQV-.IQaLzS37-7S7Xf2g" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Series last class">
+                        <h3>Series last class</h3>
+                        <a href="https://us06web.zoom.us/rec/share/wsMYtL1-T3lJxFR9bnHTQ1I63zqhqoMIlck0WKGyIF7TzNiUBgv2soYwl2Cj2lF3.9VkC3etU5EqnwdYy" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Matrix Class 1">
+                        <h3>Matrix Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/kXExzxz2qTd-y7_rFEEbTH7kuPoW23Lv6yLrn8zshN6ACQ3JFzyxIQ6tiYZ0D52v.iXj0CFt7LPcM3sfx" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Matrix Class 2">
+                        <h3>Matrix Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/pfwcEsuwzYzGgDkrbrxpd2-PUzrEltlvWZ1NVgPeOpUFEiQIoAsjtz3DZperzW_B.ti0tLbsm2jMg7w4D" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Matrix Class 3">
+                        <h3>Matrix Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/zqPcyJalMwG_GdqGcKltfbOwaVPoZZbsYavYgNAP35ygBI_jbbTAxQsGwIHJ6qvb.CL3dnqbdXpdIcBVN" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Matrix Class 4">
+                        <h3>Matrix Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/XDuP11Fh4KvKa3PgQ8ul72d-JczJfKoIZd0c64a48UIWt9mlwnAVySD9ID4-FdHu.IdW5GdmaAx-TM6Br" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Matrix Class 5">
+                        <h3>Matrix Class 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/2IzQpgllx3qEVQ32BwUq08_OjMROuscb4U-vmdEBXHOuTjtVKnj8AtDkKuy5eQYF.yv8Im40t6rcjWdfS" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Matrix Class 6">
+                        <h3>Matrix Class 6</h3>
+                        <a href="https://us06web.zoom.us/rec/share/D4kZj8QVa7A5yZ8vD08yDQFQbUqtkDmdZBb10BNrfXZnTOUf-a-9AvkP6TMQWkab.SzfN5Hozg5gFyeNW" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 1">
+                        <h3>Trigonometry Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/P7Wr5Esy_1zt83ks_CFQRUqlCk7ttN3BddqtcQaDpo0L4CRzwpNFgl_vIiUshnGb.scOSN8gySgU4ZWTk" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 2">
+                        <h3>Trigonometry Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FVrmItBZuCM9mEzPgjdKqgeiP9xtiaZVYrgl3PMvyowp-SgpdkNAW07_Na5rY7x8.HlZ5mO5aN0PHSBJp" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 3">
+                        <h3>Trigonometry Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/zwxOwxDI5REHVFrUULrmoK_RX0BIP9cit3ha0cBgIDEpiDbGRh72Vo9pRChiREHh.aFOg1ucP42KrGMOL" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 4">
+                        <h3>Trigonometry Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/5bz9nBW84XcGhCYCF0A5uS6VEvikhhY2hUsQoYf9XZFac-P15hFh3OcFUtlSEZxy.F_SAyj5H3ALe0e_r" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 5">
+                        <h3>Trigonometry Class 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xT785rj4tq7Si2RkEpFeF3tLzfHs-ugCIeXkJgEs9YLiFXTe57opjxeEHTAIqmPV.i1hzLR-AvY44a1bo" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 6">
+                        <h3>Trigonometry Class 6</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IqNRrlsWWyIx-IDkwztpJslYhqI_UCYBcgGWWCgJ94xg9iAdWxwKLUeXTnf4n8jd.z6k-zKcCyaaC8QO0" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Trigonometry Class 7">
+                        <h3>Trigonometry Class 7</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IuR2UxJznAVwu5Q5wzTFibH6UZ4Je0RwUwdNL9StxkL0y3pEHx_k4V0jgGSB959l.Vj_zcutrlJ9qdDVi" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Properties of triangles - Class 1">
+                        <h3>Properties of triangles - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/nK_euAqi64W5GxHV4Sfjn6pz-kK-hol8E0pzQHCNy6HnjppV7QTt-GqoZpu5Sp8U.5bwgjmFnFXmSIOsL" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Properties of triangles - Class 2">
+                        <h3>Properties of triangles - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/4FOHMwfd2-sfSAU_GjxsOhW015yUK656zKAZdx9BiGUdTvP5YsIf00PjBBwkYr00.YU1VultEAbAjQC6t" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Inverse Trigonometry - Class 1">
+                        <h3>Inverse Trigonometry - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/lGpeki66sGbjOhu-VKFKK3N3c_lMGOvr3EhEZZraTqc4t1bytaPBaBBrzRUqotQZ.rbQ4MUM-ukqwfWTq" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Inverse Trigonometry - Class 2">
+                        <h3>Inverse Trigonometry - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/9S2ExgjqaMOzau4XqWO4Lpz8fHOQEcqNcBG-hw9G42Q2u33SPmeZxTAIRPsP36da.ylEIgmBKy1g4KKh-" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Height & Distance - Class 1">
+                        <h3>Height & Distance - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/CODs3sb7yj3qsrknVcq4nKpd4PFshO01T08kOVCyZ4xuPC1zPpwtDigdpFfg4rfk.BmU7rc0f9zqmFnjz" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Height & Distance - Class 2">
+                        <h3>Height & Distance - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/SXsjAhVwE34O9-ChOjDFOCkjZ02thSCpNr6h0HcliWRO-heKJGJFlHtQlXBPJCIB.5SijpO4gibkUOhuc" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Point and straight line 1">
+                        <h3>Point and straight line 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/UB2miP0y__MvWKRR3_cdMVuzeNHgNkBEPXgAHjfzICBaWpHVTvvDqlvCmwGS02L8.gyraILnZaF4MGOIZ" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Point and straight line 2">
+                        <h3>Point and straight line 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/z-ti8fkSx3D709TCnv94RzbN6uGpo6aPCEGOcVltsesTv8IccyqvYAq63yOhyuSY.0bIx7-_kcIrozz8y" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Point and straight line 3">
+                        <h3>Point and straight line 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xvAFH6Ev6VJUf-i9d0DHjOMK9Usxb5dTeDsTqVgXX8-jDMOJgBfrpUj6sVbNi7Io.LbAIyxZN_rY6fDv7" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Point and straight line 4">
+                        <h3>Point and straight line 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WJ4mjjeqpb39-dcP2p5XBm-B4riliGz0bKH_8K1_9Klp_OH3oZpDYzzuDoH1z4Vn.FB0px4D-k4mPJr3l" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Point and straight line 5">
+                        <h3>Point and straight line 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FD5Ao67s9Tc2_y3UJPnIX-fXXRAbrkmlpEza1hn0ll85r_wRm-qdXaJpihW6F41B.SRlRi7LICjPjR_tC" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Circle Class 1">
+                        <h3>Circle Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/aYw3P8-MPPjjA1YXzzGSN5DViEp8Mc_iREzBFl9TJm2-8NuMYI3JcF_P1se4WnfW.1wug7LFnSkseSbQy" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Circle Class 2">
+                        <h3>Circle Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/YkrGzvsIq4j05X_x-cthxCeT9SgWNTfAgRfJEKIYxonP73LDHslkz4xYMzVQqZ0O.6tFk3RfY26KbOL9h" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Conic Section Class 1">
+                        <h3>Conic Section Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/aOzUPXKY4Sbw18gsMihAjRjMzciRbqOi3TUYvBMty4g8EET1rkEsQRtm4Q4ExYKD.Eip2_n5-grAfXu9J" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Conic Section Class 2">
+                        <h3>Conic Section Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/jc5eweMPJRShXmiQqgWPtUZwMJYWmpWKZD-1DtRrhHI3WQ7USE25s0E8uN7tguLP.adsDQUULik2biQQc" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Conic Section Class 3">
+                        <h3>Conic Section Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tlsb5Lu5lazdej6gY18YEM7GXAVP9gJYYeLSgI43t3KHtUkHK_HxQbpq0nOhYQwN.eIadGIv2cXHvM-cu" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Conic Section Class 4">
+                        <h3>Conic Section Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WEKpJbrNepCIoC14FDcSIkIgWI-GW1iMG1yMZuAm6fTw94T52_1Sa4Lo7TLq-76W.5dSwAPw1Mb-cews7" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="3D Geometry Class 1">
+                        <h3>3D Geometry Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/TPtuP4qg-3vKuKyfGycZviq8pKOvGUTwN_EDVBdpHgy5W_p6ERThmBQJdbFsMVF_.X_WnPvgU_uOZbzFW" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="3D Geometry Class 2">
+                        <h3>3D Geometry Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/DixFOc616G0OoCAdQkHg6cPSMoVBvvAi2wyr7_cPbdYQuWpIfh_CtlPiVx2iQ2js.kzZopg2v8Yodnys6" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="3D Geometry Class 3">
+                        <h3>3D Geometry Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/MhHqW9tEnUwVcqZMj2e4rwNKKyC-eEDrmaQV-wMsMHa1sepdOP1WJAfyh1KYPMyc.3pejBsOpJYggftoQ" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="3D Geometry Class 4">
+                        <h3>3D Geometry Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/JtGSDTnOjj77E6mD85J4Axcf4HYfWHRTzXN8W8YMoH3PG1kNxPMr52ZQAmQ5lXSd.XTxP2w7A_snaHdRE" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="3D Geometry Class 5">
+                        <h3>3D Geometry Class 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/vM1UoZS032CnwKWEX4miYtQtqbYSMLmIZfAxEi_mYdemOL6oTUl97F-I_YGeSgw1.-ysFqogsKC3bLA5W" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vector class 1">
+                        <h3>Vector class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/P66qo5zRB8da_WprWsQnLjga8SM2d8Qs0t6qJDtw3IjnEPw19QoTWafSqhpfrq6z.a8tUMw5Q0Jk31i2b" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vector Class 2">
+                        <h3>Vector Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/YtsRBX9b8oL6dqXsRvkUbhRCOxowkvvg6NrHi3mF6jxIgEE5X62d7DLkiCnw_YHp.8dryXW8Ekiak-57v" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vector Class 3">
+                        <h3>Vector Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ZjzjXzRlirRsgbDeVM4Qe3IrSDzKI8c8AApbXmWiqloSVC9XwfJ9ykPPOAeuE_h3._w-XQ19kueJ_Lw-Z" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vector Class 4">
+                        <h3>Vector Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/bcvjhKLtOVACBsFCXFgUQ2VSvmYe9pO9IRF7gLKLhuV7BIW9WnrSl60Q0CkCnpMj.rxj8xp7oKCagwf9A" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Statistics Class 1">
+                        <h3>Statistics Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/4mY9LwFaYNPzJ2_jNc0ZfeXf4YPc3rkHeVAyhTrUQ-k6hwtLGfke_I4IAc109Svv.ULzNQ09bOVLIX779" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Statistics Class 2">
+                        <h3>Statistics Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/SeVaWBnlMCgL_VA-Zitgyo64igxjG-cZuwJRXIiTVOhF-LSNzYPEd2lv1Np6EKxE.2OiPWmeiwMM6bRd1" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Statistics Class 3">
+                        <h3>Statistics Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1aYu_IomY5EZhbPH5Rf6Navd5g3j4iCOVKorG7ZL1a9Dx5nMlULXbfkz_7JCvOKy.TOCMyxepIHOWEo5i" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Statistics Class 4">
+                        <h3>Statistics Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/wZL-sRo6mP45ZcngNPQ8Jqye7nQ7Px2NjYNG1XgiRQzILj8ZTMHwlvUJConaJ-b7.BnP9g9MEUIbnjizd" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Statistics Class 5">
+                        <h3>Statistics Class 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/CVKgclaLYj5UiI8lV6DMZRsi1ixTfoFMEr_s8_m-sZNehb5hjCPitH8K7PIRItT1.ItojoBQTw8xeZhH_" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Statistics Class 6">
+                        <h3>Statistics Class 6</h3>
+                        <a href="https://us06web.zoom.us/rec/share/5i8pocdjjOkP2b4Kid-Nv8nRK_5eQNq0fr-Pa09FAl4kH2xlb_7yue3fyQN8r1m_.ecMFQVf1y4Vhfzhx" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Probability Class 1">
+                        <h3>Probability Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/-IAw710l0L_NmQ4yNoFGJB2mrvr682DDz45ICz9D0CJpZKc0RAyq-HjvF_msdyds.tHTM_xBnGFeLzlp0" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Probability Class 2">
+                        <h3>Probability Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/a_XKHn-dMGwnIz3a2KS7IrIkxWBeXvDa2BvcY92uOFipkgHwez7xJZsMUQPP1cRa.33_TIohQQpVchmeS" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Probability Class 3">
+                        <h3>Probability Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Vwk0t4X1QAgInTvh9HF2hvPAez6KygWlXVsyptuOn0_66nNWQz30c_NVmWk8sQOl.U5bAVaYOQNRTCMvo" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Probability Class 4">
+                        <h3>Probability Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/_EZMUO7urrXxBhSDn3k8OWMlQ5TgbePQUC2bb8wfUfFSXifFukYWsENdRu1GOee0.jHyp0x1VY3iPXt98" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Probability Class 5">
+                        <h3>Probability Class 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/7tMKXTE-WPfPE38aZ1M1dJv4dWlC2q4N3ldRVhjNtoMtVXhI5QqfGlbCT-3yjd_o.HvApMpYs97xR3QV9" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 1">
+                        <h3>Differential Calculus - 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/9DV5WypkloXQtBG5om3DrH7nwkDGsLcEFV1ENwZbddyRLxy_xhuyCeFqdL5D6AQ.wT8GsM-JilB-pziX" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 2">
+                        <h3>Differential Calculus - 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/clng4lgc5HW6n9ZyHFHBQBSM_JDYDhHKwh3c9DG3RNR9tHsylvUGGjXnGCKT70JO.rxoVS--2Wigp3y7l" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 3">
+                        <h3>Differential Calculus - 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/U8DBZQvDMvRBx30IyYU5vQGXfQ0q-DFNNi-pqaiR2qab-bTawkYXwBoqoJC6ihcM.TfTEQyT0AccaRM_t" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 4">
+                        <h3>Differential Calculus - 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xMjTY-dwnuQw0zHgJPkHHKPqPCKm8DrQr-9NPbTK0E0UdV-mPOFZ8Mv9u2tdEEPp.tSHPXC_mQq6kjz-X" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 5">
+                        <h3>Differential Calculus - 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1pus4ObeDv2bYhHEBuNL49EmWmtK97bPxYa7Y_Bsc5_8Levz0DvdnCKIj-e23JAf.k3jeYwHJX6UZWqQI" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 6">
+                        <h3>Differential Calculus - 6</h3>
+                        <a href="https://us06web.zoom.us/rec/share/_YGgq_oHBGBhoPL7Tfvocm2rVSRAF4yyb9agjNjA-_C6-S2PD6x1xM7VojBXiNkU.x2KNp2s2sMa-Jpby" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 7">
+                        <h3>Differential Calculus - 7</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Q2KeAV_kxTDyM9wb6oEJXZQGo6_S97zzDw5voROBW90hIjJE_AqRMMUwIgYAbP6C.1HlLNKitxHwUaLYl" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 8">
+                        <h3>Differential Calculus - 8</h3>
+                        <a href="https://us06web.zoom.us/rec/share/J6sZx3_i-MBIu66a9rMMhEw8Af-NgVTmBwjUKXrvBkkPWmEUIe9YddU7aJT7uaBe.MhvAKlKf-WMXWWOW" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 9">
+                        <h3>Differential Calculus - 9</h3>
+                        <a href="https://us06web.zoom.us/rec/share/kxzkYMkVrD-B0ijm2tXo2FmbGohNg4zsYc6dbHkmta9FARcSnraPPsunXvThas6M.p2yG1I742_Ml5W2Z" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 10">
+                        <h3>Differential Calculus - 10</h3>
+                        <a href="https://us06web.zoom.us/rec/share/nsCnTGBjyQkUg6oYkcPxu2vsxcwPwJvuu8hpqEGVwhFuZaBXMlyLMM4o6Nw09--P.XMPRmKOH1EEAK4S9" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Calculus - 11">
+                        <h3>Differential Calculus - 11</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WfirjWz0VZ9qQO9qibmBkwPd3si6smlU67DRNaQUpuouygIb7KDNmukNeq5FEiT-.XHTDv3Xsp8p8SbF-" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Integral Calculus - 1">
+                        <h3>Integral Calculus - 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/9ezDc9jykToy8CTkYyua0iy5sIZXPHQ9I2miHzhVJVSaTqzmSY0XKsg6PGUwO6XE.w21XKFkC0rjmUneO" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Integral Calculus - 2">
+                        <h3>Integral Calculus - 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xeoRRjG2faYz4TGpQm-Y2IUtq_wlOrb_nzZEm6Gjp74tVR3QiTtgSL-KtwNqQTmR.wP-CNPLHckwaoqZw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Integral Calculus - 3">
+                        <h3>Integral Calculus - 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/BWJXnLYRgTFgZLCOIPHidBiW2ikjJID-bG_H9T3P4OGbxA-C2zZQlain2VR6PMEE.hkgp-Bk5Yu34MkSN" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Integral Calculus - 4">
+                        <h3>Integral Calculus - 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NC1S3m63PI7AcPenM7O5hMvqqZ0PiVEDyI6jEey4c1UI77QFvfXqJ99MV5cQ-VxY.HM2IpzRPaqDH5Hw7" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Integral Calculus - 5">
+                        <h3>Integral Calculus - 5</h3>
+                        <a href="https://us06web.zoom.us/rec/share/hMXeJCN0VnNej5NcHcT4ldayY2FvMeMD2vArDn8jPi2qTkogmgQgG6zVIKUOaqzV.V5Z1uEpbaxsh82rK" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Area bounded by curves">
+                        <h3>Area bounded by curves</h3>
+                        <a href="https://us06web.zoom.us/rec/share/sS-J29neAqnO_vTG13Cs7t9wCdNuoo_Azaz8OMLJCmwvXCK3CB9FtjF5BhgcmrE.cwzZYMoUtquwyJ7R" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Equation - 1">
+                        <h3>Differential Equation - 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/iwpCtMMtIeceJ_scCbBW4E57IDctyYjeYetWsC7KnKoCiO_9EiwpdfhUhlMzRlcn.lpPV1nkt1Xs9tatS" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Equation - 2">
+                        <h3>Differential Equation - 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/MiG2WEWZRWiWDbjH7bbmIwNV2A0TDjhyg21s438hMj-T98U4iYORTIK6zvGDAmMy.Gn99UCToJXtqXvXo" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Differential Equation - 3">
+                        <h3>Differential Equation - 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/dh3LpikfIdwyfLle94vyfs5D-COxs1aI4hulGuBwJeXl1O_iQgPWeVTRtoGU-O99.coZZ1AVVhkUYMpvh" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- English Grammar Section -->
+            <section class="course-section" data-subject="English Grammar">
+                <h2>English Grammar</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Homonyms basics + MCQ">
+                        <h3>Homonyms basics + MCQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/DRygoIi9MuJe3kpjjenJDU0J8BdvgsE7B3MoHI4fOT59G2EuXORlHmklrDE1zPfX.x6idDsDX8yhDmVCV" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Parts of speech ka intro">
+                        <h3>Parts of speech ka intro</h3>
+                        <a href="https://us06web.zoom.us/rec/share/w8tudUjsUvZScHCbxNJESuTniyP1fqPBz9MUE1q_epMcNQkE9_Huu-0qSN5fpauT.QUGLJetuwTz7eU7n" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="POS final + Practise MCQs">
+                        <h3>POS final + Practise MCQs</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WRT1tnI2c5683LfmA9OYFR10T6WHA2FxQbOlE-ETjvveQKAnNL3935g6ZEiIuZFp.5i0rY60X4GahAXqB" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="New pattern POS + PYQs">
+                        <h3>New pattern POS + PYQs</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FIj8AYW77O6o_f7UQh-ZY3Mo8cLFZlbvhrLbTj237S_5l5n7b8Xw6-fCwKnpBHlW.WdVZ_wGW5zBnDV0K?startTime=1746535937000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="New pattern Similar Sounding words">
+                        <h3>New pattern Similar Sounding words</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FIj8AYW77O6o_f7UQh-ZY3Mo8cLFZlbvhrLbTj237S_5l5n7b8Xw6-fCwKnpBHlW.WdVZ_wGW5zBnDV0K?startTime=1746539745000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Question tag Class 1">
+                        <h3>Question tag Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/QWnBlRJviRG4_8hgv4mwoJv3xJe-UQzFHBV-uGiMMSyzUaPIRLvP2UE-8qw6U7z6.qd7hUaqaR5CpuTmj?startTime=1747054264000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Question tag - Final">
+                        <h3>Question tag - Final</h3>
+                        <a href="https://us06web.zoom.us/rec/share/iPMxOprrg1Cwj9V_CGSWPQfaXMKLrlmeHzsf8i03b1dbR4Jd-n_JiXxqWq5Zk3Sk.RrEDriNcq7DNdfL_?startTime=1747140296000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Verb 1">
+                        <h3>Verb 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/GI6HR-c1TJd9VzM7HwDFg8V74AUykHIqIWxXyiL6WvNIi6hSB1e5t6rQPG1eXANb.rdA4GJ0xtyTEZjF3?startTime=1747400322000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Verb 2">
+                        <h3>Verb 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/GI6HR-c1TJd9VzM7HwDFg8V74AUykHIqIWxXyiL6WvNIi6hSB1e5t6rQPG1eXANb.rdA4GJ0xtyTEZjF3?startTime=1747404968000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Verb 3">
+                        <h3>Verb 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/RxskU7ZEDemAMyV7CDM1eJpDHOU84bzgFePTj0dkAUqzOt383WuHDKXjINvNZvsO.eHfo7F5a96PlMm67?startTime=1747659018000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Verb 4 (modals)">
+                        <h3>Verb 4 (modals)</h3>
+                        <a href="https://us06web.zoom.us/rec/share/RxskU7ZEDemAMyV7CDM1eJpDHOU84bzgFePTj0dkAUqzOt383WuHDKXjINvNZvsO.eHfo7F5a96PlMm67?startTime=1747661305000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Gerund + Participle">
+                        <h3>Gerund + Participle</h3>
+                        <a href="https://us06web.zoom.us/rec/share/SnW0d1ORZJBgp9edXZIHqxipov03zVOKOcUQ02mQf3amI3NgWpMx_N_ZvGQxBDuV.oFZhKvgh6kRczj1a?startTime=1747744717000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Infinitive">
+                        <h3>Infinitive</h3>
+                        <a href="https://us06web.zoom.us/rec/share/SnW0d1ORZJBgp9edXZIHqxipov03zVOKOcUQ02mQf3amI3NgWpMx_N_ZvGQxBDuV.oFZhKvgh6kRczj1a?startTime=1747748479000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vocabulary Class 1">
+                        <h3>Vocabulary Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/zEOnuHHzDC6jgQ1UlVJIMYcqAmmX4TUCWIfU6BGyRgSbp6mbq8hBuanDf6goHsE.MHK1CJVuorjWSUr0" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Conjunction basics">
+                        <h3>Conjunction basics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/gTGPeBuAcEpdM5ohYsmSLCwK4ZaTQP3v3hZMrUVX0l-HvNoGuorhuAFUkdSC7Khb.sPOBroQIBRxeVDSb" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Conjunction Khatm">
+                        <h3>Conjunction Khatm</h3>
+                        <a href="https://us06web.zoom.us/rec/share/e4gO31dZx2JOoM88P34ukG6M6cL4FLxl3iE1Rfugz7_kwDw5M4s6zwC0pbWejdIB.G8Cp1OWAlqoPFJDl" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Preposition Class 1">
+                        <h3>Preposition Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tZ2AWGRXrQwjxq2Ohr0XlntAjdtiifZl1-PdFOcDcDJdKHcPZJ5__XYV3HwVNMSw.xbAzhIC3N6IxXACg?startTime=1752151436000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Preposition Class 2">
+                        <h3>Preposition Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tZ2AWGRXrQwjxq2Ohr0XlntAjdtiifZl1-PdFOcDcDJdKHcPZJ5__XYV3HwVNMSw.xbAzhIC3N6IxXACg?startTime=1752155282000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Preposition Class 3">
+                        <h3>Preposition Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/fk_K_gGpqPISrBDxMPEN-LpH5mUZG3guaW1pjlh5VM_qjSgIl7jjnoh7kF5Nd8-s.-i13FNKPEfyHGXg0" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Fixed preposition + Phrasal verb">
+                        <h3>Fixed preposition + Phrasal verb</h3>
+                        <a href="https://us06web.zoom.us/rec/share/cvxKAsn0aP-xniJ2OlOPNo4yhTEynJrfjPDFhJbd1Nu4s12orV30WVed8nHEcDtY.twNQHKvr31mWgvoo" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Article Class 1">
+                        <h3>Article Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/2BW5Kh5Hp96jlwf4EWg9MFtg4-7zoAxA8qQsQxW1Ds-OUqr_Fy0fe2vgvliQWXo.oJbHvIP9vJtnB8JN?startTime=1753278544000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Article Class 2">
+                        <h3>Article Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/amfbLHPv8CopmkBSs45pnFaHqCBGNzp__V-5YGgrNDbvbAUhMB8evj20TokLIYN1.coavGzQjhcSB3XIN" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Physical Geography Section -->
+            <section class="course-section" data-subject="Physical Geography">
+                <h2>Physical Geography</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Insolation + albedo + isotherm">
+                        <h3>Insolation + albedo + isotherm</h3>
+                        <a href="https://us06web.zoom.us/rec/share/em_Q8BZuq5j7n34YtmkOnyzuFyvvVKagZC-6hc0fYPABCBl4o-pbZcDb3CkGA4mG.rMbebtNWeXeSc4az?startTime=1746448901000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Pressure System + Wind">
+                        <h3>Pressure System + Wind</h3>
+                        <a href="https://us06web.zoom.us/rec/share/em_Q8BZuq5j7n34YtmkOnyzuFyvvVKagZC-6hc0fYPABCBl4o-pbZcDb3CkGA4mG.rMbebtNWeXeSc4az?startTime=1746452495000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Geographic wind + Inversion + Fog">
+                        <h3>Geographic wind + Inversion + Fog</h3>
+                        <a href="https://us06web.zoom.us/rec/share/CxQrHEbYJwAS938hc_nRSBryQTKwM0ODzcMMobBZnWAq-fzQWL5Zw9vpbiDy0e7O.WxCDEV-CqADA-YAX?startTime=1746708593000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Clouds + Cyclone">
+                        <h3>Clouds + Cyclone</h3>
+                        <a href="https://us06web.zoom.us/rec/share/CxQrHEbYJwAS938hc_nRSBryQTKwM0ODzcMMobBZnWAq-fzQWL5Zw9vpbiDy0e7O.WxCDEV-CqADA-YAX?startTime=1746713170000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Fronts + Precipitation">
+                        <h3>Fronts + Precipitation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IlMsc_KYq7Ia5IVdSpV88ZumclLCGKH1Mk_LWI1VgadieRhh4f5zQJ2JEKV-mNDQ.aRYal5_s3hbKQQHg?startTime=1746793882000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Oceanography Basics + Ocean Current">
+                        <h3>Oceanography Basics + Ocean Current</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IlMsc_KYq7Ia5IVdSpV88ZumclLCGKH1Mk_LWI1VgadieRhh4f5zQJ2JEKV-mNDQ.aRYal5_s3hbKQQHg?startTime=1746798148000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Tides + Corals">
+                        <h3>Tides + Corals</h3>
+                        <a href="https://us06web.zoom.us/rec/share/U3jRrXU7kB5c7xmfZzt78ymQu_yZMAGzIpm13wIMySDKQ1oTAVZwqbtnxnxr6RKR.l8OCmvglBYjLV501?startTime=1747227065000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Rocks ji">
+                        <h3>Rocks ji</h3>
+                        <a href="https://us06web.zoom.us/rec/share/U3jRrXU7kB5c7xmfZzt78ymQu_yZMAGzIpm13wIMySDKQ1oTAVZwqbtnxnxr6RKR.l8OCmvglBYjLV501?startTime=1747231644000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Climatology revision through 80 MCQs">
+                        <h3>Climatology revision through 80 MCQs</h3>
+                        <a href="https://us06web.zoom.us/rec/share/OX8l7JQvJjgUgySo2-1l_LuA8esZ0ivCxzX7hGAB6CIoWqzIsZU3J_CDTCPymFSl.QSrlDYJ5mxpxOzac" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Interior of earth + plate tectonics">
+                        <h3>Interior of earth + plate tectonics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1RoJs0254Jo_SH6U99S0KqYoesEWgywAOKzH41--3dt9fat8DSZvzJUek0y7iuUO.SCUZRoMPkEUfFP9l?startTime=1747917515000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Earthquake + Volcano">
+                        <h3>Earthquake + Volcano</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1RoJs0254Jo_SH6U99S0KqYoesEWgywAOKzH41--3dt9fat8DSZvzJUek0y7iuUO.SCUZRoMPkEUfFP9l?startTime=1747921615000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Geomorphic Process">
+                        <h3>Geomorphic Process</h3>
+                        <a href="https://us06web.zoom.us/rec/share/3JxJ3gJxw0Pr8SAA6atHhM2x20I9hj0KHpVWaK6XiY6bkPvBMaQWnPOOjFeSZzMS.2q_-Bi8NSVLPK3rK?startTime=1748262682000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Universe + Solar System">
+                        <h3>Universe + Solar System</h3>
+                        <a href="https://us06web.zoom.us/rec/share/3JxJ3gJxw0Pr8SAA6atHhM2x20I9hj0KHpVWaK6XiY6bkPvBMaQWnPOOjFeSZzMS.2q_-Bi8NSVLPK3rK?startTime=1748268372000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Landform by running water">
+                        <h3>Landform by running water</h3>
+                        <a href="https://us06web.zoom.us/rec/share/McN8M1AGRVq4GAKYvMzaMYdDJFn88n93h4jtdkNlcadwvCYpIWEzHIQjR0FlC-YW.9GLdHguavf9K23Xb?startTime=1748347146000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Landform by ground water">
+                        <h3>Landform by ground water</h3>
+                        <a href="https://us06web.zoom.us/rec/share/McN8M1AGRVq4GAKYvMzaMYdDJFn88n93h4jtdkNlcadwvCYpIWEzHIQjR0FlC-YW.9GLdHguavf9K23Xb?startTime=1748353909000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Landform by glaciers">
+                        <h3>Landform by glaciers</h3>
+                        <a href="https://us06web.zoom.us/rec/share/McN8M1AGRVq4GAKYvMzaMYdDJFn88n93h4jtdkNlcadwvCYpIWEzHIQjR0FlC-YW.9GLdHguavf9K23Xb?startTime=1748354895000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Landforms by sea waves and winds">
+                        <h3>Landforms by sea waves and winds</h3>
+                        <a href="https://us06web.zoom.us/rec/share/lwPgyr46Whx8dtRgP6rKOsObK25ibUUE8rNOjYtrzAb8NnWHNtsafqYIhsdbtVFM.UDpS1gJL9loBFFZf" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- One Pager Section -->
+            <section class="course-section" data-subject="One Pager">
+                <h2>One Pager</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Important Plans">
+                        <h3>Important Plans</h3>
+                        <a href="https://us06web.zoom.us/rec/share/em_Q8BZuq5j7n34YtmkOnyzuFyvvVKagZC-6hc0fYPABCBl4o-pbZcDb3CkGA4mG.rMbebtNWeXeSc4az?startTime=1746448104000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="COP meetings">
+                        <h3>COP meetings</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FIj8AYW77O6o_f7UQh-ZY3Mo8cLFZlbvhrLbTj237S_5l5n7b8Xw6-fCwKnpBHlW.WdVZ_wGW5zBnDV0K?startTime=1746534686000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Malware">
+                        <h3>Malware</h3>
+                        <a href="https://us06web.zoom.us/rec/share/CxQrHEbYJwAS938hc_nRSBryQTKwM0ODzcMMobBZnWAq-fzQWL5Zw9vpbiDy0e7O.WxCDEV-CqADA-YAX?startTime=1746707482000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Why we get ill">
+                        <h3>Why we get ill</h3>
+                        <a href="https://us06web.zoom.us/rec/share/QWnBlRJviRG4_8hgv4mwoJv3xJe-UQzFHBV-uGiMMSyzUaPIRLvP2UE-8qw6U7z6.qd7hUaqaR5CpuTmj?startTime=1747053206000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Why clothes look dark in water">
+                        <h3>Why clothes look dark in water</h3>
+                        <a href="https://us06web.zoom.us/rec/share/iPMxOprrg1Cwj9V_CGSWPQfaXMKLrlmeHzsf8i03b1dbR4Jd-n_JiXxqWq5Zk3Sk.RrEDriNcq7DNdfL_?startTime=1747139666000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="IMF">
+                        <h3>IMF</h3>
+                        <a href="https://us06web.zoom.us/rec/share/U3jRrXU7kB5c7xmfZzt78ymQu_yZMAGzIpm13wIMySDKQ1oTAVZwqbtnxnxr6RKR.l8OCmvglBYjLV501?startTime=1747225898000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="UNSC">
+                        <h3>UNSC</h3>
+                        <a href="https://us06web.zoom.us/rec/share/GI6HR-c1TJd9VzM7HwDFg8V74AUykHIqIWxXyiL6WvNIi6hSB1e5t6rQPG1eXANb.rdA4GJ0xtyTEZjF3?startTime=1747398734000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Contempt of court">
+                        <h3>Contempt of court</h3>
+                        <a href="https://us06web.zoom.us/rec/share/RxskU7ZEDemAMyV7CDM1eJpDHOU84bzgFePTj0dkAUqzOt383WuHDKXjINvNZvsO.eHfo7F5a96PlMm67?startTime=1747657900000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Indian meteorological department">
+                        <h3>Indian meteorological department</h3>
+                        <a href="https://us06web.zoom.us/rec/share/cc3IeGeagy842jph6rP00G21TeWX2-KmzwjyjGsCRfw0BhImNZGWQbS7J3rD_PY.SEPic47QSa87rG6a?startTime=1748608350000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Important institutions">
+                        <h3>Important institutions</h3>
+                        <a href="https://us06web.zoom.us/rec/share/6woeDlw7aqgNFaF3Hih94JhR-Hmq1ejX57rGfNrEBTiOqsklGTtkPcMIzUaWGqNm.B7LGv4Zrc9abZRA-?startTime=1748953871000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Electric Vehicles">
+                        <h3>Electric Vehicles</h3>
+                        <a href="https://us06web.zoom.us/rec/share/d0Fjd9DWFXrN9mNT6y9OQ7nJeTSVsLM-vhYAjcfmAwLIAbSI2n8YhVCmhtilK1hL.0zmZSGJ4Io8qRJ1-?startTime=1749040691000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Plastic">
+                        <h3>Plastic</h3>
+                        <a href="https://us06web.zoom.us/rec/share/-3zPOhOjsvHybxlFSyVePjohY-pjdaX2S_IsJVAVT7bN3t96Jj60SpEqPzPLp2pr.U2BcWgcsuEMmG2Gr?startTime=1749213508000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Protein Deficiency">
+                        <h3>Protein Deficiency</h3>
+                        <a href="https://us06web.zoom.us/rec/share/M33kG1FGxxsTtze2vW8RDYdWw_9eo7O3cWrbMA8CJe1ijzgS0I-yWOo55GH8GZs.DEVsyO6V5U6WcGrW?startTime=1749472375000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Thermal Equator">
+                        <h3>Thermal Equator</h3>
+                        <a href="https://us06web.zoom.us/rec/share/HzPBWzQIL4eHz1uCsDCYzY4Un6zvapeB8k1VGcGlxf7Vpsdur5L6vLyowpy_j3v2.YVSCQatWQrwwWhjb?startTime=1749562076000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="WTO">
+                        <h3>WTO</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FtAk-cEegFEIoNr54eGjkB-mOXUN3Q4N_bmwB_ZHJV6r_vXJ0ZoliwpNTdxnVN9p.58xXOIThbYFH4tQ3?startTime=1749645264000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Climate Change index">
+                        <h3>Climate Change index</h3>
+                        <a href="https://us06web.zoom.us/rec/share/des-c8Uh4BIDChdAwGXJfmIo-wdmu7HKQGAXDgx5WJ2mGG2oDFqsYkkOmaA4MUVn.sIPvoNaq_eRYz-hn?startTime=1749819665000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="MGNREGA">
+                        <h3>MGNREGA</h3>
+                        <a href="https://us06web.zoom.us/rec/share/rI0mqjZsettP9bVkGLGIrZvdR0Gnc0EHcg-4nO5DKPSz3EcHOGU3x5oTvoQLmsvo.NWHxKPWfwzDtZ-iI?startTime=1751286757000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Tobacco epidemic report">
+                        <h3>Tobacco epidemic report</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IuHHENlBTCKcVPcIVoygV7qtGJ88GAzzolaiWVl8aaPG6gYDVpzJOAjOxz1QgDui.r3paYLSMlAIhYSXD?startTime=1751632713000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="GSI">
+                        <h3>GSI</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Ux9CTZTct3DoRPlTc4b5TMOsbmgKW_lkIDvB2D3AnsoJ1aoq_qiUL219cKm-saSI.phDeZBVqVh7-E8aR?startTime=1752064223000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="TFR">
+                        <h3>TFR</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tZ2AWGRXrQwjxq2Ohr0XlntAjdtiifZl1-PdFOcDcDJdKHcPZJ5__XYV3HwVNMSw.xbAzhIC3N6IxXACg?startTime=1752150911000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="PSL">
+                        <h3>PSL</h3>
+                        <a href="https://us06web.zoom.us/rec/share/dbDP8ALo1pTcUVuWIiZCrkDAyk95lbZ3BKy-POrgyhNhDQ1YoLwPe1uaVrDKlAaI.E8SnBgzc9m06yo6R?startTime=1752497973000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Hydrogen powered trains">
+                        <h3>Hydrogen powered trains</h3>
+                        <a href="https://us06web.zoom.us/rec/share/sP7Hyt7BCw8vOlOtnPrhluZ4ysAcnTAyPcxdI49C0mjWTzlwZof82Ex8DD6iVyNz.oHNjxpTGCgmOl19m?startTime=1752634754000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Attorney general ji">
+                        <h3>Attorney general ji</h3>
+                        <a href="https://us06web.zoom.us/rec/share/F3k6kiVaR9tYbBmCTaxOWHF6NcokpJowHxnVjYywzprPqUd3FdKHgNCUSDLSyBkQ.X4kTAq7o82QFW6io?startTime=1752669109000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="National Road Safety Board">
+                        <h3>National Road Safety Board</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tk3ZKcru7yrFbyEvGvgOYYbPe1oogko-woJj0EidBAr-6m2DJUxduaGI1cenaIgU.sED4IciNyXcmtNP_?startTime=1752721275000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Committees of parliament">
+                        <h3>Committees of parliament</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NI9ky5ZKgYf1zkZAHWdFHUAoRFDFPtDDqPdC_MjY3CKVVizmfwN2pcL0MMzJ054.tc8sHpElzmW1qAvA?startTime=1752755966000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Election Commission">
+                        <h3>Election Commission</h3>
+                        <a href="https://us06web.zoom.us/rec/share/j2Uv4dnFDPOdLus-uEcZQOId9mJZGjX7b5d-Ma-mYcdrmUnqvf2V9cmQDp4LmdgZ.hF-X8cWNrFyvSwjv?startTime=1752841939000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Secondary Sections">
+                        <h3>Secondary Sections</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ZGlFniOJMZ1AkNgwfXCGfrEmPxVhwS0DpVCdRZmAzWu1qrTXa8q2jKW246ois6Yf.j20DW-p80OTk1G29?startTime=1753066709000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CVC">
+                        <h3>CVC</h3>
+                        <a href="https://us06web.zoom.us/rec/share/zlMscfuih2CbGF0uYUjco-gn8RMHpNqwCeqKC1VJ9yz8rFK12K3PFrn_v0-0P2AZ.t4YnLbif7cveux3B?startTime=1753102920000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CBI">
+                        <h3>CBI</h3>
+                        <a href="https://us06web.zoom.us/rec/share/8dyrn0sWr-YlbzlQ-ezxJVHntzYRVChPne-TTyU_aPv4QdWwRwXLZ0wDiSSLVutW.xn_VqOhYKxKCzNTV?startTime=1753360191000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Injectable Hydrogel">
+                        <h3>Injectable Hydrogel</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NzbXctV0zZrsjcx-7ShR5AANVMpvJwJaghzyEkH978gRKAxQ210K0CzzPnG9GdQk.h9zegoW7ViT1lBG9?startTime=1753671566000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="UPSC + SPSC">
+                        <h3>UPSC + SPSC</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FAJchncEoVEap72kTEj8eMY9zxta7mXBbILc_FaH1KFYmBc78YzWeM19X3qo5e4k.Sj_0C_fB7fcENRKD?startTime=1753706196000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Agrivoltic farming">
+                        <h3>Agrivoltic farming</h3>
+                        <a href="https://us06web.zoom.us/rec/share/qSCicLw0m_B4b2umiQmP3iT35dQhZB86cJemjHqIEO9n5Cz-UCptziKUmXa6dmfe.D6phBv3gYg4dwcYu?startTime=1753792441000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Right to be forgotten">
+                        <h3>Right to be forgotten</h3>
+                        <a href="https://us06web.zoom.us/rec/share/_NKCUJ2Jt4mXkviGHmDCWJwZwQlySjGtJbsPo8kkkqgnH7BpAw2D6pb5VkI3wYSo.jGlLDTVVS5n-Ec_Y?startTime=1753965522000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="International year of cooperatives">
+                        <h3>International year of cooperatives</h3>
+                        <a href="https://us06web.zoom.us/rec/share/q-UAxtHSpfxIXdxnHjyYUdNgf7MVRAblNvCrRKfej5CYikDtgjXAy1kQ5W0lT9GM.hpHgmjSNmuzWTUiE?startTime=1754276388000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="National Turmeric Board">
+                        <h3>National Turmeric Board</h3>
+                        <a href="https://us06web.zoom.us/rec/share/PXV0ICECWXayiZ2crRY8JdBHClAp4ZTselhllh11XvVjV-piH_G5JPsVLGmXoCKj.wp_4l1auUqAkV69r?startTime=1754363138000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="8th Pay Commission">
+                        <h3>8th Pay Commission</h3>
+                        <a href="https://us06web.zoom.us/rec/share/zsiNd2ELK_rWpxBR_YkghNlQQHceIHQXpj_0C-YToNtqtAvMIx6pnkqzakMt8-dR.L3mtdW2oVS_Qyt1h?startTime=1754483688000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Maratha Military Landscape">
+                        <h3>Maratha Military Landscape</h3>
+                        <a href="https://us06web.zoom.us/rec/share/_Gn7Hz86EqKXmFIIIjhj4bgo5yT5VZFOK8YVMHDJp7danvFamuBGWykTgrydrURS.p2DfM_EJc-7Zfv3N?startTime=1754881137000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Zonal Councils">
+                        <h3>Zonal Councils</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xM1Tf89zNSjxAttEzm5u2dRntu6xZQyXEbR7jv5DQIpKhHApfRhC1OfE-b-1YuOn.AprjTpw-aP5zotnD?startTime=1756735369000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Indian Geography Section -->
+            <section class="course-section" data-subject="Indian Geography">
+                <h2>Indian Geography</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="India - Location & area">
+                        <h3>India - Location & area</h3>
+                        <a href="https://us06web.zoom.us/rec/share/cc3IeGeagy842jph6rP00G21TeWX2-KmzwjyjGsCRfw0BhImNZGWQbS7J3rD_PY.SEPic47QSa87rG6a?startTime=1748609357000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="The Himalayas">
+                        <h3>The Himalayas</h3>
+                        <a href="https://us06web.zoom.us/rec/share/cc3IeGeagy842jph6rP00G21TeWX2-KmzwjyjGsCRfw0BhImNZGWQbS7J3rD_PY.SEPic47QSa87rG6a?startTime=1748612063000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Peninsular India">
+                        <h3>Peninsular India</h3>
+                        <a href="https://us06web.zoom.us/rec/share/6woeDlw7aqgNFaF3Hih94JhR-Hmq1ejX57rGfNrEBTiOqsklGTtkPcMIzUaWGqNm.B7LGv4Zrc9abZRA-?startTime=1748954615000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Coast + Islands">
+                        <h3>Coast + Islands</h3>
+                        <a href="https://us06web.zoom.us/rec/share/x9vlPOBWTGzq8xkPbtlSRMfks7jWMkhl6w_Sh6Ia1u-zlW9BOiDCbdn_1P-7a3Dx.BICJ4cj3Pbf7YnjS?startTime=1748959036000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Indus + Ganga river system">
+                        <h3>Indus + Ganga river system</h3>
+                        <a href="https://us06web.zoom.us/rec/share/d0Fjd9DWFXrN9mNT6y9OQ7nJeTSVsLM-vhYAjcfmAwLIAbSI2n8YhVCmhtilK1hL.0zmZSGJ4Io8qRJ1-?startTime=1749041417000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Brahmaputra + Waterfalls + peninsular rivers">
+                        <h3>Brahmaputra + Waterfalls + peninsular rivers</h3>
+                        <a href="https://us06web.zoom.us/rec/share/d0Fjd9DWFXrN9mNT6y9OQ7nJeTSVsLM-vhYAjcfmAwLIAbSI2n8YhVCmhtilK1hL.0zmZSGJ4Io8qRJ1-?startTime=1749046500000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Peninsular rivers + lakes">
+                        <h3>Peninsular rivers + lakes</h3>
+                        <a href="https://us06web.zoom.us/rec/share/GRzWlJ33TPRPJsVg5DvEJdZP1e6JPAdX_kFdOUBGnMRitkBiiXvEA2V8gO4SlFyr.gjC5_hU0p00UUVMQ?startTime=1749127218000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Soil">
+                        <h3>Soil</h3>
+                        <a href="https://us06web.zoom.us/rec/share/GRzWlJ33TPRPJsVg5DvEJdZP1e6JPAdX_kFdOUBGnMRitkBiiXvEA2V8gO4SlFyr.gjC5_hU0p00UUVMQ?startTime=1749130060000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vegetation + Forest Report">
+                        <h3>Vegetation + Forest Report</h3>
+                        <a href="https://us06web.zoom.us/rec/share/GRzWlJ33TPRPJsVg5DvEJdZP1e6JPAdX_kFdOUBGnMRitkBiiXvEA2V8gO4SlFyr.gjC5_hU0p00UUVMQ?startTime=1749132848000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Railways + roadways + waterways + pipeline">
+                        <h3>Railways + roadways + waterways + pipeline</h3>
+                        <a href="https://us06web.zoom.us/rec/share/-fmnnFl9-86-FUy3NXJRtSKrhqaZTfzldjaEsn3q8j81nibNBLy8aBRv89hDYvVd.9ns_RA7TwrjWv8lW?startTime=1749214348000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Indian monsoon + El nino + Jets">
+                        <h3>Indian monsoon + El nino + Jets</h3>
+                        <a href="https://us06web.zoom.us/rec/share/M33kG1FGxxsTtze2vW8RDYdWw_9eo7O3cWrbMA8CJe1ijzgS0I-yWOo55GH8GZs.DEVsyO6V5U6WcGrW?startTime=1749473266000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Koeppan ji ki coding">
+                        <h3>Koeppan ji ki coding</h3>
+                        <a href="https://us06web.zoom.us/rec/share/M33kG1FGxxsTtze2vW8RDYdWw_9eo7O3cWrbMA8CJe1ijzgS0I-yWOo55GH8GZs.DEVsyO6V5U6WcGrW?startTime=1749478756000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BIOLOGY Section -->
+            <section class="course-section" data-subject="BIOLOGY">
+                <h2>BIOLOGY</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Human health & diseases">
+                        <h3>Human health & diseases</h3>
+                        <a href="https://us06web.zoom.us/rec/share/HzPBWzQIL4eHz1uCsDCYzY4Un6zvapeB8k1VGcGlxf7Vpsdur5L6vLyowpy_j3v2.YVSCQatWQrwwWhjb?startTime=1749562954000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Cell class 1">
+                        <h3>Cell class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FtAk-cEegFEIoNr54eGjkB-mOXUN3Q4N_bmwB_ZHJV6r_vXJ0ZoliwpNTdxnVN9p.58xXOIThbYFH4tQ3?startTime=1749645893000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Cell class 2">
+                        <h3>Cell class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FtAk-cEegFEIoNr54eGjkB-mOXUN3Q4N_bmwB_ZHJV6r_vXJ0ZoliwpNTdxnVN9p.58xXOIThbYFH4tQ3?startTime=1749650174000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Chromosome + Cell PYQ">
+                        <h3>Chromosome + Cell PYQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/des-c8Uh4BIDChdAwGXJfmIo-wdmu7HKQGAXDgx5WJ2mGG2oDFqsYkkOmaA4MUVn.sIPvoNaq_eRYz-hn?startTime=1749820188000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Plant and animal tissue">
+                        <h3>Plant and animal tissue</h3>
+                        <a href="https://us06web.zoom.us/rec/share/des-c8Uh4BIDChdAwGXJfmIo-wdmu7HKQGAXDgx5WJ2mGG2oDFqsYkkOmaA4MUVn.sIPvoNaq_eRYz-hn?startTime=1749823070000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Excretion + Digestion">
+                        <h3>Excretion + Digestion</h3>
+                        <a href="https://us06web.zoom.us/rec/share/JVi0PRznDeZTXSX1emrJuAVOwJIwDuPaY3vg8QfQqKZqNCmgPpsdng16vRMqGs8Q.e7gVSBekq9iX4uBE?startTime=1749969230000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Transpiration + Respiration">
+                        <h3>Transpiration + Respiration</h3>
+                        <a href="https://us06web.zoom.us/rec/share/JVi0PRznDeZTXSX1emrJuAVOwJIwDuPaY3vg8QfQqKZqNCmgPpsdng16vRMqGs8Q.e7gVSBekq9iX4uBE?startTime=1749974777000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Plant Hormone + Animal Hormone">
+                        <h3>Plant Hormone + Animal Hormone</h3>
+                        <a href="https://us06web.zoom.us/rec/share/DATo3QwPNqqIvyJsLSq6naPxChOKk-E-aYR8WEuGXybTz4Bpnvfchp1YJYKsvNFL.mak42MljBdMIDYEr?startTime=1750082586000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Flowers + Stem + Leaves - High level">
+                        <h3>Flowers + Stem + Leaves - High level</h3>
+                        <a href="https://us06web.zoom.us/rec/share/w23HhReTZmA1qx6d6PRwxqUshOi2YoeOJBlFAbe7biU259BvF23x08zz9JIQZgJK.h3qjS0_E-9Ftn-4w?startTime=1750250314000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Reproduction">
+                        <h3>Reproduction</h3>
+                        <a href="https://us06web.zoom.us/rec/share/w23HhReTZmA1qx6d6PRwxqUshOi2YoeOJBlFAbe7biU259BvF23x08zz9JIQZgJK.h3qjS0_E-9Ftn-4w?startTime=1750254708000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Monera + Protista + Fungi + Plantae">
+                        <h3>Monera + Protista + Fungi + Plantae</h3>
+                        <a href="https://us06web.zoom.us/rec/share/afkK-SR-FAJ-n9tGAimZ0FZMnDrddfqgGn_2rSDT1tkDqwnuuLdjeClhjiXFKuaK.9jhuAzHaHwjA56eD?startTime=1751287705000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Animalia_Kingdom">
+                        <h3>Animalia_Kingdom</h3>
+                        <a href="https://us06web.zoom.us/rec/share/afkK-SR-FAJ-n9tGAimZ0FZMnDrddfqgGn_2rSDT1tkDqwnuuLdjeClhjiXFKuaK.9jhuAzHaHwjA56eD?startTime=1751291933000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Nervous System + Miscellaneous">
+                        <h3>Nervous System + Miscellaneous</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IuHHENlBTCKcVPcIVoygV7qtGJ88GAzzolaiWVl8aaPG6gYDVpzJOAjOxz1QgDui.r3paYLSMlAIhYSXD?startTime=1751633579000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANCIENT HISTORY Section -->
+            <section class="course-section" data-subject="ANCIENT HISTORY">
+                <h2>ANCIENT HISTORY</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Pre-history Class 1">
+                        <h3>Pre-history Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/i3DiVCK8ai3hjT48j0pRFbgreblzSW6SKH94Bd6LqLpEJ816kwC9Va6z9u6BX1EF.jyryX5hDGkjv0vFE?startTime=1749782699000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Pre-history Class 2">
+                        <h3>Pre-history Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WlF7y69u1AmcpDm1LEld_cCCMDQsSxyAME-MyhJtY1CGOlPsBnhci0cDrfTuvjzb.hu2iR6WDPmYQHCMp" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Pre-history Class 3">
+                        <h3>Pre-history Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/KnD8zLeIuV7QCRo3JLCSDliBCwEUmX6aC2SkgAYqZSE2m91Evv-0enyMwbR6Gic8.7XLwwTxag986Ro1i" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="IVC Class 1">
+                        <h3>IVC Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/EqDTTYyUDBL-dJqWZuY-RsbwGnALhjIQbeKSdpZhcA3k60YypoyTQ_yGtQF6iqJp.aCbgn1QeVf2gFYbD" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="IVC Class 2">
+                        <h3>IVC Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Ux1uGfBHxcOQaFC71jEaRCcXALOOYNn5WtHCJM58x10og_8fDSQjcLhkKHLuQtyB.KDuXqqQh94HPK16t" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vedic Age - Class 1">
+                        <h3>Vedic Age - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/n_H1EL9V9bAVqmaYYd_W1uu-HRhNydW70cICcxxnTUEOzE4czE4SvTrc9ffk062U.JFYs2rojmfjvus8L" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vedic age - Class 2">
+                        <h3>Vedic age - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/klctcPFLJ8VLtCvCqx6S3s-P0iEhHTVOdtYTeHU6uojorhqem_4VJ1fUtHXFaIMd.ei71CJ_eggAj4nyq" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Mahajanapadas & Magadh Dynasty">
+                        <h3>Mahajanapadas & Magadh Dynasty</h3>
+                        <a href="https://us06web.zoom.us/rec/share/UuP2xoGvcsdThWHMjrFsP3xWkdPIZ7YTF2Wy1EsVuAxqSwufy-vNmJZQPFY57DG6.Pm1NyYScb_efwNE7" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Magadh dynasty - Class 2">
+                        <h3>Magadh dynasty - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/mOhk4aRb0B9jgjeMLOGHzGQsraZYgy2pzq9rCnDBGaGWn-5JPeDTaAJUBbB3A9vK._DIfgIqkhCw6kLk5" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Buddhism - Class 1">
+                        <h3>Buddhism - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/96eHiFR1dsVx5k6IQrBlkXkU13bUZSJ4-_lwBoiAZyVAK-9j0DooT71IqbTZZW0C.5vfGzkB7BpAv70vj" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Buddhism - Class 2">
+                        <h3>Buddhism - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/YfyMOfKIp49PhGaXANw9ArP2fC_CypQjycUeYdhYV4ASdIDZUQHEUJTJiRHcPfTn.9GuNYUW17blj1j47" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Jainism">
+                        <h3>Jainism</h3>
+                        <a href="https://us06web.zoom.us/rec/share/VbKE4k5kdRmeH_M5TkTRFegjXaACJu4BXP7EHUnxH7sk0bG6qd8uZ4cMymZOHg_i.YfXm-vlzf8Pus7QK" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Mauryan Empire - Class 1">
+                        <h3>Mauryan Empire - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/XnqibupcioHiVNoH1ry6bMvTbyG-6Y1L9jzFnnq7bTBgmeffSC-nWFjo2xFU44tm.pk877soJNVWd-DyM" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Mauryan Empire - Class 2">
+                        <h3>Mauryan Empire - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IZIECJYQoyOsm_-Guqo-_38fo2Pgwmo_u-qnmmPCwbm0-o-c-ZjVeQfLmJbydLVC.SupqbiGH5FueYMSp?startTime=1751459302000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Mauryan Empire - Class 3">
+                        <h3>Mauryan Empire - Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/IZIECJYQoyOsm_-Guqo-_38fo2Pgwmo_u-qnmmPCwbm0-o-c-ZjVeQfLmJbydLVC.SupqbiGH5FueYMSp?startTime=1751463775000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Mauryan Empire - Class 4">
+                        <h3>Mauryan Empire - Class 4</h3>
+                        <a href="https://us06web.zoom.us/rec/share/pUZJOXrBWyNlfP-n_ZhVRGIYSI9DVFN4TiX4MEexwtsOGCFqnbT5NxTZC4wiXqwD.uh2ohM-BQtuLHwan" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Post mauryan period - 1">
+                        <h3>Post mauryan period - 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/h5kuTRTgUXWHnulIghXttNKC7te1w4ZmkuUWEPHEqMdfchiANXKZ3adxAZ9c4xbH._zOqNvPudhjXcdyk" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Post mauryan period - 2">
+                        <h3>Post mauryan period - 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Ckk7nzENIH8M29Vx-Vk2pQ1z5e7WQ-ke154Zg4N-br9WdYE1ZVX5PRslLbaaxQha.9qn1-Ct-IvKElVd2?startTime=1751977693000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="PYQ practice">
+                        <h3>PYQ practice</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Ckk7nzENIH8M29Vx-Vk2pQ1z5e7WQ-ke154Zg4N-br9WdYE1ZVX5PRslLbaaxQha.9qn1-Ct-IvKElVd2?startTime=1751981593000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Satvahan Dynasty">
+                        <h3>Satvahan Dynasty</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xS6oB0cnk2hff9P9nMhpcTPb0Cw2RCf4a1bgqfadBHPX_GW8tcogN0OGjEzEHyX2.eoN_WvZmfCRDpxko" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Sangam Age">
+                        <h3>Sangam Age</h3>
+                        <a href="https://us06web.zoom.us/rec/share/x4hPRQK3LO2yRkF9bmm7Jgace0yTCft0oGwrlurvAaZbwhinTNUzd5nXGmjMXEat.tMMsurITAg02oYCG" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Gupta dynasty">
+                        <h3>Gupta dynasty</h3>
+                        <a href="https://us06web.zoom.us/rec/share/meR1Fp6p9FDMjaKEFl0FKzldoRhZhp-Lntl_PkzUlKLH2jq3Yzr40UrXCArncV05.Fk5iEZ4uic8_H2VM" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Gupta dynasty - class 2">
+                        <h3>Gupta dynasty - class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/d2sgg-ZEpEkOMVNFpPBFZ-mZ9iJ-jO3G4yL6BAG6B1jG_2h5Amj0svFLJS-OHx9Z.XkFIC4nZ-PmhfAKO" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Post Gupta empire">
+                        <h3>Post Gupta empire</h3>
+                        <a href="https://us06web.zoom.us/rec/share/dbDP8ALo1pTcUVuWIiZCrkDAyk95lbZ3BKy-POrgyhNhDQ1YoLwPe1uaVrDKlAaI.E8SnBgzc9m06yo6R?startTime=1752499873000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="NCERT Chapter 1 Revision">
+                        <h3>NCERT Chapter 1 Revision</h3>
+                        <a href="https://us06web.zoom.us/rec/share/uJXwsZR5nnEh8htyDNQiYoRQpMOSN8MEIkAfkEgSPwwFus7rR6YymEpG3oefYNbD.RC71uJERAEtoATHH" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="NCERT Chapter 2 revision">
+                        <h3>NCERT Chapter 2 revision</h3>
+                        <a href="https://us06web.zoom.us/rec/share/sP7Hyt7BCw8vOlOtnPrhluZ4ysAcnTAyPcxdI49C0mjWTzlwZof82Ex8DD6iVyNz.oHNjxpTGCgmOl19m?startTime=1752635875000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="NCERT Chapter 3 revision">
+                        <h3>NCERT Chapter 3 revision</h3>
+                        <a href="https://us06web.zoom.us/rec/share/tk3ZKcru7yrFbyEvGvgOYYbPe1oogko-woJj0EidBAr-6m2DJUxduaGI1cenaIgU.sED4IciNyXcmtNP_?startTime=1752722677000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- English Practice Section -->
+            <section class="course-section" data-subject="English Practice">
+                <h2>English Practice</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Vocab tricks practice - Class 1">
+                        <h3>Vocab tricks practice - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/DATo3QwPNqqIvyJsLSq6naPxChOKk-E-aYR8WEuGXybTz4Bpnvfchp1YJYKsvNFL.mak42MljBdMIDYEr?startTime=1750077044000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Parts of speech (basics + QP)">
+                        <h3>Parts of speech (basics + QP)</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Bqr76Db6Ok31eHzF6_hUEl0KFOFRsGMCc-H7DWsXsyEacLbYkk1VcyddjSGJEzML.195CJZkDOv4cMtFv" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Parts of speech (basics + QP) - Class 2">
+                        <h3>Parts of speech (basics + QP) - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/UDBAHPxxBjd0MrGiKujvRNriFHjTGwXEfyp2R5uB764m7fyHwrb5F01bSBwjS4Kh.cmOMuVGmpBNdHnb8?startTime=1750768410000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vocab tricks practice - Class 2">
+                        <h3>Vocab tricks practice - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/UDBAHPxxBjd0MrGiKujvRNriFHjTGwXEfyp2R5uB764m7fyHwrb5F01bSBwjS4Kh.cmOMuVGmpBNdHnb8?startTime=1750773280000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Error based questions (CDS 2018-2024) - Class 1">
+                        <h3>Error based questions (CDS 2018-2024) - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1CDVKBOqAaXSqqu0qk5tiLdp3As9F7Ltt42SXiFgQHoAxQx8wFdTOb5H1E_7AO-k.bwIY7NasiIeG-hi6?startTime=1750854572000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vocab tricks practice - Class 3">
+                        <h3>Vocab tricks practice - Class 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1CDVKBOqAaXSqqu0qk5tiLdp3As9F7Ltt42SXiFgQHoAxQx8wFdTOb5H1E_7AO-k.bwIY7NasiIeG-hi6?startTime=1750860220000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Error based questions (CDS 2018-2024) - Class 2">
+                        <h3>Error based questions (CDS 2018-2024) - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/cnB16z-xvIIpVYFJ7wdYT_bofIx3cCxN7k9WgZoedryyLGCRoTyS7XbO0DOTZTvd.WvuAXzZoobvsxljc" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vocabulary PYQ - Class 1">
+                        <h3>Vocabulary PYQ - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ssn_EANEFIkkEROG-x8-NIBS6Kk5dtHXMxWWbAAMOMUhJnwS_NqUvft-xR_wLsGl.X6sPwTcumbo31kWU" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Root Words QP - Class 1">
+                        <h3>Root Words QP - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Xf0pInp5_b9Ta9Lq0HAR4ILV4fEe6nt7Klbtx95ei7OMc_oZkr9xvN8nB17TeWXy.xiIHi83OSnmx2Nsq" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Root Words QP - Class 2">
+                        <h3>Root Words QP - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/LX-kvFSOuzY4D_z84tYL8gVTrC0HFfObaw3G3Y7memnb1eA4gmTv20lF1lND1yHg.4IBLdNRIKIfzu05S" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="S1-S6 - Crazy tricks">
+                        <h3>S1-S6 - Crazy tricks</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ctnrIyqlY71kPpwVW2OpuCo6oM0SkQTvHiZvCuFjebynK3G5VK85FtHi44ZJ1vhO.n38FFZtH84CdB2nf?startTime=1754917290000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="S1-S6 PYQs">
+                        <h3>S1-S6 PYQs</h3>
+                        <a href="https://us06web.zoom.us/rec/share/TR_6mMbo2Bw99WLFY-PHKs_BaTtrHDa-NkFXFgZ6iuCbCUN2yqGU6WlayJKmXp9v.3XtfHnet7CsnCUI9?startTime=1755002255000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Practice Set 1">
+                        <h3>Practice Set 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/CUANefxZavibs5jV_IqThQ6cQvXMXoFOwtm6z57XepxTl0eaHO-IfJ6ODCsJHNIg.xYUdFpgHy2ehfKMA" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Practice Set 2">
+                        <h3>Practice Set 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WbAvBp_awSfkuU52iwjiqAxy9B9g1l9iaSYGnteDcLx3-eV4F9Qip5IjRaH73NuX.hAchfdiobu4-mSRf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Practice set 3">
+                        <h3>Practice set 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/aB_35rQZLK1RJCT6qYFf9nOG-Hhqmr60MELQuSfP0mKZuJe__QE0xyIAgdBMerox.HqRDQLwLDIBU7ikf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Voice (Concept + PYQ)">
+                        <h3>Voice (Concept + PYQ)</h3>
+                        <a href="https://us06web.zoom.us/rec/share/PtxWhQ7EVEVswSIEMhjdPNdQg-8jI-6fOL50y6Y3NQTOWgczXbsaL7VAqDInOHP7.F81V6qO4qbDb-q9G" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHEMISTRY Section -->
+            <section class="course-section" data-subject="CHEMISTRY">
+                <h2>CHEMISTRY</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Acid & Base">
+                        <h3>Acid & Base</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Brfz6ED1jsx-hYdHcTJyivQNdb62ndpDQ4wAn_AQaWmBf2Za3ei4-0qS4f4Lleo3.hn-n4hWQTCIEtZRq?startTime=1751891505000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Salts">
+                        <h3>Salts</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Brfz6ED1jsx-hYdHcTJyivQNdb62ndpDQ4wAn_AQaWmBf2Za3ei4-0qS4f4Lleo3.hn-n4hWQTCIEtZRq?startTime=1751896293000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Metal and non metal">
+                        <h3>Metal and non metal</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Ux9CTZTct3DoRPlTc4b5TMOsbmgKW_lkIDvB2D3AnsoJ1aoq_qiUL219cKm-saSI.phDeZBVqVh7-E8aR?startTime=1752064881000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Identification of reducing and oxidizing agent">
+                        <h3>Identification of reducing and oxidizing agent</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Ux9CTZTct3DoRPlTc4b5TMOsbmgKW_lkIDvB2D3AnsoJ1aoq_qiUL219cKm-saSI.phDeZBVqVh7-E8aR?startTime=1752070634000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Chemical reactions and colours">
+                        <h3>Chemical reactions and colours</h3>
+                        <a href="https://us06web.zoom.us/rec/share/F3k6kiVaR9tYbBmCTaxOWHF6NcokpJowHxnVjYywzprPqUd3FdKHgNCUSDLSyBkQ.X4kTAq7o82QFW6io?startTime=1752669912000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Soap and detergent">
+                        <h3>Soap and detergent</h3>
+                        <a href="https://us06web.zoom.us/rec/share/F3k6kiVaR9tYbBmCTaxOWHF6NcokpJowHxnVjYywzprPqUd3FdKHgNCUSDLSyBkQ.X4kTAq7o82QFW6io?startTime=1752674841000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Carbon + Oxidation number">
+                        <h3>Carbon + Oxidation number</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NI9ky5ZKgYf1zkZAHWdFHUAoRFDFPtDDqPdC_MjY3CKVVizmfwN2pcL0MMzJ054.tc8sHpElzmW1qAvA?startTime=1752756643000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Chemical properties of Carbon">
+                        <h3>Chemical properties of Carbon</h3>
+                        <a href="https://us06web.zoom.us/rec/share/j2Uv4dnFDPOdLus-uEcZQOId9mJZGjX7b5d-Ma-mYcdrmUnqvf2V9cmQDp4LmdgZ.hF-X8cWNrFyvSwjv?startTime=1752843102000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Atoms and basics of Chemistry">
+                        <h3>Atoms and basics of Chemistry</h3>
+                        <a href="https://us06web.zoom.us/rec/share/j2Uv4dnFDPOdLus-uEcZQOId9mJZGjX7b5d-Ma-mYcdrmUnqvf2V9cmQDp4LmdgZ.hF-X8cWNrFyvSwjv?startTime=1752846602000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Mixtures + Separations + Numericals">
+                        <h3>Mixtures + Separations + Numericals</h3>
+                        <a href="https://us06web.zoom.us/rec/share/zlMscfuih2CbGF0uYUjco-gn8RMHpNqwCeqKC1VJ9yz8rFK12K3PFrn_v0-0P2AZ.t4YnLbif7cveux3B?startTime=1753103667000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Periodic trends & Polymer">
+                        <h3>Periodic trends & Polymer</h3>
+                        <a href="https://us06web.zoom.us/rec/share/2BW5Kh5Hp96jlwf4EWg9MFtg4-7zoAxA8qQsQxW1Ds-OUqr_Fy0fe2vgvliQWXo.oJbHvIP9vJtnB8JN?startTime=1753273949000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modern History Section -->
+            <section class="course-section" data-subject="Modern History">
+                <h2>Modern History</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Modern History Overview - Class 1">
+                        <h3>Modern History Overview - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ZGlFniOJMZ1AkNgwfXCGfrEmPxVhwS0DpVCdRZmAzWu1qrTXa8q2jKW246ois6Yf.j20DW-p80OTk1G29?startTime=1753068064000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Rise of independent states">
+                        <h3>Rise of independent states</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xxcsx7GjuptMGwXYkehVQgeShQlUFcSvg51lAYtqIWc1FDCiLXfRP1jeSmQB2ugn._7ryHcMmP638WBjY?startTime=1753153183000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Maratha empire">
+                        <h3>Maratha empire</h3>
+                        <a href="https://us06web.zoom.us/rec/share/3qcP8d6rXfb94FNAxlf3ZKsilppmk3D_g0L8DMkJDmvuw7f-y_0STWYO1W22JwlZ.tZw1129VrgCCyUio" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Advent of Europeans">
+                        <h3>Advent of Europeans</h3>
+                        <a href="https://us06web.zoom.us/rec/share/K6uJERxLeaBNPzk-N5jwG8AyNThaO8mI06lt91JuU8aVxBR37MXkUYhM9CmM3OOO.Hsvjlhs9X4EIvESw?startTime=1753325934000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Acquisition of Bengal">
+                        <h3>Acquisition of Bengal</h3>
+                        <a href="https://us06web.zoom.us/rec/share/9B2HQHVss8rqdSaFOR0cmnMt88m_J9F8ANPf5XY9hFrUDEFC4rhJ1JI1vw42NNEP.GTZOe0VQcejy8phf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Land revenue system">
+                        <h3>Land revenue system</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NzbXctV0zZrsjcx-7ShR5AANVMpvJwJaghzyEkH978gRKAxQ210K0CzzPnG9GdQk.h9zegoW7ViT1lBG9?startTime=1753672664000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Revolt of 1857">
+                        <h3>Revolt of 1857</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ACVZhraDd2M_S74Qk6rPL3SeyHfKUB2nBkBWzBifD2973Ug-XoS7QNwJfXPhz5CF.Z_yRkSMZ2dWu6jwa?startTime=1753757847000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Charter Act">
+                        <h3>Charter Act</h3>
+                        <a href="https://us06web.zoom.us/rec/share/URCUrT1elVWGIDJx_8fbGUWG3f8yuuta-M9tZfahsmXawymkV-BgWo2Hmre4nqOq.hKXJqzWquxnk0sdl" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Social reform movement">
+                        <h3>Social reform movement</h3>
+                        <a href="https://us06web.zoom.us/rec/share/XwCDFK3baFd_5iHCQyaF3_l2mLYFozjd7w7RQvhoulNFide4ifknEg1DCMUJKDLL.80hGVA8e9JNViAqw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Indian National Congress">
+                        <h3>Indian National Congress</h3>
+                        <a href="https://us06web.zoom.us/rec/share/N87JUEAowrHXWynKhvxym2zlsn5q2CKtOcHiqOjpin7sLt6T-ku0s5hQlbBBS2-m.AJEvtzm8X1_Rk44F" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Bengal Partition">
+                        <h3>Bengal Partition</h3>
+                        <a href="https://us06web.zoom.us/rec/share/q-UAxtHSpfxIXdxnHjyYUdNgf7MVRAblNvCrRKfej5CYikDtgjXAy1kQ5W0lT9GM.hpHgmjSNmuzWTUiE?startTime=1754277330000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Arrival of Gandhi ji">
+                        <h3>Arrival of Gandhi ji</h3>
+                        <a href="https://us06web.zoom.us/rec/share/PXV0ICECWXayiZ2crRY8JdBHClAp4ZTselhllh11XvVjV-piH_G5JPsVLGmXoCKj.wp_4l1auUqAkV69r?startTime=1754363797000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Non-cooperation movement">
+                        <h3>Non-cooperation movement</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ueK1YhBZY4XJiZ4NK_UIDhfcA_cM92rgZGGk8JO_aO_wrfVAGXLC-ODEZbjgntlo.kilhp1SDaqi-sNEP?startTime=1754449171000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Civil disobedience movement">
+                        <h3>Civil disobedience movement</h3>
+                        <a href="https://us06web.zoom.us/rec/share/_Gn7Hz86EqKXmFIIIjhj4bgo5yT5VZFOK8YVMHDJp7danvFamuBGWykTgrydrURS.p2DfM_EJc-7Zfv3N?startTime=1754882103000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Quit India Movement">
+                        <h3>Quit India Movement</h3>
+                        <a href="https://us06web.zoom.us/rec/share/0Ca1_en69Qhldhzs2dvnML_eGV1HIrTWHn8yc0gSldBdhGh0EHheeRyVL4GbkWVC.zlLPZ3pSy9SEc_sG" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Independence Day">
+                        <h3>Independence Day</h3>
+                        <a href="https://us06web.zoom.us/rec/share/F1i1Bw3kAd-PN2qP1X32G4lpW4HCE6d1GYxmtHwcKb-NBX8NdCBAYK8RmcSbD40.9CCLoh0pVL6e-i64" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PHYSICS Section -->
+            <section class="course-section" data-subject="PHYSICS">
+                <h2>PHYSICS</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Pahla pyaar physics">
+                        <h3>Pahla pyaar physics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/SEzKvJ0_sd3SiiyLNtDrQfC2oj3PftClOO3-SBX9PUNrK2FXyoI60DQA3Q7Vf-pe.Q2CWH35wwiAR95FL" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Dimensions and motions basics">
+                        <h3>Dimensions and motions basics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/WV_oChTAF5ql1Dc8sWwgWsPYf4eI8j1z5CxrE78ZcabyNzywmx4UZaUPGcLuwBr7.O7ncwEZl5_vWAUlU" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Equations of motion">
+                        <h3>Equations of motion</h3>
+                        <a href="https://us06web.zoom.us/rec/share/X3nkCpC2bFtKdEzb05JxPJNPSVqORZyCxyfKxbDr8T7Jjy4YbzwLMFONSbO-CyIX.W5y9ZTOhdkOBej7K" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Motions khatam">
+                        <h3>Motions khatam</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Rwr_DoFChmgj6nM03YzFHuL1iApH6h76sV4jjnjvhAqzVIsnkff1YkzRY51zZXs1.ftVdK2o_EGF4b4aS" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Force">
+                        <h3>Force</h3>
+                        <a href="https://us06web.zoom.us/rec/share/SKMfdIkbyFwQwonJq1eS2E0jq8rBRHdXdc3M54fgEEnt2PRC_fjsdXFPxZVLjtbU.h7WmxKobjCh1DwvL" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Force 2.0">
+                        <h3>Force 2.0</h3>
+                        <a href="https://us06web.zoom.us/rec/share/hLeY3qXO1mEfauCjLdbFAQ1R3qTGhn21w9EM99Prq8Pyv3k5H0ahyUpmuI_ukhCA.H3vyX1tIpNl2S2PD" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Force 3.0">
+                        <h3>Force 3.0</h3>
+                        <a href="https://us06web.zoom.us/rec/share/VUjEJpLWwUThLP-3qlAav63IWfnMmM1M0hKqjE-f5faIrL4p5oNCwFOH2I0ABH0b.32TqRXoykOMZ9nFs" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Force - Pullies & Tension">
+                        <h3>Force - Pullies & Tension</h3>
+                        <a href="https://us06web.zoom.us/rec/share/LuqqD1sgj2D4RMwq9tcrkrFl189laYbkBzZWa1-rLkOQr4osFtlcJFiin_luJt_q.NW4Y7JaOM_dSOYD" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Work and energy">
+                        <h3>Work and energy</h3>
+                        <a href="https://us06web.zoom.us/rec/share/AZsnUWXAY3fF6G43VINsyXxfStHmUWgHSXrd79iy-DqMBPGNauiuzECGGv11bPpr.lI9MO2BX14EsY4tz" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Force sheet and mock solution">
+                        <h3>Force sheet and mock solution</h3>
+                        <a href="https://us06web.zoom.us/rec/share/jk4VDJeWaco4mKdoXCwClrHBk7FSJpKW9tmJwOAb-DjFgkhvA1zVOdJ5lGhUMpRO.T2VTiPPrtFJc4WL-" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Gravitation">
+                        <h3>Gravitation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/bsroYuCGb0oi6-svMmvulgCe4eaAmqR7EFnnvO2qyTt5ltLTqWonthz3cLoBrNi1.xJuaf2DG1JIEZeZj" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Gravitation Class 2">
+                        <h3>Gravitation Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/LZOSoB-yUm94yhHTffVwpMPQzLkYz31hDQrmmivMXI9ux0CRJv-DyF0wDMmyR8nt.DgIrLXghdQ0lEp9o" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Gravitation Khatam">
+                        <h3>Gravitation Khatam</h3>
+                        <a href="https://us06web.zoom.us/rec/share/Dc66npRtKqr2UhnDPK_Tgl8xDwXHoQjLNle1xXAszakA1lN9BDLBchpEbUuFa5hd.zBF79SfuNYduf_IJ" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Optics ki shuruwat">
+                        <h3>Optics ki shuruwat</h3>
+                        <a href="https://us06web.zoom.us/rec/share/DpL0rJWXUfZRg5GIfhjbgv_WZWdWoqQlf-Q7Hex1VLp-Tl714voNP2T_CsHiq8t9.MvuY5Z-IqMIjXwfp" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Reflection khatam">
+                        <h3>Reflection khatam</h3>
+                        <a href="https://us06web.zoom.us/rec/share/hdq-02WoaYPwBph9nQ0sbmLiB0kIDJal-KzbuNX3yXJ1C2Om4-Z3yqudfHe-jfFP.3OqWgmJs30OoWJB9" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Refraction + Lenses">
+                        <h3>Refraction + Lenses</h3>
+                        <a href="https://us06web.zoom.us/rec/share/vk3YmMjeZ2aRydlcY0sS8Ww4oXStCzbmmG2XTR1UcwIiaf3Tq_f3ud5Z11o8I7ds.PLg68FUpu-OIEkij" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="TIR + PRISM + OPTICAL PHENOMENA">
+                        <h3>TIR + PRISM + OPTICAL PHENOMENA</h3>
+                        <a href="https://us06web.zoom.us/rec/share/T_wg9XluJxnoNkBAIe-ln4c7u8DNls9EH045PR_jRda5a-UVrzMRBiJYVo8N6Z_C.TsBaSEkpUXUIUaI1" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Optics khatam">
+                        <h3>Optics khatam</h3>
+                        <a href="https://us06web.zoom.us/rec/share/O_qzwJ6VdgnPY7kykhLoL_rLdqLZpueJqTPl8f2VD2GEEOJRSATKcElaESPd6VHA.AhjHSBeXdMBtfkWq" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Electrostatic + electric current">
+                        <h3>Electrostatic + electric current</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NOSZJ-jp8qxuPOfscVOvml-dxKzA4HqJrH5JgsCv-EizaQxiPR-Jij9fAmYf1n2j.9AdzJYY2JNN8Sv3R" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Electricity khatam">
+                        <h3>Electricity khatam</h3>
+                        <a href="https://us06web.zoom.us/rec/share/rwvqXBiH2VjtUGiXlKZCBamevIvsNy7LZlb8PDiB-ZK-Ic8BqoXqwQtR70StbKeh.WFnpAFQm_CmdKHS6" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Magnetism">
+                        <h3>Magnetism</h3>
+                        <a href="https://us06web.zoom.us/rec/share/sFeuLjMY7Xfoz5DA4q_YzRBoW1XkgdNHtojc5DH4pFpTnS_7srje4sCmc-f3WLDt.JjiITfKUZg4ypkie" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Oscillation + Waves">
+                        <h3>Oscillation + Waves</h3>
+                        <a href="https://us06web.zoom.us/rec/share/4tecC7V3QrqDvw2KJWnCGei3KIC9sSbeL72DYWVwsCbWMP5suHzADvnQF-VKVfrA.blJM4pqKCrE9LT7G" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Sound Complete">
+                        <h3>Sound Complete</h3>
+                        <a href="https://us06web.zoom.us/rec/share/RXiyFxw7jGUH0CZRGtYzFT_J4HdJBV7yrfHKBNAIyMDelggQZ2E6gPcmZ_dFdLC-.UuOQ2ZO9R1zI-qYV" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="State of matter + fluids">
+                        <h3>State of matter + fluids</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ehHHtEGJEoYpe8lt8Srvp1Ya9dFQSyRSlEUNlsI9FO4m6rRdrz8YpWV8neOf8UoI.AVgutH_mJtXrsEaS" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="State of matter + fluids - 2">
+                        <h3>State of matter + fluids - 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/1NX6LjC99IngPYFtJikVC_ys2dwZ_x6UKunh1Hx8Y3Jlt2izOtAnXzmEv07h2elD.298_YapyDs7EAXAI" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Heat and thermodynamics">
+                        <h3>Heat and thermodynamics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/x52G8lkDXMiFv1g9cNpKJJEmCgQ5fvFv-yk0KOffMBmIe1vF0gYitS3cv-6n4Xmv.LVHFWn7QET0x0ElE" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Modern Physics">
+                        <h3>Modern Physics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/AGC7UD8WuA7DLJDsbCn0yrTDUFCfloctWvQiuUSh9Y_KwhZ6Y0nNkglNpKmCCBOb.eLXueWiABcmh3st5" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Modern Physics + Misc.">
+                        <h3>Modern Physics + Misc.</h3>
+                        <a href="https://us06web.zoom.us/rec/share/0YXjBHbBTKE0dmYDxI0TaVi6Hw3tsr188eUxKRuSBHrvsVwDwQYE5ONJV6oar_rl.zdFW0D6wNgFEAHPH" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Farewell Class of physics">
+                        <h3>Farewell Class of physics</h3>
+                        <a href="https://us06web.zoom.us/rec/share/y0Rz5NhL8EF0E8-MlFXYnrHOc4_4WcztObYsUX_exxclDu6ZM5ff9lAKkY8Yje3o.smY6b-N9GJ5sBp1g" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Economics Section -->
+            <section class="course-section" data-subject="Economics">
+                <h2>Economics</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="National Income - 1">
+                        <h3>National Income - 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/ctnrIyqlY71kPpwVW2OpuCo6oM0SkQTvHiZvCuFjebynK3G5VK85FtHi44ZJ1vhO.n38FFZtH84CdB2nf?startTime=1754920704000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="National Income - 2 + Core Industries">
+                        <h3>National Income - 2 + Core Industries</h3>
+                        <a href="https://us06web.zoom.us/rec/share/TR_6mMbo2Bw99WLFY-PHKs_BaTtrHDa-NkFXFgZ6iuCbCUN2yqGU6WlayJKmXp9v.3XtfHnet7CsnCUI9?startTime=1755006021000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Money + PYQ">
+                        <h3>Money + PYQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/hcAPPKHtFfJxB1tpTC1sdJqdFNfRqsVNniDoBi0-UWFq1jUTsqvRQi3T69wvcp53.qhpw_hClsneTXIYw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Monetary Policy">
+                        <h3>Monetary Policy</h3>
+                        <a href="https://us06web.zoom.us/rec/share/QGnIlWdhggACUXriOZhbcemnQnGXGQyjMx3vrSBiWzJoGBUpvUchYIJg3Uc1Hcb2.DwJNIV2lZREgqX-x?startTime=1755520337000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="PYQs + Banks + NBFC">
+                        <h3>PYQs + Banks + NBFC</h3>
+                        <a href="https://us06web.zoom.us/rec/share/QGnIlWdhggACUXriOZhbcemnQnGXGQyjMx3vrSBiWzJoGBUpvUchYIJg3Uc1Hcb2.DwJNIV2lZREgqX-x?startTime=1755526728000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Unemployment + Inflation">
+                        <h3>Unemployment + Inflation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/uYPxNgzgiFpFWxaFLqWtRZX88LFv-8-YxJFVnympF_KpgkUBsP_7z7-HJFJDzqlp.XQMRdDqSU7XCScbD?startTime=1755853709000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="PYQ + POVERTY">
+                        <h3>PYQ + POVERTY</h3>
+                        <a href="https://us06web.zoom.us/rec/share/uYPxNgzgiFpFWxaFLqWtRZX88LFv-8-YxJFVnympF_KpgkUBsP_7z7-HJFJDzqlp.XQMRdDqSU7XCScbD?startTime=1755857396000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Revenue Budget + Capital Budget + PYQ">
+                        <h3>Revenue Budget + Capital Budget + PYQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756127120000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Budget 2025 + Balance of payments">
+                        <h3>Budget 2025 + Balance of payments</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756131884000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Markets + Goods">
+                        <h3>Markets + Goods</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756136024000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Law of demands + Taxation">
+                        <h3>Law of demands + Taxation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756137463000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medieval History Section -->
+            <section class="course-section" data-subject="Medieval History">
+                <h2>Medieval History</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Bhakti and Sufi">
+                        <h3>Bhakti and Sufi</h3>
+                        <a href="https://us06web.zoom.us/rec/share/FxMUvW4S9uK4I6DYZQvfNek4curbajL95WaJ9X3871kmu5xBV0Bduj47UbeywFfr.XaaJLw8aGn871aer" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Bhakti and Sufi - Class 2">
+                        <h3>Bhakti and Sufi - Class 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/S9yICgl-HUPpajfLIjF8feWkx7WRAJceO-cp030u1OAeoIGKXtKsBSABcGxV8Q.rEYdRlGpmhfR2fhf?startTime=1755572444000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Sufi & Vijaynagar Empire">
+                        <h3>Sufi & Vijaynagar Empire</h3>
+                        <a href="https://us06web.zoom.us/rec/share/D-R_BjFkeghcaeyRxs5lkx_kNgoN8EaBqjQduqKYxLAv4Zj_aj-TlGyZ9zx-qOf1.lXAKL_x-UN2Dl2mO" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Antim Pag (Revision) Section -->
+            <section class="course-section" data-subject="Antim Pag">
+                <h2>Antim Pag (Revision)</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Physical Geography - Final Shot revision">
+                        <h3>Physical Geography - Final Shot revision</h3>
+                        <a href="https://us06web.zoom.us/rec/share/10Hw8MbenRsSeakOzCsYBvTaM8MR_kVU1407Z9ZPNutI5FVsibGNLqLJIU75KBCa.M8qQHNJQ2ta4V4ui" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Physical geography revision through 100 MCQ">
+                        <h3>Physical geography revision through 100 MCQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/z3XbhNboKEmUfnP8h2PlC0UZdhgQ-mCHPTfNeh3OhIc7PcdL0k1u7dIana_yIlIx.svl7_fWFR_KkQiQj" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Complete Biology revision">
+                        <h3>Complete Biology revision</h3>
+                        <a href="https://us06web.zoom.us/rec/share/lOPcPAUEGpkWjo5zS_UGRqNXWwaKMC3gQaTINjhqs3YPnNldSIrKKOwpgOX798sx.3nHSLehZP6S0-NpI?startTime=1756198887000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Biology revision through 100 MCQ">
+                        <h3>Biology revision through 100 MCQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/5PeJINJLsyReKd3ndSbRkp0N3rWcnODTnXLdWb8PzYj-W1PmW1_92hqcHnHfSQ_W.FLusnKvuRMc8LwBw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Chemistry revision through 100 MCQ">
+                        <h3>Chemistry revision through 100 MCQ</h3>
+                        <a href="https://us06web.zoom.us/rec/share/8XiFlj89kfNKTmNJlpydokH4__B-dnXLpoC40PF68V4-Xu1IhF-7s9lY-cmvBq5p.Vsa48d_6CvfmCgWM" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="World Climates">
+                        <h3>World Climates</h3>
+                        <a href="https://us06web.zoom.us/rec/share/U6sIL6nG2Lpzo-7a6u-GPYmqHQ8y1bxne3Qpcn5jDH9hwcJe13us0HqYNoNZ84UN.Xx9bpgHzDBxXJTQA?startTime=1757509868000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Farewell Class">
+                        <h3>Farewell Class</h3>
+                        <a href="https://us06web.zoom.us/rec/share/TIUC96Q4HrOEYdYCdqQVHEXYWYMf25dOnoVxqpjLWepfgR6pFEKIQCOl9WkJcebQ.4q1cD6r8aBQ44zmI" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CDS 1 2021 English Explanation">
+                        <h3>CDS 1 2021 English Explanation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/LSWvsAeWCIVMN7RsizjHtf5HM1TXhohc1ZOuUBcS0UBGFSZsFCY5ik7JPad7AN4L.K7uRkEM2s41CRx8n" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CDS 2 2021 English explanation">
+                        <h3>CDS 2 2021 English explanation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/_qY68zUumT1U3XsnH3jdBlZZju1hsUvPG4SSDkE8UhI6PajgOUnQo0ycvv6vGYNa.GcWGycnHEEYWvvq-" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CDS 1 2022 English explanation">
+                        <h3>CDS 1 2022 English explanation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/MLZu3hNeCvX48Er0az2BjseANbZUZLKN0YJYdmYQ4X40PZFUJ_iS3S7d9eVlDvqJ.47JISd8H2EN86sel" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CDS 2 2022 English explanation">
+                        <h3>CDS 2 2022 English explanation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/7yB4wNEvFnQ_z6v0zjPCCAXh8yqWQMSyb2-rMH9nMkXVtiA1cP3sY657O7jDME_K.z5Vsce-wigVOK4fb" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="CDS 1 2023 English explanation">
+                        <h3>CDS 1 2023 English explanation</h3>
+                        <a href="https://us06web.zoom.us/rec/share/71kI8TuIZU69g1UX9ClUwRTPyRZaNFQFp8zNtTFAxXeYV-f2k9QKxX78la7yC_c2.MJOuucwW6iFmJwJG" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Polity Section -->
+            <section class="course-section" data-subject="Polity">
+                <h2>Polity</h2>
+                <div class="class-grid">
+                    <div class="class-item" data-title="Preamble + 26 Nov matters">
+                        <h3>Preamble + 26 Nov matters</h3>
+                        <a href="https://us06web.zoom.us/rec/share/fahRgCYllCsWECQK29wrFKa_f_Gw5uGlYhQNLcOWSSdK8mxQhdJrPOpG8hY7hOW0.Gr7dGNtOMI75YxgR?startTime=1756301531000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Art 1- 4 + Art 368+ majorities">
+                        <h3>Art 1- 4 + Art 368+ majorities</h3>
+                        <a href="https://us06web.zoom.us/rec/share/fahRgCYllCsWECQK29wrFKa_f_Gw5uGlYhQNLcOWSSdK8mxQhdJrPOpG8hY7hOW0.Gr7dGNtOMI75YxgR?startTime=1756304656000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Dadaji - Class 1">
+                        <h3>Dadaji - Class 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/fahRgCYllCsWECQK29wrFKa_f_Gw5uGlYhQNLcOWSSdK8mxQhdJrPOpG8hY7hOW0.Gr7dGNtOMI75YxgR?startTime=1756306973000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Dadaji + Governor final">
+                        <h3>Dadaji + Governor final</h3>
+                        <a href="https://us06web.zoom.us/rec/share/nDBCDWOH_2HxcCat7CqOqv2jN0Z8D_DOlENEvjIvzpBq5KLjIkzVrKoRckOA2Aiz.oNX0wBPCc3kluo8e?startTime=1756388874000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="PM + CM + Federal Features">
+                        <h3>PM + CM + Federal Features</h3>
+                        <a href="https://us06web.zoom.us/rec/share/nDBCDWOH_2HxcCat7CqOqv2jN0Z8D_DOlENEvjIvzpBq5KLjIkzVrKoRckOA2Aiz.oNX0wBPCc3kluo8e?startTime=1756391848000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Vice President + order of precedence">
+                        <h3>Vice President + order of precedence</h3>
+                        <a href="https://us06web.zoom.us/rec/share/nDBCDWOH_2HxcCat7CqOqv2jN0Z8D_DOlENEvjIvzpBq5KLjIkzVrKoRckOA2Aiz.oNX0wBPCc3kluo8e?startTime=1756392958000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Parliament 1">
+                        <h3>Parliament 1</h3>
+                        <a href="https://us06web.zoom.us/rec/share/L0CRkQWju_-qc61uJAgWzYVzxvr2ZpdJXLvLMRe-q-DrToMdOFVolQjxFAZWIrwI.Xr9nzKBhNeXrtiK-?startTime=1756544781000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Parliament 2">
+                        <h3>Parliament 2</h3>
+                        <a href="https://us06web.zoom.us/rec/share/L0CRkQWju_-qc61uJAgWzYVzxvr2ZpdJXLvLMRe-q-DrToMdOFVolQjxFAZWIrwI.Xr9nzKBhNeXrtiK-?startTime=1756550283000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Parliament 3">
+                        <h3>Parliament 3</h3>
+                        <a href="https://us06web.zoom.us/rec/share/L0CRkQWju_-qc61uJAgWzYVzxvr2ZpdJXLvLMRe-q-DrToMdOFVolQjxFAZWIrwI.Xr9nzKBhNeXrtiK-?startTime=1756554301000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Emergency Provision">
+                        <h3>Emergency Provision</h3>
+                        <a href="https://us06web.zoom.us/rec/share/xM1Tf89zNSjxAttEzm5u2dRntu6xZQyXEbR7jv5DQIpKhHApfRhC1OfE-b-1YuOn.AprjTpw-aP5zotnD?startTime=1756736542000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Supreme Court + High court">
+                        <h3>Supreme Court + High court</h3>
+                        <a href="https://us06web.zoom.us/rec/share/X2VuhBtKvFYYLhNJHbwTeo_TGPgBRkK2ZZsIakvBWYnvA3QIJHNvvG7Qw8C3hhuL.t_Rlrx_1B0bXcXnJ?startTime=1756892048000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Article 12-30">
+                        <h3>Article 12-30</h3>
+                        <a href="https://us06web.zoom.us/rec/share/X2VuhBtKvFYYLhNJHbwTeo_TGPgBRkK2ZZsIakvBWYnvA3QIJHNvvG7Qw8C3hhuL.t_Rlrx_1B0bXcXnJ?startTime=1756895487000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Article 32 + DPSP + FD">
+                        <h3>Article 32 + DPSP + FD</h3>
+                        <a href="https://us06web.zoom.us/rec/share/X2VuhBtKvFYYLhNJHbwTeo_TGPgBRkK2ZZsIakvBWYnvA3QIJHNvvG7Qw8C3hhuL.t_Rlrx_1B0bXcXnJ?startTime=1756898564000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-item" data-title="Panchayat and municipality">
+                        <h3>Panchayat and municipality</h3>
+                        <a href="https://us06web.zoom.us/rec/share/U6sIL6nG2Lpzo-7a6u-GPYmqHQ8y1bxne3Qpcn5jDH9hwcJe13us0HqYNoNZ84UN.Xx9bpgHzDBxXJTQA?startTime=1757512904000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <a href="#" class="scroll-to-top" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></a>
+
+    <footer>
+        <p>&copy; 2024 SPIDYUNIVERSE. All rights reserved.</p>
+        <p>Crafted with dedication for NDA Aspirants.</p>
+    </footer>
+
+    <script>
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        };
+
+        scrollToTopBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // Subject Filtering and Search Functionality
+        const subjectButtons = document.querySelectorAll('.subject-button');
+        const searchInput = document.getElementById('searchInput');
+        const classSections = document.querySelectorAll('.course-section');
+
+        function filterClasses() {
+            const activeSubject = document.querySelector('.subject-button.active').dataset.subject;
+            const searchTerm = searchInput.value.toLowerCase();
+
+            classSections.forEach(section => {
+                const sectionSubject = section.dataset.subject;
+                let sectionHasVisibleClasses = false;
+
+                if (activeSubject === 'all' || activeSubject === sectionSubject) {
+                    section.style.display = 'block';
+                    const classItems = section.querySelectorAll('.class-item');
+                    classItems.forEach(item => {
+                        const title = item.dataset.title.toLowerCase();
+                        if (title.includes(searchTerm)) {
+                            item.style.display = 'flex';
+                            sectionHasVisibleClasses = true;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                } else {
+                    section.style.display = 'none';
+                }
+
+                // Hide the section if no classes are visible within it after filtering
+                if (!sectionHasVisibleClasses && (activeSubject === 'all' || activeSubject === sectionSubject)) {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        subjectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                subjectButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                filterClasses();
+            });
+        });
+
+        searchInput.addEventListener('keyup', filterClasses);
+
+        // Initial filter to show all classes
+        filterClasses();
+
+        // Optional: Add a subtle animation to section headers on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 1s ease-out';
+                    entry.target.querySelector('h2').style.animation = 'slideInLeft 0.8s ease-out';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.course-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

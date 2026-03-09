@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIPSTUDY | Elite Defence Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #03050d;
+      --surface: rgba(20, 25, 40, 0.65);
+      --border: rgba(255,255,255,0.09);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --accent: #7c3aed;
+      --green: #22c55e;
+      --radius: 1.25rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(3,5,13,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--green);
+      background: rgba(34,197,94,0.1);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(34,197,94,0.25);
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2.2s infinite;
+    }
+
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem 3.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      background: linear-gradient(to bottom, #fff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.8rem;
+      padding-bottom: 5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(12px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(59,130,246,0.35);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.45);
+    }
+
+    .card-visual {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-visual img {
+      transform: scale(1.07);
+    }
+
+    .card-body {
+      padding: 1.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-meta {
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .card:hover .card-cta {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .promo-card {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(59,130,246,0.05));
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: var(--radius);
+      padding: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .promo-left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .promo-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--green);
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      box-shadow: 0 6px 20px rgba(34,197,94,0.3);
+    }
+
+    .promo-text h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .promo-text p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .promo-btn {
+      background: var(--green);
+      color: black;
+      font-weight: 700;
+      padding: 1rem 2.2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 8px 25px rgba(34,197,94,0.3);
+      transition: all 0.3s;
+    }
+
+    .promo-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(34,197,94,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 4rem 1rem 3rem; }
+      .hero h1 { font-size: 3rem; }
+      .promo-card { flex-direction: column; text-align: center; }
+      .promo-btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo"><i class="fas fa-shield-halved"></i> VIPCDS</div>
+      <div class="status">
+        <span class="dot"></span> Live & Active
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Forging Future Warriors</h1>
+      <p>Premium preparation for NDA, CDS, OTA, AFCAT & CAPF 2026 — live classes, recordings, strategy & community support.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content-grid">
+
+      <a href="new.html" class="card">
+        <div class="card-visual">
+          <img src="new.png" alt="New Batch" onerror="this.src='https://placehold.co/600x400/1e293b/60a5fa?text=New+2026+Batches'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta">LIVE BATCHES</div>
+          <h3 class="card-title">All 2026 Batches</h3>
+          <p class="card-desc">Daily live sessions • Mock tests • Doubt resolution • Current affairs integrated</p>
+          <div class="card-cta">Join Live Classes <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <a href="old.html" class="card">
+        <div class="card-visual">
+          <img src="old.png" alt="Archives" onerror="this.src='https://placehold.co/600x400/1e293b/94a3b8?text=Recorded+Archive'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta">ARCHIVES</div>
+          <h3 class="card-title">Recorded Lectures</h3>
+          <p class="card-desc">Full syllabus recordings • Previous batches • Topic-wise access • Lifetime view</p>
+          <div class="card-cta">Watch Recordings <i class="fas fa-play"></i></div>
+        </div>
+      </a>
+
+      <div class="promo-card">
+        <div class="promo-left">
+          <div class="promo-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="promo-text">
+            <h3>VIPCDS Community</h3>
+            <p>Free PDFs • Exam alerts • Strategy updates • Daily motivation</p>
+          </div>
+        </div>
+        <a href="https://whatsapp.com/channel/0029VbAvDSX0QeahEg4kkE3U" target="_blank" class="promo-btn">
+          <i class="fab fa-whatsapp"></i> Join Channel
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025–2026 VIPCDS • Elite Defence Academy • All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

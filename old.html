@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDS Journey | Excellence in Defence Education</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #0a0b14;
+      --surface: rgba(20, 25, 45, 0.7);
+      --border: rgba(255,255,255,0.08);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #6366f1;
+      --accent-dark: #4f46e5;
+      --purple: #7c3aed;
+      --green: #10b981;
+      --radius: 1.25rem;
+      --transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10,11,20,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    nav.scrolled {
+      background: rgba(10,11,20,0.95);
+      padding: 0.8rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #a78bfa, #6366f1, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: white;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 180px 0 140px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(99,102,241,0.06), transparent 70%);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.8rem, 9vw, 7.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      background: linear-gradient(90deg, #c4b5fd, #a78bfa, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── Courses Section ── */
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(2.4rem, 6vw, 3.8rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #a78bfa, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 680px;
+      margin: 0 auto 4rem;
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .course-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    .course-card:hover {
+      transform: translateY(-12px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 50px rgba(99,102,241,0.18);
+    }
+
+    .card-header {
+      height: 180px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(124,58,237,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: rgba(255,255,255,0.15);
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .card-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: var(--accent);
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: 0.9rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .card-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      padding: 5rem 0 2rem;
+      text-align: center;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .hero {
+        padding: 140px 0 100px;
+      }
+      .hero h1 {
+        font-size: 3.8rem;
+      }
+      .hero-stats {
+        gap: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="container nav-inner">
+      <div class="logo">CDS Journey</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Batches</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+
+  <section class="section" id="courses">
+    <div class="container">
+      <h2 class="section-title">Active Batches</h2>
+      <p class="section-subtitle">Choose your target exam and join the most structured preparation available right now.</p>
+
+      <div class="courses-grid">
+
+        <div class="course-card">
+          <div class="card-header"><i class="fas fa-shield-alt"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Zulu OTA — CDS-2 2026</h3>
+            <p class="card-desc">Full syllabus coverage • Live + recorded • Current affairs integrated • Doubt resolution</p>
+            <a href="zulu ota.html" class="card-btn">Open Batch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="card-header"><i class="fas fa-calculator"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Zulu Maths — CDS-2 2026</h3>
+            <p class="card-desc">From basics to advanced level • Shortcut techniques • 1000+ solved questions</p>
+            <a href="zulu maths.html" class="card-btn">Open Batch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="card-header"><i class="fas fa-plane"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">Yankee Batch — AFCAT-2 2026</h3>
+            <p class="card-desc">Verbal + Numerical + Reasoning + GK • Mock tests series • Flying branch focus</p>
+            <a href="yankee batch.html" class="card-btn">Open Batch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="card-header"><i class="fas fa-user-shield"></i></div>
+          <div class="card-body">
+            <h3 class="card-title">X-Ray Batch — NDA-2 2026</h3>
+            <p class="card-desc">Maths + GAT complete • SSB interview guidance • Physical fitness tips</p>
+            <a href="Xray batch.html" class="card-btn">Open Batch <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="footer-text">© 2025–2026 CDS Journey • Built with dedication for future officers</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple scroll effect for nav
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 100);
+    });
+
+    // Optional: mobile menu toggle (if you add mobile menu later)
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      alert('Mobile menu coming soon');
+    });
+  </script>
+
+</body>
+</html>

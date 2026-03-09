@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CDS Journey | LALIT △ - Batches 2026</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: rgba(20, 25, 40, 0.65);
+      --border: rgba(255,255,255,0.08);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --accent: #8b5cf6;
+      --green: #22c55e;
+      --red: #ef4444;
+      --radius: 1.25rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(to bottom, #fff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .batch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+      padding-bottom: 4rem;
+    }
+
+    .batch-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.28s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(10px);
+    }
+
+    .batch-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(59,130,246,0.3);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card-image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .batch-card:hover .card-image img {
+      transform: scale(1.06);
+    }
+
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+    }
+
+    .badge {
+      align-self: flex-start;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .badge-live {
+      background: rgba(34,197,94,0.15);
+      color: #86efac;
+      border: 1px solid rgba(34,197,94,0.3);
+    }
+
+    .badge-soon {
+      background: rgba(249,115,22,0.15);
+      color: #fb923c;
+      border: 1px solid rgba(249,115,22,0.3);
+    }
+
+    .card-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-type {
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem;
+      background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: all 0.25s;
+    }
+
+    .batch-card:hover .card-cta {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .wa-section {
+      background: linear-gradient(135deg, rgba(34,197,94,0.08), transparent);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .wa-text h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .wa-text p {
+      color: var(--text-muted);
+    }
+
+    .wa-btn {
+      background: var(--green);
+      color: black;
+      font-weight: 700;
+      padding: 0.9rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 8px 25px rgba(34,197,94,0.25);
+      transition: all 0.3s;
+    }
+
+    .wa-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(34,197,94,0.35);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 3rem 1rem 2.5rem; }
+      .hero h1 { font-size: 2.8rem; }
+      .wa-section { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">VIPSTUDY</div>
+      <div class="status">
+        <span class="dot"></span> Live Updates
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>CDS / NDA / AFCAT Journey<br>Batches 2026</h1>
+      <p>Select your target batch and accelerate your preparation — full syllabus, recordings, strategy & more.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="batch-grid">
+
+      <!-- Echo AFCAT -->
+      <a href="ECHO_AFCAT_BATCH_AFCAT-2_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/afcat_CARD_new.webp" alt="Echo AFCAT 2">
+          <div class="image-overlay">
+            <span class="badge badge-live"><i class="fa-solid fa-circle"></i> Live</span>
+            <div class="card-title">Echo AFCAT 2<br>(AFCAT-2 2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">AFCAT Batch</div>
+          <div class="card-desc"><i class="far fa-clock"></i> Target 220+ Score</div>
+          <div class="card-cta">View Recordings <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- Alpha OTA -->
+      <a href="ALPHA_OTA_BATCH_CDS-1_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/ota_CARD_new.webp" alt="Alpha OTA">
+          <div class="image-overlay">
+            <span class="badge badge-live"><i class="fa-solid fa-circle"></i> Live</span>
+            <div class="card-title">Alpha OTA<br>(CDS-1 2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">CDS Batch</div>
+          <div class="card-desc"><i class="far fa-clock"></i> Full Syllabus Coverage</div>
+          <div class="card-cta">View Recordings <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- Add the remaining cards in the same pattern -->
+      <!-- Alpha Math -->
+      <a href="ALPHA_MATH_BATCH_CDS-1_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/cds_maths_CARD_new.webp" alt="Alpha Math">
+          <div class="image-overlay">
+            <span class="badge badge-live"><i class="fa-solid fa-circle"></i> Live</span>
+            <div class="card-title">Alpha Math<br>(CDS-1 2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">Math Batch</div>
+          <div class="card-desc"><i class="far fa-clock"></i> Basic to Advanced</div>
+          <div class="card-cta">View Recordings <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- Bravo GAT -->
+      <a href="BRAVO_GAT_BATCH_NDA-1_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/nda_CARD_new.webp" alt="Bravo GAT">
+          <div class="image-overlay">
+            <span class="badge badge-live"><i class="fa-solid fa-circle"></i> Live</span>
+            <div class="card-title">Bravo GAT<br>(NDA-1 2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">NDA Batch</div>
+          <div class="card-desc"><i class="far fa-clock"></i> Complete GAT</div>
+          <div class="card-cta">View Recordings <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- Bravo Math -->
+      <a href="BRAVO_MATH_BATCH_NDA-1_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/nda_CARD_new.webp" alt="Bravo Math">
+          <div class="image-overlay">
+            <span class="badge badge-live"><i class="fa-solid fa-circle"></i> Live</span>
+            <div class="card-title">Bravo Math<br>(NDA-1 2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">NDA Batch</div>
+          <div class="card-desc"><i class="far fa-clock"></i> Complete Math</div>
+          <div class="card-cta">View Recordings <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- Charlie AFCAT -->
+      <a href="CHARLIE_AFCAT_BATCH_AFCAT-1_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/afcat_CARD_new.webp" alt="Charlie AFCAT">
+          <div class="image-overlay">
+            <span class="badge badge-live"><i class="fa-solid fa-circle"></i> Live</span>
+            <div class="card-title">Charlie AFCAT<br>(AFCAT-1 2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">AFCAT Batch</div>
+          <div class="card-desc"><i class="far fa-clock"></i> Score 200+</div>
+          <div class="card-cta">View Recordings <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- CAPF Delta P1+P2 -->
+      <a href="CAPF_Paper_1_Paper_2_Delta_batch_CAPF_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/1000162824.webp" alt="CAPF Delta">
+          <div class="image-overlay">
+            <span class="badge badge-soon"><i class="far fa-clock"></i> Soon</span>
+            <div class="card-title">CAPF Delta P1+P2<br>(2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">CAPF Batch</div>
+          <div class="card-desc"><i class="far fa-bell"></i> Live Now (Details)</div>
+          <div class="card-cta">View Details <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- CAPF Delta P2 -->
+      <a href="CAPF_Paper_2_Delta_batch_CAPF_2026index.html" class="batch-card">
+        <div class="card-image">
+          <img src="https://cds-journey-bucket.s3.amazonaws.com/media/course/CAPF_Card_eQBxZLi.webp" alt="CAPF P2">
+          <div class="image-overlay">
+            <span class="badge badge-soon"><i class="far fa-clock"></i> Soon</span>
+            <div class="card-title">CAPF Delta P2<br>(2026)</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-type">CAPF Batch</div>
+          <div class="card-desc"><i class="far fa-bell"></i> Live Now (Details)</div>
+          <div class="card-cta">View Details <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- WhatsApp Banner -->
+    <div class="wa-section">
+      <div class="wa-text">
+        <h3>Join WhatsApp Channel</h3>
+        <p>Get Free PDFs, Exam Notices, Strategy Updates & Important Announcements</p>
+      </div>
+      <a href="https://whatsapp.com/channel/0029VbAvDSX0QeahEg4kkE3U" target="_blank" class="wa-btn">
+        <i class="fab fa-whatsapp"></i> Join Now
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>VIPCDS © 2025–2026 • All Rights Reserved</p>
+  </footer>
+ <script>
+        // === Z+ SECURITY SCRIPT – DANGEROUS ===
+        (function() {
+            "use strict";
+
+            // ---------- SHUTDOWN FUNCTION ----------
+            // This is the "nuclear option" – it wipes the page and freezes the tab.
+            function shutdown() {
+                // Prevent any further user interaction or inspection
+                try {
+                    // 1. Wipe the entire document
+                    document.documentElement.innerHTML = '';
+                    
+                    // 2. Optionally write a stark message (though the page will be blank after the loop)
+                    document.open();
+                    document.write('<h1 style="color:red; text-align:center;">🔒 WEBSITE SHUT DOWN – SECURITY VIOLATION</h1>');
+                    document.close();
+                    
+                    // 3. Trap the user in an infinite alert loop – the tab becomes unusable
+                    setInterval(function() {
+                        while (true) {
+                            alert('🚨 INTRUSION DETECTED – TERMINATING SESSION');
+                        }
+                    }, 100);
+                } catch (e) {
+                    // If wiping fails, fallback to a hard redirect
+                    location.replace('about:blank');
+                }
+            }
+
+            // ---------- PREVENT EASY INSPECTION ----------
+            // Block right-click
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // Block keyboard shortcuts that open DevTools (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+            document.addEventListener('keydown', function(e) {
+                // F12
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                    shutdown();  // Immediate lockdown
+                }
+                // Ctrl+Shift+I or Ctrl+Shift+J (Windows/Linux)
+                if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
+                    e.preventDefault();
+                    shutdown();
+                }
+                // Ctrl+U (view source)
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    shutdown();
+                }
+                // Cmd+Option+I (Mac)
+                if (e.metaKey && e.altKey && e.key === 'I') {
+                    e.preventDefault();
+                    shutdown();
+                }
+            });
+
+            // ---------- DEVTOOLS DETECTION METHODS ----------
+            let devtoolsOpen = false;
+
+            // Method 1: Console.log with a getter trap
+            (function() {
+                const trap = {
+                    get id() {
+                        devtoolsOpen = true;
+                        throw new Error('DevTools detected via console');
+                    }
+                };
+                console.log('%c ', trap);  // Some browsers will evaluate the getter when showing the object
+            })();
+
+            // Method 2: Debugger timing check
+            function checkDevToolsByDebugger() {
+                const start = performance.now();
+                debugger;  // Pauses only if DevTools is open
+                const end = performance.now();
+                if (end - start > 50) {  // If paused, the time difference will be huge
+                    devtoolsOpen = true;
+                }
+            }
+
+            // Method 3: Periodic checks using a loop
+            setInterval(function() {
+                if (devtoolsOpen) {
+                    shutdown();
+                }
+                
+                // Re-run debugger check
+                checkDevToolsByDebugger();
+                
+                // Additional: check for window size differences (some browsers)
+                if (window.outerHeight - window.innerHeight > 200) {
+                    devtoolsOpen = true;
+                }
+                
+                // Check for console.clear (if DevTools is open, console might be modified)
+                try {
+                    if (console.clear && console.clear.toString().includes('native')) {
+                        // No action, just a potential flag
+                    }
+                } catch (e) {}
+            }, 500);  // Check every 500ms
+
+            // ---------- EXTRA PARANOIA: OVERRIDE CONSOLE METHODS ----------
+            // Once DevTools is detected, console methods become useless anyway,
+            // but we can neuter them ahead of time to make inspection harder.
+            if (console) {
+                const noop = function() {};
+                console.log = noop;
+                console.info = noop;
+                console.warn = noop;
+                console.error = noop;
+                console.dir = noop;
+                console.table = noop;
+                console.trace = noop;
+                console.debug = noop;
+            }
+
+            // ---------- FINAL SAFEGUARD: IF DEVIATION DETECTED AT STARTUP ----------
+            // Immediately run a detection pass
+            setTimeout(function() {
+                checkDevToolsByDebugger();
+                if (devtoolsOpen) shutdown();
+            }, 0);
+        })();
+    </script>
+</body>
+</html>

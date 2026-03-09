@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIDYUNIVERSE - CDS-2 2025 Batch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+           --primary-color: #6A1B9A; /* Deep Purple */
+            --secondary-color: #FFC107; /* Amber */
+            --accent-color: #00BCD4; /* Cyan */
+            --text-color: #333;
+            --bg-color: #f0f2f5; /* Light Grayish Blue */
+            --card-bg: #ffffff;
+            --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8E24AA 100%);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: rotate(45deg);
+            animation: headerWave 10s infinite linear;
+        }
+
+        @keyframes headerWave {
+            0% { transform: rotate(45deg) translateX(0); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 4.5em;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1.2s ease-out;
+        }
+
+        .search-filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .search-box {
+            flex-grow: 1;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.2);
+            outline: none;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background-color: #e0e0e0;
+            color: var(--text-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            background-color: #d0d0d0;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 5px;
+            background-color: var(--accent-color);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -15px;
+            border-radius: 3px;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .class-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            animation: zoomIn 0.6s ease-out;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .class-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .class-card.hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        .class-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .class-card p {
+            font-size: 0.98em;
+            color: #666;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .class-card a {
+            display: block; /* Changed to block for full width button */
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: auto; /* Pushes button to bottom */
+        }
+
+        .class-card a:hover {
+            background-color: #00A8C0; /* Slightly darker cyan */
+            transform: translateY(-3px);
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            header h1 {
+                font-size: 3.5em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .class-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .search-filter-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box {
+                max-width: 100%;
+            }
+            .filter-buttons {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+                -webkit-overflow-scrolling: touch;
+            }
+            .filter-btn {
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            .class-card h3 {
+                font-size: 1.2em;
+            }
+            .class-card p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VIPSTUYDY</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-filter-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search classes...">
+            </div>
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-subject="all">All Subjects</button>
+                <button class="filter-btn" data-subject="Physical Geography">Physical Geography</button>
+                <button class="filter-btn" data-subject="English Grammar">English Grammar</button>
+                <button class="filter-btn" data-subject="One Pager">One Pager</button>
+                <button class="filter-btn" data-subject="Indian Geography">Indian Geography</button>
+                <button class="filter-btn" data-subject="BIOLOGY">BIOLOGY</button>
+                <button class="filter-btn" data-subject="ANCIENT HISTORY">ANCIENT HISTORY</button>
+                <button class="filter-btn" data-subject="English Practice">English Practice</button>
+                <button class="filter-btn" data-subject="CHEMISTRY">CHEMISTRY</button>
+                <button class="filter-btn" data-subject="Afternoon Revision Test">Afternoon Revision Test</button>
+                <button class="filter-btn" data-subject="Modern History">Modern History</button>
+                <button class="filter-btn" data-subject="PHYSICS">PHYSICS</button>
+                <button class="filter-btn" data-subject="Economics">Economics</button>
+                <button class="filter-btn" data-subject="AFCAT Special">AFCAT Special</button>
+                <button class="filter-btn" data-subject="Medieval History">Medieval History</button>
+                <button class="filter-btn" data-subject="Antim Pag">Antim Pag</button>
+                <button class="filter-btn" data-subject="Polity">Polity</button>
+            </div>
+        </div>
+
+        <div id="allClassesContainer">
+            <!-- Physical Geography -->
+            <section id="physical-geography" data-subject="Physical Geography">
+                <h2 class="section-title">Physical Geography</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Insolation + albedo + isotherm</h3>
+                        <p>Learn about solar radiation, reflectivity, and temperature distribution.</p>
+                        <a href="https://us06web.zoom.us/rec/share/em_Q8BZuq5j7n34YtmkOnyzuFyvvVKagZC-6hc0fYPABCBl4o-pbZcDb3CkGA4mG.rMbebtNWeXeSc4az?startTime=1746448901000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Pressure System + Wind</h3>
+                        <p>Understand atmospheric pressure and global wind patterns.</p>
+                        <a href="https://us06web.zoom.us/rec/share/em_Q8BZuq5j7n34YtmkOnyzuFyvvVKagZC-6hc0fYPABCBl4o-pbZcDb3CkGA4mG.rMbebtNWeXeSc4az?startTime=1746452495000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Geographic wind + Inversion + Fog</h3>
+                        <p>Explore local winds, temperature inversion, and fog formation.</p>
+                        <a href="https://us06web.zoom.us/rec/share/CxQrHEbYJwAS938hc_nRSBryQTKwM0ODzcMMobBZnWAq-fzQWL5Zw9vpbiDy0e7O.WxCDEV-CqADA-YAX?startTime=1746708593000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Clouds + Cyclone</h3>
+                        <p>Study different cloud types and the dynamics of cyclones.</p>
+                        <a href="https://us06web.zoom.us/rec/share/CxQrHEbYJwAS938hc_nRSBryQTKwM0ODzcMMobBZnWAq-fzQWL5Zw9vpbiDy0e7O.WxCDEV-CqADA-YAX?startTime=1746713170000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Fronts + Precipitation</h3>
+                        <p>Learn about weather fronts and various forms of precipitation.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IlMsc_KYq7Ia5IVdSpV88ZumclLCGKH1Mk_LWI1VgadieRhh4f5zQJ2JEKV-mNDQ.aRYal5_s3hbKQQHg?startTime=1746793882000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Oceanography Basics + Ocean Current</h3>
+                        <p>Introduction to oceanography and major ocean currents.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IlMsc_KYq7Ia5IVdSpV88ZumclLCGKH1Mk_LWI1VgadieRhh4f5zQJ2JEKV-mNDQ.aRYal5_s3hbKQQHg?startTime=1746798148000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Tides + Coral</h3>
+                        <p>Understand the phenomena of tides and coral reef ecosystems.</p>
+                        <a href="https://us06web.zoom.us/rec/share/U3jRrXU7kB5c7xmfZzt78ymQu_yZMAGzIpm13wIMySDKQ1oTAVZwqbtnxnxr6RKR.l8OCmvglBYjLV501?startTime=1747227065000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Rocks ji</h3>
+                        <p>Study different types of rocks and their formation.</p>
+                        <a href="https://us06web.zoom.us/rec/share/U3jRrXU7kB5c7xmfZzt78ymQu_yZMAGzIpm13wIMySDKQ1oTAVZwqbtnxnxr6RKR.l8OCmvglBYjLV501?startTime=1747231644000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Climatology revision through 80 MCQs</h3>
+                        <p>Revise climatology concepts with 80 multiple-choice questions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/OX8l7JQvJjgUgySo2-1l_LuA8esZ0ivCxzX7hGAB6CIoWqzIsZU3J_CDTCPymFSl.QSrlDYJ5mxpxOzac" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Interior of earth + plate tectonics</h3>
+                        <p>Explore the Earth's internal structure and plate tectonic theory.</p>
+                        <a href="https://us06web.zoom.us/rec/share/1RoJs0254Jo_SH6U99S0KqYoesEWgywAOKzH41--3dt9fat8DSZvzJUek0y7iuUO.SCUZRoMPkEUfFP9l?startTime=1747917515000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Earthquake + Volcano</h3>
+                        <p>Understand the causes and effects of earthquakes and volcanoes.</p>
+                        <a href="https://us06web.zoom.us/rec/share/1RoJs0254Jo_SH6U99S0KqYoesEWgywAOKzH41--3dt9fat8DSZvzJUek0y7iuUO.SCUZRoMPkEUfFP9l?startTime=1747921615000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Geomorphic Process</h3>
+                        <p>Study the processes that shape the Earth's surface.</p>
+                        <a href="https://us06web.zoom.us/rec/share/3JxJ3gJxw0Pr8SAA6atHhM2x20I9hj0KHpVWaK6XiY6bkPvBMaQWnPOOjFeSZzMS.2q_-Bi8NSVLPK3rK?startTime=1748262682000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Universe + solar system</h3>
+                        <p>Explore the universe and our solar system.</p>
+                        <a href="https://us06web.zoom.us/rec/share/3JxJ3gJxw0Pr8SAA6atHhM2x20I9hj0KHpVWaK6XiY6bkPvBMaQWnPOOjFeSZzMS.2q_-Bi8NSVLPK3rK?startTime=1748268372000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Landform by running water</h3>
+                        <p>Learn about landforms created by rivers and streams.</p>
+                        <a href="https://us06web.zoom.us/rec/share/McN8M1AGRVq4GAKYvMzaMYdDJFn88n93h4jtdkNlcadwvCYpIWEzHIQjR0FlC-YW.9GLdHguavf9K23Xb?startTime=1748347146000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>15. Landform by ground water</h3>
+                        <p>Discover landforms shaped by groundwater processes.</p>
+                        <a href="https://us06web.zoom.us/rec/share/McN8M1AGRVq4GAKYvMzaMYdDJFn88n93h4jtdkNlcadwvCYpIWEzHIQjR0FlC-YW.9GLdHguavf9K23Xb?startTime=1748353909000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>16. Landform by glaciers</h3>
+                        <p>Study landforms created by glacial erosion and deposition.</p>
+                        <a href="https://us06web.zoom.us/rec/share/McN8M1AGRVq4GAKYvMzaMYdDJFn88n93h4jtdkNlcadwvCYpIWEzHIQjR0FlC-YW.9GLdHguavf9K23Xb?startTime=1748354895000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>17. Landforms by sea waves and winds</h3>
+                        <p>Explore coastal and aeolian landforms.</p>
+                        <a href="https://us06web.zoom.us/rec/share/lwPgyr46Whx8dtRgP6rKOsObK25ibUUE8rNOjYtrzAb8NnWHNtsafqYIhsdbtVFM.UDpS1gJL9loBFFZf" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- English Grammar -->
+            <section id="english-grammar" data-subject="English Grammar">
+                <h2 class="section-title">English Grammar</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Homonyms basics + MCQ</h3>
+                        <p>Understand homonyms and practice with MCQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/DRygoIi9MuJe3kpjjenJDU0J8BdvgsE7B3MoHI4fOT59G2EuXORlHmklrDE1zPfX.x6idDsDX8yhDmVCV" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Parts of speech ka intro</h3>
+                        <p>Introduction to the different parts of speech.</p>
+                        <a href="https://us06web.zoom.us/rec/share/w8tudUjsUvZScHCbxNJESuTniyP1fqPBz9MUE1q_epMcNQkE9_Huu-0qSN5fpauT.QUGLJetuwTz7eU7n" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. POS final + Practise MCQs</h3>
+                        <p>Final review of parts of speech and practice MCQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/YfS8RdDvBSkr8PHO7Q0y5dEkJQyGSMYfIRPWuGzBGg2oskhlcaMGlyJRJvmYasMe.t2xt5oC1O191qyWw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. New pattern POS + PYQs</h3>
+                        <p>Learn new patterns for parts of speech and solve previous year questions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FIj8AYW77O6o_f7UQh-ZY3Mo8cLFZlbvhrLbTj237S_5l5n7b8Xw6-fCwKnpBHlW.WdVZ_wGW5zBnDV0K?startTime=1746535937000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. New pattern Similar Sounding words</h3>
+                        <p>Explore new patterns for similar sounding words.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FIj8AYW77O6o_f7UQh-ZY3Mo8cLFZlbvhrLbTj237S_5l5n7b8Xw6-fCwKnpBHlW.WdVZ_wGW5zBnDV0K?startTime=1746539745000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Question tag Class 1</h3>
+                        <p>First class on question tags.</p>
+                        <a href="https://us06web.zoom.us/rec/share/QWnBlRJviRG4_8hgv4mwoJv3xJe-UQzFHBV-uGiMMSyzUaPIRLvP2UE-8qw6U7z6.qd7hUaqaR5CpuTmj?startTime=1747054264000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Question tag - Final</h3>
+                        <p>Final class on question tags.</p>
+                        <a href="https://us06web.zoom.us/rec/share/iPMxOprrg1Cwj9V_CGSWPQfaXMKLrlmeHzsf8i03b1dbR4Jd-n_JiXxqWq5Zk3Sk.RrEDriNcq7DNdfL_?startTime=1747140296000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Verb 1</h3>
+                        <p>First class on verbs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/GI6HR-c1TJd9VzM7HwDFg8V74AUykHIqIWxXyiL6WvNIi6hSB1e5t6rQPG1eXANb.rdA4GJ0xtyTEZjF3?startTime=1747400322000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Verb 2</h3>
+                        <p>Second class on verbs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/GI6HR-c1TJd9VzM7HwDFg8V74AUykHIqIWxXyiL6WvNIi6hSB1e5t6rQPG1eXANb.rdA4GJ0xtyTEZjF3?startTime=1747404968000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Verb 3</h3>
+                        <p>Third class on verbs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/RxskU7ZEDemAMyV7CDM1eJpDHOU84bzgFePTj0dkAUqzOt383WuHDKXjINvNZvsO.eHfo7F5a96PlMm67?startTime=1747659018000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Verb 4 (modals)</h3>
+                        <p>Fourth class on verbs, focusing on modals.</p>
+                        <a href="https://us06web.zoom.us/rec/share/RxskU7ZEDemAMyV7CDM1eJpDHOU84bzgFePTj0dkAUqzOt383WuHDKXjINvNZvsO.eHfo7F5a96PlMm67?startTime=1747661305000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Gerund+ Participle</h3>
+                        <p>Learn about gerunds and participles.</p>
+                        <a href="https://us06web.zoom.us/rec/share/SnW0d1ORZJBgp9edXZIHqxipov03zVOKOcUQ02mQf3amI3NgWpMx_N_ZvGQxBDuV.oFZhKvgh6kRczj1a?startTime=1747744717000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Infinitive</h3>
+                        <p>Study infinitives in English grammar.</p>
+                        <a href="https://us06web.zoom.us/rec/share/SnW0d1ORZJBgp9edXZIHqxipov03zVOKOcUQ02mQf3amI3NgWpMx_N_ZvGQxBDuV.oFZhKvgh6kRczj1a?startTime=1747748479000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Vocabulary Class 1</h3>
+                        <p>First class dedicated to vocabulary building.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IMWy8YK8hzpujjplC5UuAqd596IMM5FzDzVFJzgPPcYrx9__nWyi-lPzIBaT7UY.anj21vmTttGpVVR2" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>15. Conjunction basics</h3>
+                        <p>Understand the basics of conjunctions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/gTGPeBuAcEpdM5ohYsmSLCwK4ZaTQP3v3hZMrUVX0l-HvNoGuorhuAFUkdSC7Khb.sPOBroQIBRxeVDSb" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>16. Conjunction Khatm</h3>
+                        <p>Concluding class on conjunctions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/vBspI3AUOG4rDdc5BTpQpt_6RR6MkR3CLQgH1_Jyro2rSkQoc3apBf29WfiCXE79.zbnSrNWOOxyu5OZ5" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>17. Preposition Class 1</h3>
+                        <p>First class on prepositions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/tZ2AWGRXrQwjxq2Ohr0XlntAjdtiifZl1-PdFOcDcDJdKHcPZJ5__XYV3HwVNMSw.xbAzhIC3N6IxXACg?startTime=1752151436000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>18. Preposition Class 2</h3>
+                        <p>Second class on prepositions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/tZ2AWGRXrQwjxq2Ohr0XlntAjdtiifZl1-PdFOcDcDJdKHcPZJ5__XYV3HwVNMSw.xbAzhIC3N6IxXACg?startTime=1752155282000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>19. Preposition Class 3</h3>
+                        <p>Third class on prepositions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/H8aIUCKWPYC6esK2_Z92hrqxcw9Cmcl3BMHI8Nqproxexpdi57BlyymbqQU873Lk.1hDfxRqxWHlXU6D4" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>20. Fixed preposition + Phrasal verb</h3>
+                        <p>Learn about fixed prepositions and phrasal verbs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/cvxKAsn0aP-xniJ2OlOPNo4yhTEynJrfjPDFhJbd1Nu4s12orV30WVed8nHEcDtY.twNQHKvr31mWgvoo" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>21. Article Class 1</h3>
+                        <p>First class on articles.</p>
+                        <a href="https://us06web.zoom.us/rec/share/2BW5Kh5Hp96jlwf4EWg9MFtg4-7zoAxA8qQsQxW1Ds-OUqr_Fy0fe2vgvliQWXo.oJbHvIP9vJtnB8JN?startTime=1753278544000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>22. Article Class 2</h3>
+                        <p>Second class on articles.</p>
+                        <a href="https://us06web.zoom.us/rec/share/amfbLHPv8CopmkBSs45pnFaHqCBGNzp__V-5YGgrNDbvbAUhMB8evj20TokLIYN1.coavGzQjhcSB3XIN" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- One Pager -->
+            <section id="one-pager" data-subject="One Pager">
+                <h2 class="section-title">One Pager</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Important Plans</h3>
+                        <p>Overview of important plans.</p>
+                        <a href="https://us06web.zoom.us/rec/share/em_Q8BZuq5j7n34YtmkOnyzuFyvvVKagZC-6hc0fYPABCBl4o-pbZcDb3CkGA4mG.rMbebtNWeXeSc4az?startTime=1746448104000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. COP meetings</h3>
+                        <p>Details about COP meetings.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FIj8AYW77O6o_f7UQh-ZY3Mo8cLFZlbvhrLbTj237S_5l5n7b8Xw6-fCwKnpBHlW.WdVZ_wGW5zBnDV0K?startTime=1746534686000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Malware</h3>
+                        <p>Understanding malware and its types.</p>
+                        <a href="https://us06web.zoom.us/rec/share/CxQrHEbYJwAS938hc_nRSBryQTKwM0ODzcMMobBZnWAq-fzQWL5Zw9vpbiDy0e7O.WxCDEV-CqADA-YAX?startTime=1746707482000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Why we get ill</h3>
+                        <p>Reasons behind human illnesses.</p>
+                        <a href="https://us06web.zoom.us/rec/share/QWnBlRJviRG4_8hgv4mwoJv3xJe-UQzFHBV-uGiMMSyzUaPIRLvP2UE-8qw6U7z6.qd7hUaqaR5CpuTmj?startTime=1747053206000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Why clothes look dark in water</h3>
+                        <p>Scientific explanation for clothes appearing dark in water.</p>
+                        <a href="https://us06web.zoom.us/rec/share/iPMxOprrg1Cwj9V_CGSWPQfaXMKLrlmeHzsf8i03b1dbR4Jd-n_JiXxqWq5Zk3Sk.RrEDriNcq7DNdfL_?startTime=1747139666000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. IMF</h3>
+                        <p>Insights into the International Monetary Fund.</p>
+                        <a href="https://us06web.zoom.us/rec/share/U3jRrXU7kB5c7xmfZzt78ymQu_yZMAGzIpm13wIMySDKQ1oTAVZwqbtnxnxr6RKR.l8OCmvglBYjLV501?startTime=1747225898000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. UNSC</h3>
+                        <p>Understanding the United Nations Security Council.</p>
+                        <a href="https://us06web.zoom.us/rec/share/GI6HR-c1TJd9VzM7HwDFg8V74AUykHIqIWxXyiL6WvNIi6hSB1e5t6rQPG1eXANb.rdA4GJ0xtyTEZjF3?startTime=1747398734000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Contempt of court</h3>
+                        <p>Learn about contempt of court.</p>
+                        <a href="https://us06web.zoom.us/rec/share/RxskU7ZEDemAMyV7CDM1eJpDHOU84bzgFePTj0dkAUqzOt383WuHDKXjINvNZvsO.eHfo7F5a96PlMm67?startTime=1747657900000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Indian meteorological department</h3>
+                        <p>Information about the Indian Meteorological Department.</p>
+                        <a href="https://us06web.zoom.us/rec/share/cc3IeGeagy842jph6rP00G21TeWX2-KmzwjyjGsCRfw0BhImNZGWQbS7J3rD_PY.SEPic47QSa87rG6a?startTime=1748608350000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Important institutions</h3>
+                        <p>Overview of important national and international institutions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/6woeDlw7aqgNFaF3Hih94JhR-Hmq1ejX57rGfNrEBTiOqsklGTtkPcMIzUaWGqNm.B7LGv4Zrc9abZRA-?startTime=1748953871000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Electric Vehicles</h3>
+                        <p>Discussion on electric vehicles and their impact.</p>
+                        <a href="https://us06web.zoom.us/rec/share/d0Fjd9DWFXrN9mNT6y9OQ7nJeTSVsLM-vhYAjcfmAwLIAbSI2n8YhVCmhtilK1hL.0zmZSGJ4Io8qRJ1-?startTime=1749040691000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Plastic</h3>
+                        <p>Understanding plastic and its environmental concerns.</p>
+                        <a href="https://us06web.zoom.us/rec/share/-3zPOhOjsvHybxlFSyVePjohY-pjdaX2S_IsJVAVT7bN3t96Jj60SpEqPzPLp2pr.U2BcWgcsuEMmG2Gr?startTime=1749213508000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Protein Deficiency</h3>
+                        <p>Learn about protein deficiency and its health implications.</p>
+                        <a href="https://us06web.zoom.us/rec/share/M33kG1FGxxsTtze2vW8RDYdWw_9eo7O3cWrbMA8CJe1ijzgS0I-yWOo55GH8GZs.DEVsyO6V5U6WcGrW?startTime=1749472375000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Thermal Equator</h3>
+                        <p>Understanding the concept of the thermal equator.</p>
+                        <a href="https://us06web.zoom.us/rec/share/HzPBWzQIL4eHz1uCsDCYzY4Un6zvapeB8k1VGcGlxf7Vpsdur5L6vLyowpy_j3v2.YVSCQatWQrwwWhjb?startTime=1749562076000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>15. WTO</h3>
+                        <p>Insights into the World Trade Organization.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FtAk-cEegFEIoNr54eGjkB-mOXUN3Q4N_bmwB_ZHJV6r_vXJ0ZoliwpNTdxnVN9p.58xXOIThbYFH4tQ3?startTime=1749645264000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>16. Climate Change index</h3>
+                        <p>Learn about climate change indices.</p>
+                        <a href="https://us06web.zoom.us/rec/share/des-c8Uh4BIDChdAwGXJfmIo-wdmu7HKQGAXDgx5WJ2mGG2oDFqsYkkOmaA4MUVn.sIPvoNaq_eRYz-hn?startTime=1749819665000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>17. MGNREGA</h3>
+                        <p>Understanding the Mahatma Gandhi National Rural Employment Guarantee Act.</p>
+                        <a href="https://us06web.zoom.us/rec/share/rI0mqjZsettP9bVkGLGIrZvdR0Gnc0EHcg-4nO5DKPSz3EcHOGU3x5oTvoQLmsvo.NWHxKPWfwzDtZ-iI?startTime=1751286757000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>18. Tobacco epidemic report</h3>
+                        <p>Insights from the tobacco epidemic report.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IuHHENlBTCKcVPcIVoygV7qtGJ88GAzzolaiWVl8aaPG6gYDVpzJOAjOxz1QgDui.r3paYLSMlAIhYSXD?startTime=1751632713000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>19. GSI</h3>
+                        <p>Information about the Geological Survey of India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Ux9CTZTct3DoRPlTc4b5TMOsbmgKW_lkIDvB2D3AnsoJ1aoq_qiUL219cKm-saSI.phDeZBVqVh7-E8aR?startTime=1752064223000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>20. TFR</h3>
+                        <p>Understanding Total Fertility Rate.</p>
+                        <a href="https://us06web.zoom.us/rec/share/tZ2AWGRXrQwjxq2Ohr0XlntAjdtiifZl1-PdFOcDcDJdKHcPZJ5__XYV3HwVNMSw.xbAzhIC3N6IxXACg?startTime=1752150911000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>21. PSL</h3>
+                        <p>Details about Priority Sector Lending.</p>
+                        <a href="https://us06web.zoom.us/rec/share/dbDP8ALo1pTcUVuWIiZCrkDAyk95lbZ3BKy-POrgyhNhDQ1YoLwPe1uaVrDKlAaI.E8SnBgzc9m06yo6R?startTime=1752497973000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>22. Hydrogen powered trains</h3>
+                        <p>Discussion on hydrogen-powered trains.</p>
+                        <a href="https://us06web.zoom.us/rec/share/sP7Hyt7BCw8vOlOtnPrhluZ4ysAcnTAyPcxdI49C0mjWTzlwZof82Ex8DD6iVyNz.oHNjxpTGCgmOl19m?startTime=1752634754000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>23. Attorney general ji</h3>
+                        <p>Role and functions of the Attorney General.</p>
+                        <a href="https://us06web.zoom.us/rec/share/F3k6kiVaR9tYbBmCTaxOWHF6NcokpJowHxnVjYywzprPqUd3FdKHgNCUSDLSyBkQ.X4kTAq7o82QFW6io?startTime=1752669109000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>24. National Road Safety Board</h3>
+                        <p>Information about the National Road Safety Board.</p>
+                        <a href="https://us06web.zoom.us/rec/share/tk3ZKcru7yrFbyEvGvgOYYbPe1oogko-woJj0EidBAr-6m2DJUxduaGI1cenaIgU.sED4IciNyXcmtNP_?startTime=1752721275000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>25. Committees of parliament</h3>
+                        <p>Overview of parliamentary committees.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NI9ky5ZKgYf1zkZAHWdFHUAoRFDFPtDDqPdC_MjY3CKVVizmfwN2pcL0MMzJ054.tc8sHpElzmW1qAvA?startTime=1752755966000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>26. Election Commission</h3>
+                        <p>Role and functions of the Election Commission.</p>
+                        <a href="https://us06web.zoom.us/rec/share/j2Uv4dnFDPOdLus-uEcZQOId9mJZGjX7b5d-Ma-mYcdrmUnqvf2V9cmQDp4LmdgZ.hF-X8cWNrFyvSwjv?startTime=1752841939000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>27. Secondary Sections</h3>
+                        <p>Details about secondary sections.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ZGlFniOJMZ1AkNgwfXCGfrEmPxVhwS0DpVCdRZmAzWu1qrTXa8q2jKW246ois6Yf.j20DW-p80OTk1G29?startTime=1753066709000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>28. CVC</h3>
+                        <p>Understanding the Central Vigilance Commission.</p>
+                        <a href="https://us06web.zoom.us/rec/share/zlMscfuih2CbGF0uYUjco-gn8RMHpNqwCeqKC1VJ9yz8rFK12K3PFrn_v0-0P2AZ.t4YnLbif7cveux3B?startTime=1753102920000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>29. CBI</h3>
+                        <p>Information about the Central Bureau of Investigation.</p>
+                        <a href="https://us06web.zoom.us/rec/share/8dyrn0sWr-YlbzlQ-ezxJVHntzYRVChPne-TTyU_aPv4QdWwRwXLZ0wDiSSLVutW.xn_VqOhYKxKCzNTV?startTime=1753360191000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>30. Injectable Hydrogel</h3>
+                        <p>Learn about injectable hydrogels.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NzbXctV0zZrsjcx-7ShR5AANVMpvJwJaghzyEkH978gRKAxQ210K0CzzPnG9GdQk.h9zegoW7ViT1lBG9?startTime=1753671566000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>31. UPSC + SPSC</h3>
+                        <p>Understanding UPSC and SPSC.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FAJchncEoVEap72kTEj8eMY9zxta7mXBbILc_FaH1KFYmBc78YzWeM19X3qo5e4k.Sj_0C_fB7fcENRKD?startTime=1753706196000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>32. Agrivoltic farming</h3>
+                        <p>Explore agrivoltaic farming techniques.</p>
+                        <a href="https://us06web.zoom.us/rec/share/qSCicLw0m_B4b2umiQmP3iT35dQhZB86cJemjHqIEO9n5Cz-UCptziKUmXa6dmfe.D6phBv3gYg4dwcYu?startTime=1753792441000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>33. Right to be forgotten</h3>
+                        <p>Learn about the right to be forgotten.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_NKCUJ2Jt4mXkviGHmDCWJwZwQlySjGtJbsPo8kkkqgnH7BpAw2D6pb5VkI3wYSo.jGlLDTVVS5n-Ec_Y?startTime=1753965522000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>34. International year of cooperatives</h3>
+                        <p>Information on the International Year of Cooperatives.</p>
+                        <a href="https://us06web.zoom.us/rec/share/q-UAxtHSpfxIXdxnHjyYUdNgf7MVRAblNvCrRKfej5CYikDtgjXAy1kQ5W0lT9GM.hpHgmjSNmuzWTUiE?startTime=1754276388000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>35. National Turmeric Board</h3>
+                        <p>Details about the National Turmeric Board.</p>
+                        <a href="https://us06web.zoom.us/rec/share/PXV0ICECWXayiZ2crRY8JdBHClAp4ZTselhllh11XvVjV-piH_G5JPsVLGmXoCKj.wp_4l1auUqAkV69r?startTime=1754363138000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>36. 8th Pay Commission</h3>
+                        <p>Insights into the 8th Pay Commission.</p>
+                        <a href="https://us06web.zoom.us/rec/share/zsiNd2ELK_rWpxBR_YkghNlQQHceIHQXpj_0C-YToNtqtAvMIx6pnkqzakMt8-dR.L3mtdW2oVS_Qyt1h?startTime=1754483688000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>37. Maratha Military Landscape</h3>
+                        <p>Study of the Maratha Military Landscape.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_Gn7Hz86EqKXmFIIIjhj4bgo5yT5VZFOK8YVMHDJp7danvFamuBGWykTgrydrURS.p2DfM_EJc-7Zfv3N?startTime=1754881137000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>38. Zonal Councils</h3>
+                        <p>Understanding Zonal Councils.</p>
+                        <a href="https://us06web.zoom.us/rec/share/xM1Tf89zNSjxAttEzm5u2dRntu6xZQyXEbR7jv5DQIpKhHApfRhC1OfE-b-1YuOn.AprjTpw-aP5zotnD?startTime=1756735369000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Indian Geography -->
+            <section id="indian-geography" data-subject="Indian Geography">
+                <h2 class="section-title">Indian Geography</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. India - Location & area</h3>
+                        <p>Learn about India's geographical location and area.</p>
+                        <a href="https://us06web.zoom.us/rec/share/cc3IeGeagy842jph6rP00G21TeWX2-KmzwjyjGsCRfw0BhImNZGWQbS7J3rD_PY.SEPic47QSa87rG6a?startTime=1748609357000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. The Himalayas</h3>
+                        <p>Study the Himalayan mountain range.</p>
+                        <a href="https://us06web.zoom.us/rec/share/cc3IeGeagy842jph6rP00G21TeWX2-KmzwjyjGsCRfw0BhImNZGWQbS7J3rD_PY.SEPic47QSa87rG6a?startTime=1748612063000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Peninsular India</h3>
+                        <p>Explore the geography of Peninsular India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/6woeDlw7aqgNFaF3Hih94JhR-Hmq1ejX57rGfNrEBTiOqsklGTtkPcMIzUaWGqNm.B7LGv4Zrc9abZRA-?startTime=1748954615000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Coast + Islands</h3>
+                        <p>Learn about India's coastline and islands.</p>
+                        <a href="https://us06web.zoom.us/rec/share/x9vlPOBWTGzq8xkPbtlSRMfks7jWMkhl6w_Sh6Ia1u-zlW9BOiDCbdn_1P-7a3Dx.BICJ4cj3Pbf7YnjS?startTime=1748959036000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Indus + Ganga river system</h3>
+                        <p>Study the Indus and Ganga river systems.</p>
+                        <a href="https://us06web.zoom.us/rec/share/d0Fjd9DWFXrN9mNT6y9OQ7nJeTSVsLM-vhYAjcfmAwLIAbSI2n8YhVCmhtilK1hL.0zmZSGJ4Io8qRJ1-?startTime=1749041417000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Brahmaputra + Waterfalls + peninsular rivers</h3>
+                        <p>Explore the Brahmaputra river, waterfalls, and peninsular rivers.</p>
+                        <a href="https://us06web.zoom.us/rec/share/d0Fjd9DWFXrN9mNT6y9OQ7nJeTSVsLM-vhYAjcfmAwLIAbSI2n8YhVCmhtilK1hL.0zmZSGJ4Io8qRJ1-?startTime=1749046500000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Peninsular rivers + lakes</h3>
+                        <p>Learn about peninsular rivers and important lakes.</p>
+                        <a href="https://us06web.zoom.us/rec/share/GRzWlJ33TPRPJsVg5DvEJdZP1e6JPAdX_kFdOUBGnMRitkBiiXvEA2V8gO4SlFyr.gjC5_hU0p00UUVMQ?startTime=1749127218000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Soil</h3>
+                        <p>Study different types of soils in India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/GRzWlJ33TPRPJsVg5DvEJdZP1e6JPAdX_kFdOUBGnMRitkBiiXvEA2V8gO4SlFyr.gjC5_hU0p00UUVMQ?startTime=1749130060000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Vegetation + Forest Report</h3>
+                        <p>Learn about natural vegetation and forest reports.</p>
+                        <a href="https://us06web.zoom.us/rec/share/GRzWlJ33TPRPJsVg5DvEJdZP1e6JPAdX_kFdOUBGnMRitkBiiXvEA2V8gO4SlFyr.gjC5_hU0p00UUVMQ?startTime=1749132848000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Railways + roadways + waterways + pipeline</h3>
+                        <p>Overview of transportation networks in India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/-fmnnFl9-86-FUy3NXJRtSKrhqaZTfzldjaEsn3q8j81nibNBLy8aBRv89hDYvVd.9ns_RA7TwrjWv8lW?startTime=1749214348000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Indian monsoon + El nino + Jets</h3>
+                        <p>Understand the Indian monsoon, El Niño, and jet streams.</p>
+                        <a href="https://us06web.zoom.us/rec/share/M33kG1FGxxsTtze2vW8RDYdWw_9eo7O3cWrbMA8CJe1ijzgS0I-yWOo55GH8GZs.DEVsyO6V5U6WcGrW?startTime=1749473266000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Koeppan ji ki coding</h3>
+                        <p>Learn about the Köppen climate classification system.</p>
+                        <a href="https://us06web.zoom.us/rec/share/M33kG1FGxxsTtze2vW8RDYdWw_9eo7O3cWrbMA8CJe1ijzgS0I-yWOo55GH8GZs.DEVsyO6V5U6WcGrW?startTime=1749478756000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BIOLOGY -->
+            <section id="biology" data-subject="BIOLOGY">
+                <h2 class="section-title">BIOLOGY</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Human health & diseases</h3>
+                        <p>Study human health and common diseases.</p>
+                        <a href="https://us06web.zoom.us/rec/share/HzPBWzQIL4eHz1uCsDCYzY4Un6zvapeB8k1VGcGlxf7Vpsdur5L6vLyowpy_j3v2.YVSCQatWQrwwWhjb?startTime=1749562954000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Cell class 1</h3>
+                        <p>First class on cell biology.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FtAk-cEegFEIoNr54eGjkB-mOXUN3Q4N_bmwB_ZHJV6r_vXJ0ZoliwpNTdxnVN9p.58xXOIThbYFH4tQ3?startTime=1749645893000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Cell class 2</h3>
+                        <p>Second class on cell biology.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FtAk-cEegFEIoNr54eGjkB-mOXUN3Q4N_bmwB_ZHJV6r_vXJ0ZoliwpNTdxnVN9p.58xXOIThbYFH4tQ3?startTime=1749650174000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Chromosome + Cell PYQ</h3>
+                        <p>Learn about chromosomes and solve cell biology PYQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/des-c8Uh4BIDChdAwGXJfmIo-wdmu7HKQGAXDgx5WJ2mGG2oDFqsYkkOmaA4MUVn.sIPvoNaq_eRYz-hn?startTime=1749820188000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Plant and animal tissue</h3>
+                        <p>Study different types of plant and animal tissues.</p>
+                        <a href="https://us06web.zoom.us/rec/share/des-c8Uh4BIDChdAwGXJfmIo-wdmu7HKQGAXDgx5WJ2mGG2oDFqsYkkOmaA4MUVn.sIPvoNaq_eRYz-hn?startTime=1749823070000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Excretion + Digestion</h3>
+                        <p>Understand the processes of excretion and digestion.</p>
+                        <a href="https://us06web.zoom.us/rec/share/JVi0PRznDeZTXSX1emrJuAVOwJIwDuPaY3vg8QfQqKZqNCmgPpsdng16vRMqGs8Q.e7gVSBekq9iX4uBE?startTime=1749969230000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Transpiration + Respiration</h3>
+                        <p>Learn about transpiration and respiration in living organisms.</p>
+                        <a href="https://us06web.zoom.us/rec/share/JVi0PRznDeZTXSX1emrJuAVOwJIwDuPaY3vg8QfQqKZqNCmgPpsdng16vRMqGs8Q.e7gVSBekq9iX4uBE?startTime=1749974777000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Plant Hormone + Animal Hormone</h3>
+                        <p>Study plant and animal hormones.</p>
+                        <a href="https://us06web.zoom.us/rec/share/DATo3QwPNqqIvyJsLSq6naPxChOKk-E-aYR8WEuGXybTz4Bpnvfchp1YJYKsvNFL.mak42MljBdMIDYEr?startTime=1750082586000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Flowers + Stem + Leaves - High level</h3>
+                        <p>Advanced study of plant parts: flowers, stems, and leaves.</p>
+                        <a href="https://us06web.zoom.us/rec/share/w23HhReTZmA1qx6d6PRwxqUshOi2YoeOJBlFAbe7biU259BvF23x08zz9JIQZgJK.h3qjS0_E-9Ftn-4w?startTime=1750250314000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Reproduction</h3>
+                        <p>Learn about different modes of reproduction.</p>
+                        <a href="https://us06web.zoom.us/rec/share/w23HhReTZmA1qx6d6PRwxqUshOi2YoeOJBlFAbe7biU259BvF23x08zz9JIQZgJK.h3qjS0_E-9Ftn-4w?startTime=1750254708000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Monera + Protista + Fungi + Plantae</h3>
+                        <p>Study the kingdoms Monera, Protista, Fungi, and Plantae.</p>
+                        <a href="https://us06web.zoom.us/rec/share/afkK-SR-FAJ-n9tGAimZ0FZMnDrddfqgGn_2rSDT1tkDqwnuuLdjeClhjiXFKuaK.9jhuAzHaHwjA56eD?startTime=1751287705000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Animalia_Kingdom</h3>
+                        <p>Explore the Animalia kingdom.</p>
+                        <a href="https://us06web.zoom.us/rec/share/afkK-SR-FAJ-n9tGAimZ0FZMnDrddfqgGn_2rSDT1tkDqwnuuLdjeClhjiXFKuaK.9jhuAzHaHwjA56eD?startTime=1751291933000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Nervous System + Miscellaneous</h3>
+                        <p>Learn about the nervous system and other biological topics.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IuHHENlBTCKcVPcIVoygV7qtGJ88GAzzolaiWVl8aaPG6gYDVpzJOAjOxz1QgDui.r3paYLSMlAIhYSXD?startTime=1751633579000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANCIENT HISTORY -->
+            <section id="ancient-history" data-subject="ANCIENT HISTORY">
+                <h2 class="section-title">ANCIENT HISTORY</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Pre-history Class 1</h3>
+                        <p>First class on pre-history.</p>
+                        <a href="https://us06web.zoom.us/rec/share/xsTPvrTvlj9ot-C5Cr2CdIa-8n4-pEeiZiO5uTtbOsw2UPtRN-LQYLckgUf62oXB.fvRqYb2LHXb81byW" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Pre-history Class 2</h3>
+                        <p>Second class on pre-history.</p>
+                        <a href="https://us06web.zoom.us/rec/share/WlF7y69u1AmcpDm1LEld_cCCMDQsSxyAME-MyhJtY1CGOlPsBnhci0cDrfTuvjzb.hu2iR6WDPmYQHCMp" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Pre-history Class 3</h3>
+                        <p>Third class on pre-history.</p>
+                        <a href="https://us06web.zoom.us/rec/share/KnD8zLeIuV7QCRo3JLCSDliBCwEUmX6aC2SkgAYqZSE2m91Evv-0enyMwbR6Gic8.7XLwwTxag986Ro1i" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. IVC Class 1</h3>
+                        <p>First class on Indus Valley Civilization.</p>
+                        <a href="https://us06web.zoom.us/rec/share/EqDTTYyUDBL-dJqWZuY-RsbwGnALhjIQbeKSdpZhcA3k60YypoyTQ_yGtQF6iqJp.aCbgn1QeVf2gFYbD" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. IVC Class 2</h3>
+                        <p>Second class on Indus Valley Civilization.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Ux1uGfBHxcOQaFC71jEaRCcXALOOYNn5WtHCJM58x10og_8fDSQjcLhkKHLuQtyB.KDuXqqQh94HPK16t" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Vedic Age - Class 1</h3>
+                        <p>First class on the Vedic Age.</p>
+                        <a href="https://us06web.zoom.us/rec/share/n_H1EL9V9bAVqmaYYd_W1uu-HRhNydW70cICcxxnTUEOzE4czE4SvTrc9ffk062U.JFYs2rojmfjvus8L" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Vedic age - Class 2</h3>
+                        <p>Second class on the Vedic Age.</p>
+                        <a href="https://us06web.zoom.us/rec/share/-tYuGpCLxvNupNEStmw8hGQP4_jvyCUfPZrb5xlU9VKredOY4GkTujtdr4yKh8yj.5MmxxFHQYuYvplb9" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Mahajanapadas & Magadh Dynasty</h3>
+                        <p>Study of Mahajanapadas and the Magadh Dynasty.</p>
+                        <a href="https://us06web.zoom.us/rec/share/UuP2xoGvcsdThWHMjrFsP3xWkdPIZ7YTF2Wy1EsVuAxqSwufy-vNmJZQPFY57DG6.Pm1NyYScb_efwNE7" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Magadh dynasty - Class 2</h3>
+                        <p>Second class on the Magadh Dynasty.</p>
+                        <a href="https://us06web.zoom.us/rec/share/mOhk4aRb0B9jgjeMLOGHzGQsraZYgy2pzq9rCnDBGaGWn-5JPeDTaAJUBbB3A9vK._DIfgIqkhCw6kLk5" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Buddhism - Class 1</h3>
+                        <p>First class on Buddhism.</p>
+                        <a href="https://us06web.zoom.us/rec/share/96eHiFR1dsVx5k6IQrBlkXkU13bUZSJ4-_lwBoiAZyVAK-9j0DooT71IqbTZZW0C.5vfGzkB7BpAv70vj" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Buddhism - Class 2</h3>
+                        <p>Second class on Buddhism.</p>
+                        <a href="https://us06web.zoom.us/rec/share/YfyMOfKIp49PhGaXANw9ArP2fC_CypQjycUeYdhYV4ASdIDZUQHEUJTJiRHcPfTn.9GuNYUW17blj1j47" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Jainism</h3>
+                        <p>Study of Jainism.</p>
+                        <a href="https://us06web.zoom.us/rec/share/VbKE4k5kdRmeH_M5TkTRFegjXaACJu4BXP7EHUnxH7sk0bG6qd8uZ4cMymZOHg_i.YfXm-vlzf8Pus7QK" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Mauryan Empire - Class 1</h3>
+                        <p>First class on the Mauryan Empire.</p>
+                        <a href="https://us06web.zoom.us/rec/share/XnqibupcioHiVNoH1ry6bMvTbyG-6Y1L9jzFnnq7bTBgmeffSC-nWFjo2xFU44tm.pk877soJNVWd-DyM" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Mauryan Empire - Class 2</h3>
+                        <p>Second class on the Mauryan Empire.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IZIECJYQoyOsm_-Guqo-_38fo2Pgwmo_u-qnmmPCwbm0-o-c-ZjVeQfLmJbydLVC.SupqbiGH5FueYMSp?startTime=1751459302000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>15. Mauryan Empire - Class 3</h3>
+                        <p>Third class on the Mauryan Empire.</p>
+                        <a href="https://us06web.zoom.us/rec/share/IZIECJYQoyOsm_-Guqo-_38fo0Pgwmo_u-qnmmPCwbm0-o-c-ZjVeQfLmJbydLVC.SupqbiGH5FueYMSp?startTime=1751463775000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>16. Mauryan Empire - Class 4</h3>
+                        <p>Fourth class on the Mauryan Empire.</p>
+                        <a href="https://us06web.zoom.us/rec/share/pUZJOXrBWyNlfP-n_ZhVRGIYSI9DVFN4TiX4MEexwtsOGCFqnbT5NxTZC4wiXqwD.uh2ohM-BQtuLHwan" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>17. Post mauryan period - 1</h3>
+                        <p>First class on the Post-Mauryan period.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Hl5EDVh53buU9VXMn4yr91Knb__NeLyxC7dCL71LHT6BAfdJfhKc3paodWKbvjvw.IrY4WnijbqgFvnsS" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>18. Post mauryan period - 2</h3>
+                        <p>Second class on the Post-Mauryan period.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Ckk7nzENIH8M29Vx-Vk2pQ1z5e7WQ-ke154Zg4N-br9WdYE1ZVX5PRslLbaaxQha.9qn1-Ct-IvKElVd2?startTime=1751977693000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>19. PYQ practice</h3>
+                        <p>Practice previous year questions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Ckk7nzENIH8M29Vx-Vk2pQ1z5e7WQ-ke154Zg4N-br9WdYE1ZVX5PRslLbaaxQha.9qn1-Ct-IvKElVd2?startTime=1751981593000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>20. Satvahan Dynasty</h3>
+                        <p>Study of the Satavahana Dynasty.</p>
+                        <a href="https://us06web.zoom.us/rec/share/xS6oB0cnk2hff9P9nMhpcTPb0Cw2RCf4a1bgqfadBHPX_GW8tcogN0OGjEzEHyX2.eoN_WvZmfCRDpxko" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>21. Sangam Age</h3>
+                        <p>Explore the Sangam Age.</p>
+                        <a href="https://us06web.zoom.us/rec/share/x4hPRQK3LO2yRkF9bmm7Jgace0yTCft0oGwrlurvAaZbwhinTNUzd5nXGmjMXEat.tMMsurITAg02oYCG" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>22. Gupta dynasty</h3>
+                        <p>Study of the Gupta Dynasty.</p>
+                        <a href="https://us06web.zoom.us/rec/share/meR1Fp6p9FDMjaKEFl0FKzldoRhZhp-Lntl_PkzUlKLH2jq3Yzr40UrXCArncV05.Fk5iEZ4uic8_H2VM" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>23. Gupta dynasty - class 2</h3>
+                        <p>Second class on the Gupta Dynasty.</p>
+                        <a href="https://us06web.zoom.us/rec/share/d2sgg-ZEpEkOMVNFpPBFZ-mZ9iJ-jO3G4yL6BAG6B1jG_2h5Amj0svFLJS-OHx9Z.XkFIC4nZ-PmhfAKO" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>24. Post Gupta empire</h3>
+                        <p>Learn about the Post-Gupta Empire period.</p>
+                        <a href="https://us06web.zoom.us/rec/share/dbDP8ALo1pTcUVuWIiZCrkDAyk95lbZ3BKy-POrgyhNhDQ1YoLwPe1uaVrDKlAaI.E8SnBgzc9m06yo6R?startTime=1752499873000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>25. NCERT Chapter 1 Revision</h3>
+                        <p>Revision of NCERT Chapter 1.</p>
+                        <a href="https://us06web.zoom.us/rec/share/uJXwsZR5nnEh8htyDNQiYoRQpMOSN8MEIkAfkEgSPwwFus7rR6YymEpG3oefYNbD.RC71uJERAEtoATHH" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>26. NCERT Chapter 2 revision</h3>
+                        <p>Revision of NCERT Chapter 2.</p>
+                        <a href="https://us06web.zoom.us/rec/share/sP7Hyt7BCw8vOlOtnPrhluZ4ysAcnTAyPcxdI49C0mjWTzlwZof82Ex8DD6iVyNz.oHNjxpTGCgmOl19m?startTime=1752635875000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>27. NCERT Chapter 3 revision</h3>
+                        <p>Revision of NCERT Chapter 3.</p>
+                        <a href="https://us06web.zoom.us/rec/share/tk3ZKcru7yrFbyEvGvgOYYbPe1oogko-woJj0EidBAr-6m2DJUxduaGI1cenaIgU.sED4IciNyXcmtNP_?startTime=1752722677000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- English Practice -->
+            <section id="english-practice" data-subject="English Practice">
+                <h2 class="section-title">English Practice</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Vocab tricks practice - Class 1</h3>
+                        <p>First class on vocabulary tricks practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/DATo3QwPNqqIvyJsLSq6naPxChOKk-E-aYR8WEuGXybTz4Bpnvfchp1YJYKsvNFL.mak42MljBdMIDYEr?startTime=1750077044000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Parts of speech (basics + QP)</h3>
+                        <p>Basics of parts of speech and question practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Bqr76Db6Ok31eHzF6_hUEl0KFOFRsGMCc-H7DWsXsyEacLbYkk1VcyddjSGJEzML.195CJZkDOv4cMtFv" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Parts of speech (basics + QP) - Class 2</h3>
+                        <p>Second class on parts of speech basics and question practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/UDBAHPxxBjd0MrGiKujvRNriFHjTGwXEfyp2R5uB764m7fyHwrb5F01bSBwjS4Kh.cmOMuVGmpBNdHnb8?startTime=1750768410000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Vocab tricks practice - Class 2</h3>
+                        <p>Second class on vocabulary tricks practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/UDBAHPxxBjd0MrGiKujvRNriFHjTGwXEfyp2R5uB764m7fyHwrb5F01bSBwjS4Kh.cmOMuVGmpBNdHnb8?startTime=1750773280000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Error based questions (CDS 2018-2024) - Class 1</h3>
+                        <p>First class on error-based questions from CDS 2018-2024.</p>
+                        <a href="https://us06web.zoom.us/rec/share/1CDVKBOqAaXSqqu0qk5tiLdp3As9F7Ltt42SXiFgQHoAxQx8wFdTOb5H1E_7AO-k.bwIY7NasiIeG-hi6?startTime=1750854572000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Vocab tricks practice - Class 3</h3>
+                        <p>Third class on vocabulary tricks practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/1CDVKBOqAaXSqqu0qk5tiLdp3As9F7Ltt42SXiFgQHoAxQx8wFdTOb5H1E_7AO-k.bwIY7NasiIeG-hi6?startTime=1750860220000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Error based questions (CDS 2018-2024) - Class 2</h3>
+                        <p>Second class on error-based questions from CDS 2018-2024.</p>
+                        <a href="https://us06web.zoom.us/rec/share/cnB16z-xvIIpVYFJ7wdYT_bofIx3cCxN7k9WgZoedryyLGCRoTyS7XbO0DOTZTvd.WvuAXzZoobvsxljc" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Vocabulary PYQ - Class 1</h3>
+                        <p>First class on vocabulary previous year questions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ssn_EANEFIkkEROG-x8-NIBS6Kk5dtHXMxWWbAAMOMUhJnwS_NqUvft-xR_wLsGl.X6sPwTcumbo31kWU" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Full mock (27th July) explanation</h3>
+                        <p>Explanation of the full mock test from July 27th.</p>
+                        <a href="https://us06web.zoom.us/rec/share/sKjbg1jz6FfFIyNeRSySQ_ZY7lDl2O9bRRoz-LtCtlbFUXGjTOOogWJxFwP-e2IK.W8WpdyalgD5ViR9b" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Root Words QP - Class 1</h3>
+                        <p>First class on root words question practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Xf0pInp5_b9Ta9Lq0HAR4ILV4fEe6nt7Klbtx95ei7OMc_oZkr9xvN8nB17TeWXy.xiIHi83OSnmx2Nsq" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Root Words QP - Class 2</h3>
+                        <p>Second class on root words question practice.</p>
+                        <a href="https://us06web.zoom.us/rec/share/LX-kvFSOuzY4D_z84tYL8gVTrC0HFfObaw3G3Y7memnb1eA4gmTv20lF1lND1yHg.4IBLdNRIKIfzu05S" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Practice Set 1</h3>
+                        <p>First English practice set.</p>
+                        <a href="https://us06web.zoom.us/rec/share/CUANefxZavibs5jV_IqThQ6cQvXMXoFOwtm6z57XepxTl0eaHO-IfJ6ODCsJHNIg.xYUdFpgHy2ehfKMA" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. S1-S6 - Crazy tricks</h3>
+                        <p>Crazy tricks for S1-S6 questions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ctnrIyqlY71kPpwVW2OpuCo6oM0SkQTvHiZvCuFjebynK3G5VK85FtHi44ZJ1vhO.n38FFZtH84CdB2nf?startTime=1754917290000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. S1-S6 PYQs</h3>
+                        <p>Previous year questions for S1-S6.</p>
+                        <a href="https://us06web.zoom.us/rec/share/TR_6mMbo2Bw99WLFY-PHKs_BaTtrHDa-NkFXFgZ6iuCbCUN2yqGU6WlayJKmXp9v.3XtfHnet7CsnCUI9?startTime=1755002255000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>15. Practice Set 2</h3>
+                        <p>Second English practice set.</p>
+                        <a href="https://us06web.zoom.us/rec/share/WbAvBp_awSfkuU52iwjiqAxy9B9g1l9iaSYGnteDcLx3-eV4F9Qip5IjRaH73NuX.hAchfdiobu4-mSRf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>16. Practice set 3</h3>
+                        <p>Third English practice set.</p>
+                        <a href="https://us06web.zoom.us/rec/share/aB_35rQZLK1RJCT6qYFf9nOG-Hhqmr60MELQuSfP0mKZuJe__QE0xyIAgdBMerox.HqRDQLwLDIBU7ikf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>17. Voice (Concept + PYQ)</h3>
+                        <p>Learn about voice (active/passive) and solve PYQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/PtxWhQ7EVEVswSIEMhjdPNdQg-8jI-6fOL50y6Y3NQTOWgczXbsaL7VAqDInOHP7.F81V6qO4qbDb-q9G" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>18. CDS 1 2021 English Explanation</h3>
+                        <p>Explanation of English section from CDS 1 2021.</p>
+                        <a href="https://us06web.zoom.us/rec/share/gI-T_AYA0Yh3sWZMqxhOoR-wKUakHw1zhvY92qdpPn9aUcnLyNWuVeS1wz0NdKxj.Y7F0R-7MwQY-Ouhb" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>19. CDS 2 2021 English explanation</h3>
+                        <p>Explanation of English section from CDS 2 2021.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_qY68zUumT1U3XsnH3jdBlZZju1hsUvPG4SSDkE8UhI6PajgOUnQo0ycvv6vGYNa.GcWGycnHEEYWvvq-" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>20. CDS 1 2022 English explanation</h3>
+                        <p>Explanation of English section from CDS 1 2022.</p>
+                        <a href="https://us06web.zoom.us/rec/share/MLZu3hNeCvX48Er0az2BjseANbZUZLKN0YJYdmYQ4X40PZFUJ_iS3S7d9eVlDvqJ.47JISd8H2EN86sel" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>21. CDS 2 2022 English explanation</h3>
+                        <p>Explanation of English section from CDS 2 2022.</p>
+                        <a href="https://us06web.zoom.us/rec/share/6iZTSSuUOxVzuPJ1E4XKLbJvLhFjcEaQ2lLMTrgSu8hXjbaCN1mWQdfjmUmT0k6x.9kOBN20WCaAdLmed" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>22. CDS 1 2023 English explanation</h3>
+                        <p>Explanation of English section from CDS 1 2023.</p>
+                        <a href="https://us06web.zoom.us/rec/share/71kI8TuIZU69g1UX9ClUwRTPyRZaNFQFp8zNtTFAxXeYV-f2k9QKxX78la7yC_c2.MJOuucwW6iFmJwJG" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHEMISTRY -->
+            <section id="chemistry" data-subject="CHEMISTRY">
+                <h2 class="section-title">CHEMISTRY</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Acid & Base</h3>
+                        <p>Learn about acids and bases.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Brfz6ED1jsx-hYdHcTJyivQNdb62ndpDQ4wAn_AQaWmBf2Za3ei4-0qS4f4Lleo3.hn-n4hWQTCIEtZRq?startTime=1751891505000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Salts</h3>
+                        <p>Study different types of salts.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Brfz6ED1jsx-hYdHcTJyivQNdb62ndpDQ4wAn_AQaWmBf2Za3ei4-0qS4f4Lleo3.hn-n4hWQTCIEtZRq?startTime=1751896293000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Metal and non metal</h3>
+                        <p>Understand the properties of metals and non-metals.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Ux9CTZTct3DoRPlTc4b5TMOsbmgKW_lkIDvB2D3AnsoJ1aoq_qiUL219cKm-saSI.phDeZBVqVh7-E8aR?startTime=1752064881000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Identification of reducing and oxidizing agent</h3>
+                        <p>Learn to identify reducing and oxidizing agents.</p>
+                        <a href="https://us06web.zoom.us/rec/share/Ux9CTZTct3DoRPlTc4b5TMOsbmgKW_lkIDvB2D3AnsoJ1aoq_qiUL219cKm-saSI.phDeZBVqVh7-E8aR?startTime=1752070634000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Chemical reactions and colours</h3>
+                        <p>Study chemical reactions and associated color changes.</p>
+                        <a href="https://us06web.zoom.us/rec/share/F3k6kiVaR9tYbBmCTaxOWHF6NcokpJowHxnVjYywzprPqUd3FdKHgNCUSDLSyBkQ.X4kTAq7o82QFW6io?startTime=1752669912000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Soap and detergent</h3>
+                        <p>Learn about the chemistry of soaps and detergents.</p>
+                        <a href="https://us06web.zoom.us/rec/share/F3k6kiVaR9tYbBmCTaxOWHF6NcokpJowHxnVjYywzprPqUd3FdKHgNCUSDLSyBkQ.X4kTAq7o82QFW6io?startTime=1752674841000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Carbon + Oxidation number</h3>
+                        <p>Study carbon and oxidation numbers.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NI9ky5ZKgYf1zkZAHWdFHUAoRFDFPtDDqPdC_MjY3CKVVizmfwN2pcL0MMzJ054.tc8sHpElzmW1qAvA?startTime=1752756643000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Chemical properties of Carbon</h3>
+                        <p>Explore the chemical properties of carbon.</p>
+                        <a href="https://us06web.zoom.us/rec/share/j2Uv4dnFDPOdLus-uEcZQOId9mJZGjX7b5d-Ma-mYcdrmUnqvf2V9cmQDp4LmdgZ.hF-X8cWNrFyvSwjv?startTime=1752843102000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Atoms and basics of Chemistry</h3>
+                        <p>Introduction to atoms and fundamental chemistry concepts.</p>
+                        <a href="https://us06web.zoom.us/rec/share/j2Uv4dnFDPOdLus-uEcZQOId9mJZGjX7b5d-Ma-mYcdrmUnqvf2V9cmQDp4LmdgZ.hF-X8cWNrFyvSwjv?startTime=1752846602000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Mixtures + Separations + Numericals</h3>
+                        <p>Study mixtures, separation techniques, and related numericals.</p>
+                        <a href="https://us06web.zoom.us/rec/share/zlMscfuih2CbGF0uYUjco-gn8RMHpNqwCeqKC1VJ9yz8rFK12K3PFrn_v0-0P2AZ.t4YnLbif7cveux3B?startTime=1753103667000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Periodic trends & Polymer</h3>
+                        <p>Learn about periodic trends and polymers.</p>
+                        <a href="https://us06web.zoom.us/rec/share/2BW5Kh5Hp96jlwf4EWg9MFtg4-7zoAxA8qQsQxW1Ds-OUqr_Fy0fe2vgvliQWXo.oJbHvIP9vJtnB8JN?startTime=1753273949000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Afternoon Revision Test -->
+            <section id="afternoon-revision-test" data-subject="Afternoon Revision Test">
+                <h2 class="section-title">Afternoon Revision Test</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Full mock (6th July) - GS explanation</h3>
+                        <p>Explanation of the General Studies section from the full mock test on July 6th.</p>
+                        <a href="https://us06web.zoom.us/rec/share/HM9VITU4YDZaQ5C4weCqoPZJBUbvJVWu9g6qTiz2x3tXG6r-XtQbMvyWg_9aT96a.LIGw12ECi-LMjCjs" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Full mock (17th Aug) - English explanation</h3>
+                        <p>Explanation of the English section from the full mock test on August 17th.</p>
+                        <a href="https://us06web.zoom.us/rec/share/uKyPRKcA9ElgSx_w6BLmZXcrdZ1R_34FP7_K11Zvo8lWeq-Kbbnv53aKyzVzJsah.xlLMKnDuip1kWZRG" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modern History -->
+            <section id="modern-history" data-subject="Modern History">
+                <h2 class="section-title">Modern History</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Modern History Overview - Class 1</h3>
+                        <p>First class providing an overview of Modern History.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ZGlFniOJMZ1AkNgwfXCGfrEmPxVhwS0DpVCdRZmAzWu1qrTXa8q2jKW246ois6Yf.j20DW-p80OTk1G29?startTime=1753068064000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Rise of independent states</h3>
+                        <p>Study the rise of independent states in modern India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/DexLjyg3nlcJ185EXVRD2JZImvKHqyiWN0t5yzj8j2kmjidk2QIxaU-3e1IjqEJ1.-26BjIMCjFRpig53?startTime=1753153183000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Maratha empire</h3>
+                        <p>Learn about the Maratha Empire.</p>
+                        <a href="https://us06web.zoom.us/rec/share/3qcP8d6rXfb94FNAxlf3ZKsilppmk3D_g0L8DMkJDmvuw7f-y_0STWYO1W22JwlZ.tZw1129VrgCCyUio" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Advent of Europeans</h3>
+                        <p>Study the arrival of Europeans in India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/K6uJERxLeaBNPzk-N5jwG8AyNThaO8mI06lt91JuU8aVxBR37MXkUYhM9CmM3OOO.Hsvjlhs9X4EIvESw?startTime=1753325934000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Acquisition of Bengal</h3>
+                        <p>Learn about the British acquisition of Bengal.</p>
+                        <a href="https://us06web.zoom.us/rec/share/9B2HQHVss8rqdSaFOR0cmnMt88m_J9F8ANPf5XY9hFrUDEFC4rhJ1JI1vw42NNEP.GTZOe0VQcejy8phf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Land revenue system</h3>
+                        <p>Understand the land revenue systems during British rule.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NzbXctV0zZrsjcx-7ShR5AANVMpvJwJaghzyEkH978gRKAxQ210K0CzzPnG9GdQk.h9zegoW7ViT1lBG9?startTime=1753672664000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Revolt of 1857</h3>
+                        <p>Study the causes and effects of the Revolt of 1857.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ACVZhraDd2M_S74Qk6rPL3SeyHfKUB2nBkBWzBifD2973Ug-XoS7QNwJfXPhz5CF.Z_yRkSMZ2dWu6jwa?startTime=1753757847000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Charter Act</h3>
+                        <p>Learn about the various Charter Acts.</p>
+                        <a href="https://us06web.zoom.us/rec/share/URCUrT1elVWGIDJx_8fbGUWG3f8yuuta-M9tZfahsmXawymkV-BgWo2Hmre4nqOq.hKXJqzWquxnk0sdl" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Social reform movement</h3>
+                        <p>Study the social reform movements in modern India.</p>
+                        <a href="https://us06web.zoom.us/rec/share/XwCDFK3baFd_5iHCQyaF3_l2mLYFozjd7w7RQvhoulNFide4ifknEg1DCMUJKDLL.80hGVA8e9JNViAqw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Indian National Congress</h3>
+                        <p>Learn about the formation and role of the Indian National Congress.</p>
+                        <a href="https://us06web.zoom.us/rec/share/N87JUEAowrHXWynKhvxym2zlsn5q2CKtOcHiqOjpin7sLt6T-ku0s5hQlbBBS2-m.AJEvtzm8X1_Rk44F" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Bengal Partition</h3>
+                        <p>Study the partition of Bengal.</p>
+                        <a href="https://us06web.zoom.us/rec/share/q-UAxtHSpfxIXdxnHjyYUdNgf7MVRAblNvCrRKfej5CYikDtgjXAy1kQ5W0lT9GM.hpHgmjSNmuzWTUiE?startTime=1754277330000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Arrival of Gandhi ji</h3>
+                        <p>Learn about Mahatma Gandhi's arrival in India and early movements.</p>
+                        <a href="https://us06web.zoom.us/rec/share/PXV0ICECWXayiZ2crRY8JdBHClAp4ZTselhllh11XvVjV-piH_G5JPsVLGmXoCKj.wp_4l1auUqAkV69r?startTime=1754363797000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Non-cooperation movement</h3>
+                        <p>Study the Non-Cooperation Movement.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ueK1YhBZY4XJiZ4NK_UIDhfcA_cM92rgZGGk8JO_aO_wrfVAGXLC-ODEZbjgntlo.kilhp1SDaqi-sNEP?startTime=1754449171000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Civil disobedience movement</h3>
+                        <p>Learn about the Civil Disobedience Movement.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_Gn7Hz86EqKXmFIIIjhj4bgo5yT5VZFOK8YVMHDJp7danvFamuBGWykTgrydrURS.p2DfM_EJc-7Zfv3N?startTime=1754882103000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>15. Quit India Movement</h3>
+                        <p>Study the Quit India Movement.</p>
+                        <a href="https://us06web.zoom.us/rec/share/0Ca1_en69Qhldhzs2dvnML_eGV1HIrTWHn8yc0gSldBdhGh0EHheeRyVL4GbkWVC.zlLPZ3pSy9SEc_sG" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>16. Independence Day</h3>
+                        <p>Learn about the events leading to India's Independence.</p>
+                        <a href="https://us06web.zoom.us/rec/share/F1i1Bw3kAd-PN2qP1X32G4lpW4HCE6d1GYxmtHwcKb-NBX8NdCBAYK8RmcSbD40.9CCLoh0pVL6e-i64" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PHYSICS -->
+            <section id="physics" data-subject="PHYSICS">
+                <h2 class="section-title">PHYSICS</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Physics basics</h3>
+                        <p>Fundamental concepts of physics.</p>
+                        <a href="https://us06web.zoom.us/rec/share/xf67qyCqCTXna7K_PSBU03sJYCSvLahYej-yotLaBqpkvavtPVUQFp7OlwcfYq0.ZHXxBytbWE2OJkPd" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Complete motion + Numericals + PYQs</h3>
+                        <p>Comprehensive study of motion, numerical problems, and PYQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FAJchncEoVEap72kTEj8eMY9zxta7mXBbILc_FaH1KFYmBc78YzWeM19X3qo5e4k.Sj_0C_fB7fcENRKD?startTime=1753707599000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Uniform circular motion</h3>
+                        <p>Learn about uniform circular motion.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FAJchncEoVEap72kTEj8eMY9zxta7mXBbILc_FaH1KFYmBc78YzWeM19X3qo5e4k.Sj_0C_fB7fcENRKD?startTime=1753712305000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Force and momentum</h3>
+                        <p>Study force and momentum concepts.</p>
+                        <a href="https://us06web.zoom.us/rec/share/qSCicLw0m_B4b2umiQmP3iT35dQhZB86cJemjHqIEO9n5Cz-UCptziKUmXa6dmfe.D6phBv3gYg4dwcYu?startTime=1753793072000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Work + Energy + Power + Numericals</h3>
+                        <p>Understand work, energy, power, and solve related numericals.</p>
+                        <a href="https://us06web.zoom.us/rec/share/qSCicLw0m_B4b2umiQmP3iT35dQhZB86cJemjHqIEO9n5Cz-UCptziKUmXa6dmfe.D6phBv3gYg4dwcYu?startTime=1753796156000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Gravitation + Lift Concept</h3>
+                        <p>Learn about gravitation and the concept of lift.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_NKCUJ2Jt4mXkviGHmDCWJwZwQlySjGtJbsPo8kkkqgnH7BpAw2D6pb5VkI3wYSo.jGlLDTVVS5n-Ec_Y?startTime=1753966357000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Sound with important numericals</h3>
+                        <p>Study sound and solve important numerical problems.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_NKCUJ2Jt4mXkviGHmDCWJwZwQlySjGtJbsPo8kkkqgnH7BpAw2D6pb5VkI3wYSo.jGlLDTVVS5n-Ec_Y?startTime=1753969452000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Echo (Must Watch)</h3>
+                        <p>Detailed explanation of echo phenomenon.</p>
+                        <a href="https://us06web.zoom.us/rec/share/_NKCUJ2Jt4mXkviGHmDCWJwZwQlySjGtJbsPo8kkkqgnH7BpAw2D6pb5VkI3wYSo.jGlLDTVVS5n-Ec_Y?startTime=1753972688000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Mirror</h3>
+                        <p>Learn about mirrors and their properties.</p>
+                        <a href="https://us06web.zoom.us/rec/share/-6uDrTVkRDmnhhwulZASn2fgtJi-DZ8SBD_Ty0Fc7y6ssBhrNNfhj-ByIDbJYBiS.mMWdOHn84pldZ8Cm?startTime=1754312701000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Lens</h3>
+                        <p>Study lenses and their applications.</p>
+                        <a href="https://us06web.zoom.us/rec/share/-6uDrTVkRDmnhhwulZASn2fgtJi-DZ8SBD_Ty0Fc7y6ssBhrNNfhj-ByIDbJYBiS.mMWdOHn84pldZ8Cm?startTime=1754317115000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Rainbow + Total internal reflection</h3>
+                        <p>Understand rainbow formation and total internal reflection.</p>
+                        <a href="https://us06web.zoom.us/rec/share/zsiNd2ELK_rWpxBR_YkghNlQQHceIHQXpj_0C-YToNtqtAvMIx6pnkqzakMt8-dR.L3mtdW2oVS_Qyt1h?startTime=1754484527000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Bijli 1</h3>
+                        <p>First class on electricity.</p>
+                        <a href="https://us06web.zoom.us/rec/share/zsiNd2ELK_rWpxBR_YkghNlQQHceIHQXpj_0C-YToNtqtAvMIx6pnkqzakMt8-dR.L3mtdW2oVS_Qyt1h?startTime=1754487209000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Magnetic field + Misc</h3>
+                        <p>Study magnetic fields and other physics topics.</p>
+                        <a href="https://us06web.zoom.us/rec/share/-qMjKSb5zatnWvllhEg9lLXn560kcfofBXtggJndjfp1AjQ2XCJ40EHoZPPXkcmE.2ZAnYLD9QsxtfgL0" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Bijli 2</h3>
+                        <p>Second class on electricity.</p>
+                        <a href="https://us06web.zoom.us/rec/share/3feYRo8Vk7_5dA2TM55_DXCNL1mp69SSbdxOHbBwPEEP632bkH07D5qUzaexfP7Q.vDqDcoUKwjcmkTJf" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Economics -->
+            <section id="economics" data-subject="Economics">
+                <h2 class="section-title">Economics</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. National Income - 1</h3>
+                        <p>First class on national income concepts.</p>
+                        <a href="https://us06web.zoom.us/rec/share/ctnrIyqlY71kPpwVW2OpuCo6oM0SkQTvHiZvCuFjebynK3G5VK85FtHi44ZJ1vhO.n38FFZtH84CdB2nf?startTime=1754920704000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. National Income - 2 + Core Industries</h3>
+                        <p>Second class on national income and core industries.</p>
+                        <a href="https://us06web.zoom.us/rec/share/TR_6mMbo2Bw99WLFY-PHKs_BaTtrHDa-NkFXFgZ6iuCbCUN2yqGU6WlayJKmXp9v.3XtfHnet7CsnCUI9?startTime=1755006021000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Money + PYQ</h3>
+                        <p>Learn about money and solve previous year questions.</p>
+                        <a href="https://us06web.zoom.us/rec/share/b2y9AvMxah-Cq8y92j7_cwIcQWvMK5jLC9nFBKer1n93og7hPSCdmyoohG5OsNV_.XNFLZJ7RPFcsQfcf" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Monetary Policy</h3>
+                        <p>Study monetary policy.</p>
+                        <a href="https://us06web.zoom.us/rec/share/QGnIlWdhggACUXriOZhbcemnQnGXGQyjMx3vrSBiWzJoGBUpvUchYIJg3Uc1Hcb2.DwJNIV2lZREgqX-x?startTime=1755520337000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. PYQs + Banks + NBFC</h3>
+                        <p>Solve PYQs and learn about banks and NBFCs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/QGnIlWdhggACUXriOZhbcemnQnGXGQyjMx3vrSBiWzJoGBUpvUchYIJg3Uc1Hcb2.DwJNIV2lZREgqX-x?startTime=1755526728000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Unemployment + Inflation</h3>
+                        <p>Understand unemployment and inflation.</p>
+                        <a href="https://us06web.zoom.us/rec/share/uYPxNgzgiFpFWxaFLqWtRZX88LFv-8-YxJFVnympF_KpgkUBsP_7z7-HJFJDzqlp.XQMRdDqSU7XCScbD?startTime=1755853709000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. PYQ + POVERTY</h3>
+                        <p>Solve PYQs and learn about poverty.</p>
+                        <a href="https://us06web.zoom.us/rec/share/uYPxNgzgiFpFWxaFLqWtRZX88LFv-8-YxJFVnympF_KpgkUBsP_7z7-HJFJDzqlp.XQMRdDqSU7XCScbD?startTime=1755857396000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Revenue Budget + Capital Budget + PYQ</h3>
+                        <p>Study revenue budget, capital budget, and solve PYQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756127120000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Budget 2025 + Balance of payments</h3>
+                        <p>Insights into Budget 2025 and balance of payments.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756131884000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Markets + Goods</h3>
+                        <p>Learn about markets and different types of goods.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756136024000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Law of demands + Taxation</h3>
+                        <p>Study the law of demand and taxation principles.</p>
+                        <a href="https://us06web.zoom.us/rec/share/NNdjtiRAiA8zx6aqDUNHHAzABhO0KeC9ciKhI-s9CBq-zj4O5xPEP4OzsUQdvFBA.yFwMaGGaUR2Q4Daq?startTime=1756137463000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AFCAT Special -->
+            <section id="afcat-special" data-subject="AFCAT Special">
+                <h2 class="section-title">AFCAT Special</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Math final revision - 1</h3>
+                        <p>First class for final math revision for AFCAT.</p>
+                        <a href="https://us06web.zoom.us/rec/share/9KnB8qlftxPuLBTNBBYPOSDQqtyDjDOCGaJrY1tbPOlkMa-zatBuyYlkTd8oZmi_.NCpMjWCFMe-Hi7Du" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. 500 expected GK for AFCAT 2 2025</h3>
+                        <p>500 expected General Knowledge questions for AFCAT 2 2025.</p>
+                        <a href="https://us06web.zoom.us/rec/share/xV7VTMXVuBE0W_-nm0V9wgQs0HOeD5nGby9cjYmIxSUJ_AaI67tP6JsaLGcV9no6.qPapeLhmLMB8MG9W" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. 500 expected GK for AFCAT 2 2025 - part 2</h3>
+                        <p>Part 2 of 500 expected General Knowledge questions for AFCAT 2 2025.</p>
+                        <a href="https://us06web.zoom.us/rec/share/y1sMryweVnxZh0Ehp36AGBCjpLrK8DTRz71sZj635LYNQUB2bnT7HcwaN2PW_OR8.nobP7UIKxEAWywlg" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Math final revision - 2</h3>
+                        <p>Second class for final math revision for AFCAT.</p>
+                        <a href="https://us06web.zoom.us/rec/share/MM8_EoZ2g-ySuKh_rJB1aNV_qgvo4NiTJV_I4i_HDZ2hz0kM0wD5DmNq0tHTyzzy.KN3bgg98pfWdNok5" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medieval History -->
+            <section id="medieval-history" data-subject="Medieval History">
+                <h2 class="section-title">Medieval History</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Bhakti and Sufi</h3>
+                        <p>Study of Bhakti and Sufi movements.</p>
+                        <a href="https://us06web.zoom.us/rec/share/FxMUvW4S9uK4I6DYZQvfNek4curbajL95WaJ9X3871kmu5xBV0Bduj47UbeywFfr.XaaJLw8aGn871aer" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Bhakti and Sufi - Class 2</h3>
+                        <p>Second class on Bhakti and Sufi movements.</p>
+                        <a href="https://us06web.zoom.us/rec/share/S9yICgl-HUPpajfLIjF8feWkx7WRAJceO-cp030u1OAeoIGKXtKsBSABcGxV8Q.rEYdRlGpmhfR2fhf?startTime=1755572444000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Sufi & Vijaynagar Empire</h3>
+                        <p>Learn about Sufism and the Vijayanagara Empire.</p>
+                        <a href="https://us06web.zoom.us/rec/share/D-R_BjFkeghcaeyRxs5lkx_kNgoN8EaBqjQduqKYxLAv4Zj_aj-TlGyZ9zx-qOf1.lXAKL_x-UN2Dl2mO" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Antim Pag -->
+            <section id="antim-pag" data-subject="Antim Pag">
+                <h2 class="section-title">Antim Pag</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Physical Geography - Final Shot revision</h3>
+                        <p>Final revision of Physical Geography.</p>
+                        <a href="https://us06web.zoom.us/rec/share/10Hw8MbenRsSeakOzCsYBvTaM8MR_kVU1407Z9ZPNutI5FVsibGNLqLJIU75KBCa.M8qQHNJQ2ta4V4ui" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Physical geography revision through 100 MCQ</h3>
+                        <p>Revise Physical Geography with 100 MCQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/z3XbhNboKEmUfnP8h2PlC0UZdhgQ-mCHPTfNeh3OhIc7PcdL0k1u7dIana_yIlIx.svl7_fWFR_KkQiQj" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Complete Biology revision</h3>
+                        <p>Comprehensive revision of Biology.</p>
+                        <a href="https://us06web.zoom.us/rec/share/KEzPHM2Fi7cHnxOMdmlrDpiLup2PyTIC9Q2aObEeO2yiHrh-JaQlkZ71stnjvgL3.7MTIDsddM4gPi9Ew" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Biology revision through 100 MCQ</h3>
+                        <p>Revise Biology with 100 MCQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/5PeJINJLsyReKd3ndSbRkp0N3rWcnODTnXLdWb8PzYj-W2PmW1_92hqcHnHfSQ_W.FLusnKvuRMc8LwBw" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. Chemistry revision through 100 MCQ</h3>
+                        <p>Revise Chemistry with 100 MCQs.</p>
+                        <a href="https://us06web.zoom.us/rec/share/8XiFlj89kfNKTmNJlpydokH4__B-dnXLpoC40PF68V4-Xu1IhF-7s9lY-cmvBq5p.Vsa48d_6CvfmCgWM" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. World Climates</h3>
+                        <p>Study different world climates.</p>
+                        <a href="https://us06web.zoom.us/rec/share/U6sIL6nG2Lpzo-7a6u-GPYmqHQ8y1bxne3Qpcn5jDH9hwcJe13us0HqYNoNZ84UN.Xx9bpgHzDBxXJTQA?startTime=1757509868000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Farewell Class</h3>
+                        <p>A farewell class.</p>
+                        <a href="https://us06web.zoom.us/rec/share/TIUC96Q4HrOEYdYCdqQVHEXYWYMf25dOnoVxqpjLWepfgR6pFEKIQCOl9WkJcebQ.4q1cD6r8aBQ44zmI" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Polity -->
+            <section id="polity" data-subject="Polity">
+                <h2 class="section-title">Polity</h2>
+                <div class="class-grid">
+                    <div class="class-card">
+                        <h3>1. Preamble + 26 Nov matters</h3>
+                        <p>Learn about the Preamble and significance of November 26th.</p>
+                        <a href="https://us06web.zoom.us/rec/share/fahRgCYllCsWECQK29wrFKa_f_Gw5uGlYhQNLcOWSSdK8mxQhdJrPOpG8hY7hOW0.Gr7dGNtOMI75YxgR?startTime=1756301531000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>2. Art 1- 4 + Art 368+ majorities</h3>
+                        <p>Study Articles 1-4, Article 368, and different types of majorities.</p>
+                        <a href="https://us06web.zoom.us/rec/share/fahRgCYllCsWECQK29wrFKa_f_Gw5uGlYhQNLcOWSSdK8mxQhdJrPOpG8hY7hOW0.Gr7dGNtOMI75YxgR?startTime=1756304656000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>3. Dadaji - Class 1</h3>
+                        <p>First class on "Dadaji" (likely a specific topic or person in Polity).</p>
+                        <a href="https://us06web.zoom.us/rec/share/fahRgCYllCsWECQK29wrFKa_f_Gw5uGlYhQNLcOWSSdK8mxQhdJrPOpG8hY7hOW0.Gr7dGNtOMI75YxgR?startTime=1756306973000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>4. Dadaji + Governor final</h3>
+                        <p>Final class on "Dadaji" and the role of the Governor.</p>
+                        <a href="https://us06web.zoom.us/rec/share/nDBCDWOH_2HxcCat7CqOqv2jN0Z8D_DOlENEvjIvzpBq5KLjIkzVrKoRckOA2Aiz.oNX0wBPCc3kluo8e?startTime=1756388874000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>5. PM + CM + Federal Features</h3>
+                        <p>Study the roles of Prime Minister, Chief Minister, and federal features.</p>
+                        <a href="https://us06web.zoom.us/rec/share/nDBCDWOH_2HxcCat7CqOqv2jN0Z8D_DOlENEvjIvzpBq5KLjIkzVrKoRckOA2Aiz.oNX0wBPCc3kluo8e?startTime=1756391848000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>6. Vice President + order of precedence</h3>
+                        <p>Learn about the Vice President and the order of precedence.</p>
+                        <a href="https://us06web.zoom.us/rec/share/nDBCDWOH_2HxcCat7CqOqv2jN0Z8D_DOlENEvjIvzpBq5KLjIkzVrKoRckOA2Aiz.oNX0wBPCc3kluo8e?startTime=1756392958000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>7. Parliament 1</h3>
+                        <p>First class on the Indian Parliament.</p>
+                        <a href="https://us06web.zoom.us/rec/share/L0CRkQWju_-qc61uJAgWzYVzxvr2ZpdJXLvLMRe-q-DrToMdOFVolQjxFAZWIrwI?startTime=1756544781000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>8. Parliament 2</h3>
+                        <p>Second class on the Indian Parliament.</p>
+                        <a href="https://us06web.zoom.us/rec/share/L0CRkQWju_-qc61uJAgWzYVzxvr2ZpdJXLvLMRe-q-DrToMdOFVolQjxFAZWIrwI?startTime=1756550283000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>9. Parliament 3</h3>
+                        <p>Third class on the Indian Parliament.</p>
+                        <a href="https://us06web.zoom.us/rec/share/L0CRkQWju_-qc61uJAgWzYVzxvr2ZpdJXLvLMRe-q-DrToMdOFVolQjxFAZWIrwI?startTime=1756554301000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>10. Emergency Provision</h3>
+                        <p>Study emergency provisions in the Indian Constitution.</p>
+                        <a href="https://us06web.zoom.us/rec/share/xM1Tf89zNSjxAttEzm5u2dRntu6xZQyXEbR7jv5DQIpKhHApfRhC1OfE-b-1YuOn.AprjTpw-aP5zotnD?startTime=1756736542000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>11. Supreme Court + High court</h3>
+                        <p>Learn about the Supreme Court and High Courts.</p>
+                        <a href="https://us06web.zoom.us/rec/share/X2VuhBtKvFYYLhNJHbwTeo_TGPgBRkK2ZZsIakvBWYnvA3QIJHNvvG7Qw8C3hhuL.t_Rlrx_1B0bXcXnJ?startTime=1756892048000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>12. Article 12-30</h3>
+                        <p>Study Articles 12-30 of the Indian Constitution.</p>
+                        <a href="https://us06web.zoom.us/rec/share/X2VuhBtKvFYYLhNJHbwTeo_TGPgBRkK2ZZsIakvBWYnvA3QIJHNvvG7Qw8C3hhuL.t_Rlrx_1B0bXcXnJ?startTime=1756895487000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>13. Article 32 + DPSP + FD</h3>
+                        <p>Learn about Article 32, DPSP, and Fundamental Duties.</p>
+                        <a href="https://us06web.zoom.us/rec/share/X2VuhBtKvFYYLhNJHbwTeo_TGPgBRkK2ZZsIakvBWYnvA3QIJHNvvG7Qw8C3hhuL.t_Rlrx_1B0bXcXnJ?startTime=1756898564000" target="_blank">Watch Class</a>
+                    </div>
+                    <div class="class-card">
+                        <h3>14. Panchayat and municipality</h3>
+                        <p>Study Panchayats and Municipalities.</p>
+                        <a href="https://us06web.zoom.us/rec/share/U6sIL6nG2Lpzo-7a6u-GPYmqHQ8y1bxne3Qpcn5jDH9hwcJe13us0HqYNoNZ84UN.Xx9bpgHzDBxXJTQA?startTime=1757512904000" target="_blank">Watch Class</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtonsContainer = document.getElementById('filterButtons');
+            const searchInput = document.getElementById('searchInput');
+            const allClassesContainer = document.getElementById('allClassesContainer');
+            const allSections = allClassesContainer.querySelectorAll('section');
+
+            function filterClasses(selectedSubject, searchTerm = '') {
+                const lowerCaseSearchTerm = searchTerm.toLowerCase();
+
+                allSections.forEach(section => {
+                    const sectionSubject = section.dataset.subject;
+                    let sectionHasVisibleCards = false;
+
+                    const classCards = section.querySelectorAll('.class-card');
+                    classCards.forEach(card => {
+                        const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+                        const cardDescription = card.querySelector('p').textContent.toLowerCase();
+
+                        const matchesSearch = cardTitle.includes(lowerCaseSearchTerm) || cardDescription.includes(lowerCaseSearchTerm);
+                        const matchesSubject = (selectedSubject === 'all' || sectionSubject === selectedSubject);
+
+                        if (matchesSearch && matchesSubject) {
+                            card.classList.remove('hidden');
+                            sectionHasVisibleCards = true;
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+
+                    // Show/hide the section title based on whether it has visible cards
+                    const sectionTitle = section.querySelector('.section-title');
+                    if (sectionHasVisibleCards && (selectedSubject === 'all' || sectionSubject === selectedSubject)) {
+                        section.style.display = 'block';
+                        sectionTitle.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                        sectionTitle.style.display = 'none';
+                    }
+                });
+            }
+
+            // Event listener for filter buttons
+            filterButtonsContainer.addEventListener('click', function(event) {
+                if (event.target.classList.contains('filter-btn')) {
+                    // Remove active class from all buttons
+                    filterButtonsContainer.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    // Add active class to the clicked button
+                    event.target.classList.add('active');
+
+                    const selectedSubject = event.target.dataset.subject;
+                    const currentSearchTerm = searchInput.value;
+                    filterClasses(selectedSubject, currentSearchTerm);
+                }
+            });
+
+            // Event listener for search input
+            searchInput.addEventListener('keyup', function() {
+                const currentActiveButton = filterButtonsContainer.querySelector('.filter-btn.active');
+                const selectedSubject = currentActiveButton ? currentActiveButton.dataset.subject : 'all';
+                const searchTerm = searchInput.value;
+                filterClasses(selectedSubject, searchTerm);
+            });
+
+            // Initial load: show all classes
+            filterClasses('all');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIDYUNIVERSE - Maths Classes (CDS-2 2025)</title>
+    <!-- Google Fonts - Poppins for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f2f5 0%, #e0e5ec 100%); /* Soft gradient background */
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%); /* Vibrant gradient header */
+            color: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before { /* Subtle background pattern */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+            animation: headerPattern 20s linear infinite;
+        }
+        @keyframes headerPattern {
+            from { background-position: 0 0; }
+            to { background-position: 100px 100px; }
+        }
+        header h1 {
+            font-size: 3.8em;
+            margin: 0;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: textPop 0.8s ease-out;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .search-container input {
+            width: 80%;
+            padding: 15px 20px;
+            border: 2px solid #a7b8d1;
+            border-radius: 30px;
+            font-size: 1.1em;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .search-container input:focus {
+            border-color: #2575fc;
+            box-shadow: 0 0 15px rgba(37, 117, 252, 0.3);
+        }
+
+        /* Chapter Sections (Accordion) */
+        .chapter-section {
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .chapter-section.active {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+        .chapter-header {
+            background-color: #f8f9fa;
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #34495e;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .chapter-header:hover {
+            background-color: #e9ecef;
+            color: #2575fc;
+        }
+        .chapter-header i {
+            transition: transform 0.3s ease;
+        }
+        .chapter-section.active .chapter-header i {
+            transform: rotate(90deg);
+        }
+        .chapter-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            background-color: #ffffff;
+            padding: 0 25px; /* Initial padding for hidden state */
+        }
+        .chapter-section.active .chapter-content {
+            max-height: 1000px; /* Adjust as needed for content height */
+            padding: 20px 25px;
+        }
+
+        /* Class Grid within Chapter Content */
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .class-item {
+            background-color: #eef4ff; /* Light blue for class items */
+            border: 1px solid #d0e0f0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+        }
+        .class-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #dbe7ff; /* Slightly darker on hover */
+        }
+        .class-item a {
+            text-decoration: none;
+            color: #4a69bd; /* Darker blue for links */
+            font-weight: 500;
+            font-size: 1.05em;
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .class-item a:hover {
+            color: #1a4a9e;
+        }
+        .class-item.hidden {
+            display: none; /* For search functionality */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background-color: #34495e; /* Darker footer */
+            color: #ecf0f1;
+            border-radius: 12px;
+            font-size: 0.9em;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes textPop {
+            0% { transform: scale(0.8); opacity: 0; }
+            70% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2.8em;
+            }
+            .search-container input {
+                width: 95%;
+                font-size: 1em;
+            }
+            .chapter-header {
+                font-size: 1.2em;
+                padding: 15px 20px;
+            }
+            .chapter-section.active .chapter-content {
+                padding: 15px 20px;
+            }
+            .class-grid {
+                grid-template-columns: 1fr;
+            }
+            .class-item {
+                min-height: 50px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .chapter-header {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SPIDYUNIVERSE</h1>
+            <p>Mastering Maths for CDS-2 2025 - Your Ultimate Learning Hub</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="filterClasses()" placeholder="Search for classes or topics...">
+        </div>
+
+        <main id="classSections">
+            <!-- Number System -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-calculator"></i> Number System</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/sqLv9I6EVGC-f2c6H3PsOtehzY5-8xtLbruSWeHFwHpAQN6phutJePJvgDhUscXO.CZY8Yn-HnSUH7DXm" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Bz0h1NNR96WrFNlWuRAOfdRsHAvvkuLc5LlBKBCTgwQT17e45XO68Yn24P2YwcUG.MhV3v3rDnlj0xNju" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/IaBQmtsVs1PiFJ0r9nlXLotnq16i7DEZfPyMb8GDzRFVvm8bLLG6hroFOoV1rQxi.GP7Ud1a38GRjHJds" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/h5sq7PhijGqheoHOMhXorsntzxxy8OoYhP93t4JAF4DJjrPLnHdSujapKgYZsyGD.SrMXbtZlYavAm0Bt" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/vdOdT4Fqqucx1a3pnxi3ea7GpfOIliH1Z6AANSxV1o_d1J2AID2-_XKrnFc77Erm.xQkk-nYHdD8LCK-c" target="_blank">Class 5</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/IWeFwhKL-SArHkA67X6dn5xfi_-Z4XAwcyxHuQVaptWBw8FFWiDYWYvb8asv9MNj.LaronHLL8zc_7hsH" target="_blank">Class 6</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/D-WYNH90DHOgfDiWTe25-2K2__0HWF1z5OniWaqEza0isgSZ4yEfBstnLD9fU_GL.Jb8-FOO-6_118bYX" target="_blank">Class 7</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/B5SJaBkSnB7q2ubgZcZOxZ_-DQYsrKLsSpT2LIfTzY6H25Hus8uVgPjl4EFegsgl.kMQTS-KuJg437wy4" target="_blank">Class 8</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/usB-HLT9q0mpBri4Z749y9mdWlAm9ST_qqfDBMSmi7y92fWFKogfgU7wvox-lCzh.7MuYBLKvW6xzGhRh" target="_blank">Class 9</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simplification -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-superscript"></i> Simplification</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/khBHBxlu1Zwr3OJ7lEj2J3ZQi1dn4CBG7_OHHN5S2g7jPa4c1fd8IWb7T7OpXiMf.FkKkvwsh4QqIVszs" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/rTWvK8DlRzLV-Q9e78b-NuktSx7D2HWAMMYqgqvRaiAcUkg8rlIHBmGEpdmj5iM._A6mq3te0wA8xnIC" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/8HcDNrjBPLUEN13FWFLE84j9HfZqu3fX6Rz-uINhCAsZRS1q_bpzmXVu2oUsJQrD.OGxXNgsC5UfxQ1W7" target="_blank">Class 3</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LCM HCF -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-divide"></i> LCM HCF</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/8HcDNrjBPLUEN13FWFLE84j9HfZqu3fX6Rz-uINhCAsZRS1q_bpzmXVu2oUsJQrD.OGxXNgsC5UfxQ1W7" target="_blank">Class 1 (with Simplification Class 3)</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/8-eBiBoaiYQAhzHE2YQXzZN47ALk_niRAGY7jr0vDh3OBu_I5H_3Ds8Ur1an2hDS.84CVPzfMqi04Ub4P" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Uvnft_2P9UuwziNauTfa3Mh8NR2e8s_7km6XNRibijTPq7SNEeRVGhK3vXo5NSPd.SeZHNmmvhW4hSM60" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/catwvq7-awrHJ3JqwgdrKGnKBMPT9yoGmQX8mSYUFlglTJxQ9UXbs2urYBCVORB-.eR2NrzJGJKp_v72_" target="_blank">Algebraic Factors</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Equation -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-equals"></i> Equation</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/wDkm5P3TfLS9zcPRnsKpOqDLjMTuqycKFYW4s-hebXdm_9U3xsufKEIgvLP9arUm.HyaSrRAVuokQfqjI" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/dzAhXHNzMnparA_olIaUJsTGR4RJmyFkKHQB-FJjwyuq9AE8axw5RwDMxxoqQx8y.oojgIrVnKmCcbthZ" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/fwyBbtNbGQ5l1IQ4C_BN7rdQoBZ9RRCFnKMakr5fqx2uxk7BbHQTBmZLGn1eqDxy.q72JMU38KpkujImJ" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Fk0YcWk7or775G_OyX1esLHddm18iBz9Z9Wd-AHMnmL5UkpwBARNQ1K-xH4ujXxJ.XBDvoKg6o-EhgGf2" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/8v-_5_5Bcjwr6kMRxbfwIS4fBBxuzXrLU6T5lxyfFbgQETEwtGYwAMS4CZm-nG9M.0C_DD0l4B6FcBGka" target="_blank">Class 5</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/K25qaldwOb0uhbPGyntlTbrDOrpXlUnw0Dg71ElaixJQlJAaHf3qzSWPBoWGzvt9.Foeu4BOb56ivz-Tz" target="_blank">Class 6</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Algebra -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-square-root-alt"></i> Algebra</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/WvxLCMqCL2Hva3VrojbUx76aERnryenXAqWv_MJgIjPhMKlFq8_DqvlCyGHYNuzf.9OzSxpmh5cPUi43i" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/9U4rOpEiGI0ceHgIMTsBQpbcShN9oriFfPjiE1XbWLYIkUCnqWRddp8q3WeKoDZw.lAeyQmVpjbCtENa_" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/3idNnqbGkcriZmZ7Qz78IiWCa9qVBpk2fM1yv083a6a4mLkGvrH6D1Xi5AW4NGvq.tfngUncqOHyyuP4d" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/3fmDcqHYiyyLdpjVvq9jpfyBUT1IgitB-fGOYE0Gjx5M6jaw301x1omJ1rzJJKls.AslPicJy1dB4dGH4" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/X53RI3bSZIyzH10PRF7_jdh4q1jOXHPnkwhUio7SLmewLeZlQrpQ326QQabLBl3Q.-Kd3Zy94YCqKPYPI" target="_blank">Class 5</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/l8CocQpSwV34JiOO34Dgq1PjAJIeEVgsg_Dm13SVZTHNYpRWRZX7L5u4sxoHZ0O_.3EYMTV-yhdaImmav" target="_blank">Class 6</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/1LRhyY3DgunpU4d_cZxcwbkMKslq6Va4n18CSj5nWinyPpGSXhE5wJIPKZlB72JV.zoZ6ykvHi6xpbj8n" target="_blank">Class 7</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Logarithm -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-chart-line"></i> Logarithm</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Nkrqgj48cTEC_7RagUUGkQIvU-zhp_4HL_JZBkZEiz7BZI3AsN6yUpCd3C4WUcsz.NhnADY7bza1_JSIQ" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/ppkx46m812FJoOuEsSm24ubyBsXMFzpyzFskf_5K9YRHh6Smj6FSYBECGKD-81GI.FwWMxRn71BUBSQIL" target="_blank">Class 2</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Set -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-object-group"></i> Set Theory</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/-HGPVI8O3CLLL8s6iY30T6OMtXz4b-aI3weUYrXJCI41IS30rjV4siuhe1E1kpoN.SIrHAWAod1Ys2xtb" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/2eDGs9osWsj5Nl5Zs80XHcp30xMIo0sTeGDYNWiILynicvTaTTAkssP4VK99RZfh.VHeOp_DRoiU2Nh3B" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/FT6hammMHQ45-3D4_ezzzbrN_qPMoVWU5-PDu_Tsjcalzx3irL6sqYZcGnHRpt4l.gDMlK_iVgavMaLik" target="_blank">Class 3</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trigonometry -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-wave-square"></i> Trigonometry</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/z8HOnMf1l7-yQjSX1QmFRmtlctg9e4RKhkWLZrtvm_FWNShxdtrJEbnHfF3vDyV3.yQZ656LwK9by19oC" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/tDOBX7Cl4iIjozILQB4r6A8QwJa127URp90h2eEFnglKOYUu0mZkeB6QsCiW5lw.BKeFRX5TAHdnzEFS" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/HLo303y3RVekQPvR7-l2kuhKjRfODraozC-qxlHsa5Zc_U3M-DEvr2tOnamR_qf2.J6vTWpmMZBnV1bq4" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/NgCHsm2a2nJgdcmTErUYH2BzY9Ynwqz-USWDimtdJnQ1OGjFM3_j_Rc5ANmyNhvp.OOXFnfMYjOZhw7VU" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/IXqMZUwRo11YPN5j2RKGAlwiZ_aN2f5MouTDp7K_S_vCcMie2RWsRFY5umemck8M.5MtxA-yWteLVNW6T" target="_blank">Class 5</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/lkGVvJhlpy4sfSpAqdZI-r4sT1ViR25V2RgCFATB1hVdKgH30L6GY1eFBkSyWenx._fZJZ16_7KubMCFK" target="_blank">Class 6</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/rJDytuiAK2LneeNUEP8NRIIvwcPrflomKKqUEtQId0ya-DQt5V0Ll4TJsfOvMZT6.AO0W0TVIxhwO77y8" target="_blank">Class 7</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Height and Distance -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-mountain"></i> Height and Distance</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/BiPnyypKCQSw9eZSibJi_JtX4k2dYeWr-mf-mcxxzP31M43Nm2shBS0ch_ZDfdBX.eIXeyyC9-ViCeJeE" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/oPHZqgkoyiUz6DY8U4K8v5kz5-jit3Su3ObuULodlLc_wYXSiR1KxV-bvXNrbAkl.-3y-gVSzzmvEJp5m" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/NE0KMBd89XWuEUJ4aDFV_BgaMmk9DaNvzYDWtzkbUUvKniq0x8TykkiuBoXBFUFk.EfQrM5hNWDJ-VC6t" target="_blank">Class 3</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-chart-bar"></i> Statistics</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/o0TQDXWg7Ghvmxl60U_2U1-7t95J9SPGjZ_vfu91R4NMUza91LhFdGGG1CdaZhUX._rwaY_iqXV0drl7m" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/T-Zj6YKGtoH9HR8u_op5_q0Y9Yx1jJi7nlr630KY6enNLJPJPAvqPH5BZl6mmpLB.ckFXusb-EJKITUk9" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/_jS2R0lthYQRjuFysjrZG1Jnmgds_5bfUpmXbfYNpOvkfASfndILh0E4km8t2IWf.mDlfDZ-_7pM9LVyi" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/dOB_TIhv1fc_tS7jQDwav9Qm4goTfut4pDoiQRMxT2qvL0ytBMJE4HfFXuN5bZfP.frgWPwqncd3fEvER" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/92VLA9-zbQNoPp-TqpnM4exaPSQg-L6t4OoZtNuukSJ9T1HQhKsZGVLlLRtY87xd.gPiyoTShwBrZLDx-" target="_blank">Class 5</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Geometry & Mensuration -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-drafting-compass"></i> Geometry & Mensuration</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/M9xQ5gfNG4YQg8VAizINbSUCeGRRzwDQRPknMCQh2HT3LVdnC67vMPRPORudsIgo.99GGQnUffoN4oWFJ" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/FOR5BzzF7Y2IjC-iP_AF8cXo5Aw0INYicedj9pgNFoDfGU7cHX5gF9mywEVprngo.dPDUD3LlHiToziNn" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/BwSRYqxSvp9EjPnYGCwnYmNPlAeMn-gZy3ZVruG3AWWHZEjJaUL5h7ZN4ooHHRjQ.6br_5aE8zgoAJUtf" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/UsWId4xDpQ1IneaFb1rIv8IPcs_uq3PCYsJEPIFH1wu7KpfVAOmYLxF-OPZpzr6m.5tFcSE4x-Vtu6I-r" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/7em0LefLruZ9CRs1CGgHArTcv2x9MV0mjPtHEPBgxa9AO0FEg47xGVNEr48OUz8z.Ll561V5RYGgMupff" target="_blank">Class 5</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/VNV1wPTiurW735WCq16r30RM3tnNpBWPV7v6SIAQLo9Y1UdbjA40Z0_MY2M9Qnjg.5Z3myFif3gBbVTyT" target="_blank">Class 6</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/YdVKP52V5cc4vY-kbD5dccND8WmCMXEqype_C9vhxGT2H8LjM5gtI-A3nDeIr0vK.CkXBEGZyfF8-WstG" target="_blank">Class 7</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/qfkRGtVO5r-M3Xn5ei53mNHiXtmm1xFK1yFXnq7wtD_T-sJP3l1iu6cXcXkAmEA5.8BBWZs_zgIrBnS2Z" target="_blank">Class 8</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/7XQDQIQWVc0BFlPu5fVVosEmxnWjwplsNwdoB68ssDcEsDNUwKYyk1-ITmkb0AH1.JMrwTIPi-R8Ug4VD" target="_blank">Class 9</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/eQA2CUs4rI0oeBu4tI5vSeA3O9xIMcHmsyctDi3QfaLTGeFIW7Zpp7knKkKiTg.sdNH9-YZOQNiFOY1" target="_blank">Class 10</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/R_jB3Hj92hZgTxHF81hsNiP1u3t4JNEmyJgD1rGRHeB77X8iRvSJuVoHmJDtJex4.iuQKIHGmb0INx4VL" target="_blank">Class 11</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/6h6LEaruyghxU2aq8a7llj0oXEEy5ScfyvEGXeBD6aa2DOFXVQprtrC1EIT647eq.zQMOGqzOsz-y21Il" target="_blank">Class 12</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/IChXr_V08F39DEVkDZbuzvCMyzY8O_-53K18tzEfqFLlhR3KtQpX11Syvs_qTgpP._wVgD75TYU3yKeZ0" target="_blank">Class 13</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/gIr5lL4G_9xbLydKmswMGm85yB3RYf7-NSj205BI--fKFluOnFbpp_W-PpsyQu5Q.eGaTMaCNCQesx0E-" target="_blank">Class 14</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/EWXocWkMkauRzoCoL8n_gnGNFmRqdpcqy1JGNuVOZLl38CwYMWiLIVhvq2MdIH48.nBk0EH17p-jrwOLA" target="_blank">Class 15</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/4oxDflsNFYWgEqvjLOk4oGrS85Fi8XnzYEwZRkjz9JDbz8ThVD3tuBkurMQ1UVny.MHlXnwRIsGUahs57" target="_blank">Class 16</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/bVozVXW4cm7hLVIP4kSGwFbiW3Fq_s33JV8DOoqDHSi0OCito8y_oP8n2j9c-ttm.TtJDs5tL7zEWEHoL" target="_blank">Class 17</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/hhq0PNzxWZjI5Nvkkp4iiqkcAjuwdEb7C0ulNOsuuFUYaAT2Xwrtu1hdtyaF4W5z.YgJQqCnA2WbaHV1Z" target="_blank">Class 18</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/LO6MN8doGUpt9-r7xDrMkiJZbMBp2eMVVFvIGfm7eDapvt6rWjyCx7tN3TvTOIl5.pS2H__tlY11wRxuR" target="_blank">Class 19</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/jcunSlwqoD5kv7ZJoKVVNOiJNKe0w6QXt7NPRJILiK6kTbbb-QSUNc61SZepH0xa.sOw32rbNYDa6ZDxZ" target="_blank">Class 20</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/ltfP5vSpN_wLLL2dWmKqGa9Q8uy7ka8Gnz58HfutTd53DYqrvLNZi3Z7ywLEanWH.xS2eSodcXMPq9Y4T" target="_blank">3D Practice & Doubt</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/osGYc_EDRzqOufj1Z9lo1O9TKl0x4RSZCBIc1sA1x8W0-FB3Zg_o9ytkUbrafpOT.6l6Lxy9AQlK8Deq0" target="_blank">Practice Class</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Average -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-chart-pie"></i> Average</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/raDRl4KEHRMs7Ui44n-ziXMBj7-uQfgBdTmdGyl9tGoDbUgiN6OTjf-pnRmPV3_6.on6hTper8rqeYgNo" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/mIghkhkjhiH3WM21gvevooPZPlq6JPWSHefKX6suIHsFyIIvSfRk81GM82pe177I.zOyLX_fmTYW__MRe" target="_blank">Class 2</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Percentage -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-percent"></i> Percentage</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/P5pc_9V8BQUMzXpasdcegUpz95EuoWka-0cCr6m77dcT4CTmiaYr4x5kDlgcStDD.maMemEpI25bVufc-" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Gzsylew4MAZ6nM5qzn4LaUOYZy7N0_qjEAO3poGtV0zJhYcLCzMa9MiRecCYokPW.fLHaZCZNKQSudWa-" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/7elxKgxGYrNnDQ92b3N4C-wu3s1CefofpZ41NuoWpLNw6jHuFLCNyGZV2HXcY668.rFRzV70gXfGnFKYg" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/IGF1KabAwftwfWCgjD-F1FoLc4rUu5qs-jf_Ut759ZNomwi7SbYz0Ijy4fbmqEwC.iNmBCzdS44v6PYlc" target="_blank">Class 4</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profit and Loss -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-hand-holding-usd"></i> Profit and Loss</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/anFkgYoh54U_r36lsOuNLfjQZGXgShBmkpiORdmooD_tO6U-opa1oLfZrTz9sAtg.mXZ_bIFPHMrMDCC-" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Rxs-837beScLmQJ0rWRIq57fev8WYYN7vIZcaYkn5OkLcXkxPVeiAoQVKzNQ6VyA.4EG6VGMr6MTMhY4f" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/AifgG3nYCKhEGITGpEz1C-vLWtrMcLlE0W3-_w28YUa46cFo9RW-mX97q2QUFThb.9EpCYad2EQ3jdaCt" target="_blank">Class 3</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interest -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-money-bill-wave"></i> Interest</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/Z7OkNNtPkpsk7hMihh5Sb6Mx0yYSnaBl3r9uoaMPNlT9YQUIJD8RwU_hwEAQACaz.X1ZR6cIG81RslRf7" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/zLeviOt8yKHx9-YptklRjOHL9Ssbtd73qFbxJlPOLQEKm4WP-iwWTlaRXXwTu2ph.hVm2HcPCcsWS7F7-" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/28jrb0qGGE_Rajp9ZCygRz5JJifahmO8jXDcxNbYiVZq-TaMboujyb_6o532EqJC.URGYUdT-ykRU8tJw" target="_blank">Class 3</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Time and Distance -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-running"></i> Time and Distance</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/s6wY8ehi9jSBNi5Z3aH9NP66_14aduluABIillKhpCawKtU0q8X6NQFbvhItm6xL.yuSBST26pLFkcPcZ" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/MqsGpbienRVROkV4oE7_tJvfUq-0WKviqzahRgawRHbnIU-DIEVLvnY384k8oNVQ.9MYoW652LXNcKt6_" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/MXRu8Dp8zI5CmAg0xQRVqVSub3Vu3RTZo6kY-MyMVPS0ebJXoz2S7n30IUnP0ybf.AReFsbxqX3dduJin" target="_blank">Class 3</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/qQMNw_gZd-szgMY9x8uxG2BQqO7oimx7CGji2BjIvQ7NyN_YLroxbQ3yNl-2rCvw.Ef2ehILUiQNSkms_" target="_blank">Class 4</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/SsMxuGQuEjfI4sjwU4NfLO4Ke2dtmWUJR5ON30qyqKx25BgIakq8CcG-eM6duKnL.ryzVauO4IbThrjMB" target="_blank">Class 5</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/1aqB0MFW-rS5nlk54VyUp687znIj2P_tixM3jOfs3vlDKR38A0Zlf0b44tnmGC4.nDiqWaSd6UO5tMi6" target="_blank">Class 6</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ratio -->
+            <section class="chapter-section">
+                <div class="chapter-header">
+                    <span><i class="fas fa-balance-scale"></i> Ratio</span>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="chapter-content">
+                    <div class="class-grid">
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/eD2iQ19V2XywFZA6FB2i7VAMt_5Yv8udsV5Nz4Kjj-i4VduUV9KjDuWfDYfTd_nj.OXeMhg-3ZG_2_3_A" target="_blank">Class 1</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/kRpT-3VPhXJ9l4KjWJhH6daBT519qX9STkc_gVOeM69BT_YEP-0kv3T0eaXOGy4Y.736ZqNPVd4hQ_9DR" target="_blank">Class 2</a></div>
+                        <div class="class-item"><a href="https://us06web.zoom.us/rec/share/XQF4bVSkeIug9_92_FNc-WgLKW2cx3UZqAgzTlCFWb-bOgGOvYnnjLyOUQ5dAzUz.T_PpegLvuLme6bjR" target="_blank">Class 3</a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 SPIDYUNIVERSE. All rights reserved. Designed with <i class="fas fa-heart"></i> for CDS Aspirants.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.chapter-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const chapterSection = header.closest('.chapter-section');
+                const chapterContent = chapterSection.querySelector('.chapter-content');
+
+                // Toggle active class on the section
+                chapterSection.classList.toggle('active');
+
+                // Adjust max-height for smooth expand/collapse
+                if (chapterSection.classList.contains('active')) {
+                    chapterContent.style.maxHeight = chapterContent.scrollHeight + "px";
+                } else {
+                    chapterContent.style.maxHeight = "0";
+                }
+
+                // Close other open sections (optional, but good for UX)
+                document.querySelectorAll('.chapter-section').forEach(otherSection => {
+                    if (otherSection !== chapterSection && otherSection.classList.contains('active')) {
+                        otherSection.classList.remove('active');
+                        otherSection.querySelector('.chapter-content').style.maxHeight = "0";
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        function filterClasses() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const chapterSections = document.querySelectorAll('.chapter-section');
+
+            chapterSections.forEach(section => {
+                let sectionHasVisibleClasses = false;
+                const chapterHeader = section.querySelector('.chapter-header span').textContent.toLowerCase();
+                const classItems = section.querySelectorAll('.class-item');
+
+                classItems.forEach(item => {
+                    const classText = item.textContent.toLowerCase();
+                    if (classText.includes(filter) || chapterHeader.includes(filter)) {
+                        item.classList.remove('hidden');
+                        sectionHasVisibleClasses = true;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                // If search term matches chapter header, show all classes in that chapter
+                if (chapterHeader.includes(filter)) {
+                    classItems.forEach(item => item.classList.remove('hidden'));
+                    sectionHasVisibleClasses = true;
+                }
+
+                // If section has visible classes or its header matches, ensure it's visible and expanded
+                if (sectionHasVisibleClasses) {
+                    section.style.display = ''; // Show the section
+                    if (!section.classList.contains('active')) {
+                        section.classList.add('active');
+                        section.querySelector('.chapter-content').style.maxHeight = section.querySelector('.chapter-content').scrollHeight + "px";
+                    }
+                } else {
+                    section.style.display = 'none'; // Hide the section if no classes match
+                }
+
+                // If search input is empty, reset all sections
+                if (filter === '') {
+                    section.style.display = '';
+                    section.classList.remove('active');
+                    section.querySelector('.chapter-content').style.maxHeight = "0";
+                }
+            });
+        }
+
+        // Initial header animation (already present, kept for consistency)
+        document.addEventListener('DOMContentLoaded', () => {
+            const headerH1 = document.querySelector('header h1');
+            headerH1.style.opacity = 0;
+            headerH1.style.transform = 'translateY(-20px)';
+            setTimeout(() => {
+                headerH1.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+                headerH1.style.opacity = 1;
+                headerH1.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
